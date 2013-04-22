@@ -1,0 +1,2059 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{2CE0B38F-5C9C-4088-8FEC-D3B58EE48E35}</ProjectGuid>
+    <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <OutputPath>bin\$(Platform)\$(Configuration)</OutputPath>
+    <ContentRootDirectory>Content</ContentRootDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Windows Phone'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Windows Phone'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>testsContent</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fonts\MarkerFelt-16.spritefont">
+      <Name>MarkerFelt-16</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="fonts\MarkerFelt-18.spritefont">
+      <Name>MarkerFelt-18</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="fonts\MarkerFelt-22.spritefont">
+      <Name>MarkerFelt-22</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\cocos2d-xna\cocos2d.Content.Pipeline.Importers\cocos2d.Content.Pipeline.Importers.csproj">
+      <Project>{FBE4633D-00D1-4391-8184-63B91DA28D4B}</Project>
+      <Name>cocos2d.Content.Pipeline.Importers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\bloop.wav">
+      <Name>bloop</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\break1.wav">
+      <Name>break1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\break2.wav">
+      <Name>break2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\break3.wav">
+      <Name>break3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\drums.wav">
+      <Name>drums</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\gong.wav">
+      <Name>gong</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\grunt1.wav">
+      <Name>grunt1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\grunt2.wav">
+      <Name>grunt2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\grunt3.wav">
+      <Name>grunt3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\grunt4.wav">
+      <Name>grunt4</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\grunt5.wav">
+      <Name>grunt5</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\grunt6.wav">
+      <Name>grunt6</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\grunt7.wav">
+      <Name>grunt7</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\grunt8.wav">
+      <Name>grunt8</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\impact1.wav">
+      <Name>impact1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\impact2.wav">
+      <Name>impact2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\impact3.wav">
+      <Name>impact3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\impact4.wav">
+      <Name>impact4</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\impact5.wav">
+      <Name>impact5</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\whoosh.wav">
+      <Name>whoosh</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="10000points-hd.png">
+      <Name>10000points-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="10000points.png">
+      <Name>10000points</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="1000points-hd.png">
+      <Name>1000points-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="1000points.png">
+      <Name>1000points</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="100points-hd.png">
+      <Name>100points-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="100points.png">
+      <Name>100points</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="5000points-hd.png">
+      <Name>5000points-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="5000points.png">
+      <Name>5000points</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="500points-hd.png">
+      <Name>500points-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="500points.png">
+      <Name>500points</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ambientFX-hd.png">
+      <Name>ambientFX-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ambientFX-ipad-hd.png">
+      <Name>ambientFX-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ambientFX-ipad.png">
+      <Name>ambientFX-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ambientFX.png">
+      <Name>ambientFX</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ambientFX_dim-hd.png">
+      <Name>ambientFX_dim-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ambientFX_dim-ipad-hd.png">
+      <Name>ambientFX_dim-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ambientFX_dim-ipad.png">
+      <Name>ambientFX_dim-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ambientFX_dim.png">
+      <Name>ambientFX_dim</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="background_clouds-hd.png">
+      <Name>background_clouds-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="background_clouds.png">
+      <Name>background_clouds</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="background_hills-hd.png">
+      <Name>background_hills-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="background_hills.png">
+      <Name>background_hills</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="blocks-ipad.png">
+      <Name>blocks-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="blocks.png">
+      <Name>blocks</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="circle-hd.png">
+      <Name>circle-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="circle.png">
+      <Name>circle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="circleShape-hd.png">
+      <Name>circleShape-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="circleShape.png">
+      <Name>circleShape</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Default-Landscape~ipad.png">
+      <Name>Default-Landscape~ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Default.png">
+      <Name>Default</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Default_hd.png">
+      <Name>Default_hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Default_ipad.png">
+      <Name>Default_ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0001-hd.png">
+      <Name>explosion_0001-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0001.png">
+      <Name>explosion_0001</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0002-hd.png">
+      <Name>explosion_0002-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0002.png">
+      <Name>explosion_0002</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0003-hd.png">
+      <Name>explosion_0003-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0003.png">
+      <Name>explosion_0003</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0004-hd.png">
+      <Name>explosion_0004-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0004.png">
+      <Name>explosion_0004</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0005-hd.png">
+      <Name>explosion_0005-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0005.png">
+      <Name>explosion_0005</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0006-hd.png">
+      <Name>explosion_0006-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0006.png">
+      <Name>explosion_0006</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0007-hd.png">
+      <Name>explosion_0007-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0007.png">
+      <Name>explosion_0007</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0008-hd.png">
+      <Name>explosion_0008-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0008.png">
+      <Name>explosion_0008</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0009-hd.png">
+      <Name>explosion_0009-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0009.png">
+      <Name>explosion_0009</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0010-hd.png">
+      <Name>explosion_0010-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0010.png">
+      <Name>explosion_0010</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0011-hd.png">
+      <Name>explosion_0011-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion_0011.png">
+      <Name>explosion_0011</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="fire.png">
+      <Name>fire</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="fps_images-hd.png">
+      <Name>fps_images-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="fps_images-ipadhd.png">
+      <Name>fps_images-ipadhd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="fps_images.png">
+      <Name>fps_images</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gameMenu-hd.png">
+      <Name>gameMenu-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gameMenu-ipad.png">
+      <Name>gameMenu-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gameMenu.png">
+      <Name>gameMenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="grid_example.png">
+      <Name>grid_example</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ground_plane-hd.png">
+      <Name>ground_plane-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ground_plane.png">
+      <Name>ground_plane</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="hexagonShape-hd.png">
+      <Name>hexagonShape-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="hexagonShape.png">
+      <Name>hexagonShape</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="hexagonShape2-hd.png">
+      <Name>hexagonShape2-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="hexagonShape2.png">
+      <Name>hexagonShape2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Icon%402x.png">
+      <Name>Icon%402x</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Icon-144.png">
+      <Name>Icon-144</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Icon-72.png">
+      <Name>Icon-72</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Icon-Small%402x.png">
+      <Name>Icon-Small%402x</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Icon-Small-50.png">
+      <Name>Icon-Small-50</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Icon-Small.png">
+      <Name>Icon-Small</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Icon.png">
+      <Name>Icon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="IntroLayer-hd.png">
+      <Name>IntroLayer-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="IntroLayer-ipad.png">
+      <Name>IntroLayer-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="IntroLayer-ipadhd.png">
+      <Name>IntroLayer-ipadhd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="IntroLayer.png">
+      <Name>IntroLayer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton1-hd.png">
+      <Name>levelButton1-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton1-ipad-hd.png">
+      <Name>levelButton1-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton1-ipad.png">
+      <Name>levelButton1-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton1.png">
+      <Name>levelButton1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton10-hd.png">
+      <Name>levelButton10-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton10-ipad-hd.png">
+      <Name>levelButton10-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton10-ipad.png">
+      <Name>levelButton10-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton10.png">
+      <Name>levelButton10</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton10_locked-hd.png">
+      <Name>levelButton10_locked-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton10_locked-ipad-hd.png">
+      <Name>levelButton10_locked-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton10_locked-ipad.png">
+      <Name>levelButton10_locked-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton10_locked.png">
+      <Name>levelButton10_locked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton2-hd.png">
+      <Name>levelButton2-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton2-ipad-hd.png">
+      <Name>levelButton2-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton2-ipad.png">
+      <Name>levelButton2-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton2.png">
+      <Name>levelButton2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton2_locked-hd.png">
+      <Name>levelButton2_locked-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton2_locked-ipad-hd.png">
+      <Name>levelButton2_locked-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton2_locked-ipad.png">
+      <Name>levelButton2_locked-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton2_locked.png">
+      <Name>levelButton2_locked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton3-hd.png">
+      <Name>levelButton3-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton3-ipad-hd.png">
+      <Name>levelButton3-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton3-ipad.png">
+      <Name>levelButton3-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton3.png">
+      <Name>levelButton3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton3_locked-hd.png">
+      <Name>levelButton3_locked-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton3_locked-ipad-hd.png">
+      <Name>levelButton3_locked-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton3_locked-ipad.png">
+      <Name>levelButton3_locked-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton3_locked.png">
+      <Name>levelButton3_locked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton4-hd.png">
+      <Name>levelButton4-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton4-ipad-hd.png">
+      <Name>levelButton4-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton4-ipad.png">
+      <Name>levelButton4-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton4.png">
+      <Name>levelButton4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton4_locked-hd.png">
+      <Name>levelButton4_locked-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton4_locked-ipad-hd.png">
+      <Name>levelButton4_locked-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton4_locked-ipad.png">
+      <Name>levelButton4_locked-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton4_locked.png">
+      <Name>levelButton4_locked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton5-hd.png">
+      <Name>levelButton5-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton5-ipad-hd.png">
+      <Name>levelButton5-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton5-ipad.png">
+      <Name>levelButton5-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton5.png">
+      <Name>levelButton5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton5_locked-hd.png">
+      <Name>levelButton5_locked-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton5_locked-ipad-hd.png">
+      <Name>levelButton5_locked-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton5_locked-ipad.png">
+      <Name>levelButton5_locked-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton5_locked.png">
+      <Name>levelButton5_locked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton6-hd.png">
+      <Name>levelButton6-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton6-ipad-hd.png">
+      <Name>levelButton6-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton6-ipad.png">
+      <Name>levelButton6-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton6.png">
+      <Name>levelButton6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton6_locked-hd.png">
+      <Name>levelButton6_locked-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton6_locked-ipad-hd.png">
+      <Name>levelButton6_locked-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton6_locked-ipad.png">
+      <Name>levelButton6_locked-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton6_locked.png">
+      <Name>levelButton6_locked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton7-hd.png">
+      <Name>levelButton7-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton7-ipad-hd.png">
+      <Name>levelButton7-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton7-ipad.png">
+      <Name>levelButton7-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton7.png">
+      <Name>levelButton7</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton7_locked-hd.png">
+      <Name>levelButton7_locked-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton7_locked-ipad-hd.png">
+      <Name>levelButton7_locked-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton7_locked-ipad.png">
+      <Name>levelButton7_locked-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton7_locked.png">
+      <Name>levelButton7_locked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton8-hd.png">
+      <Name>levelButton8-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton8-ipad-hd.png">
+      <Name>levelButton8-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton8-ipad.png">
+      <Name>levelButton8-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton8.png">
+      <Name>levelButton8</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton8_locked-hd.png">
+      <Name>levelButton8_locked-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton8_locked-ipad-hd.png">
+      <Name>levelButton8_locked-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton8_locked-ipad.png">
+      <Name>levelButton8_locked-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton8_locked.png">
+      <Name>levelButton8_locked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton9-hd.png">
+      <Name>levelButton9-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton9-ipad-hd.png">
+      <Name>levelButton9-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton9-ipad.png">
+      <Name>levelButton9-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton9.png">
+      <Name>levelButton9</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton9_locked-hd.png">
+      <Name>levelButton9_locked-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton9_locked-ipad-hd.png">
+      <Name>levelButton9_locked-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton9_locked-ipad.png">
+      <Name>levelButton9_locked-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelButton9_locked.png">
+      <Name>levelButton9_locked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelLocked-hd.png">
+      <Name>levelLocked-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelLocked-ipad.png">
+      <Name>levelLocked-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="levelLocked.png">
+      <Name>levelLocked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="marbleSquare-hd.png">
+      <Name>marbleSquare-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="marbleSquare.png">
+      <Name>marbleSquare</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="menu_background-hd.png">
+      <Name>menu_background-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="menu_background-ipad-hd.png">
+      <Name>menu_background-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="menu_background-ipad.png">
+      <Name>menu_background-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="menu_background.png">
+      <Name>menu_background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper-hd.png">
+      <Name>mutantPepper-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper.png">
+      <Name>mutantPepper</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_blink-hd.png">
+      <Name>mutantPepper_blink-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_blink.png">
+      <Name>mutantPepper_blink</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0001-hd.png">
+      <Name>mutantPepper_break0001-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0001.png">
+      <Name>mutantPepper_break0001</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0002-hd.png">
+      <Name>mutantPepper_break0002-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0002.png">
+      <Name>mutantPepper_break0002</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0003-hd.png">
+      <Name>mutantPepper_break0003-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0003.png">
+      <Name>mutantPepper_break0003</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0004-hd.png">
+      <Name>mutantPepper_break0004-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0004.png">
+      <Name>mutantPepper_break0004</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0005-hd.png">
+      <Name>mutantPepper_break0005-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0005.png">
+      <Name>mutantPepper_break0005</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0006-hd.png">
+      <Name>mutantPepper_break0006-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0006.png">
+      <Name>mutantPepper_break0006</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0007-hd.png">
+      <Name>mutantPepper_break0007-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0007.png">
+      <Name>mutantPepper_break0007</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0008-hd.png">
+      <Name>mutantPepper_break0008-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0008.png">
+      <Name>mutantPepper_break0008</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0009-hd.png">
+      <Name>mutantPepper_break0009-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0009.png">
+      <Name>mutantPepper_break0009</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0010-hd.png">
+      <Name>mutantPepper_break0010-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_break0010.png">
+      <Name>mutantPepper_break0010</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_damage1-hd.png">
+      <Name>mutantPepper_damage1-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_damage1.png">
+      <Name>mutantPepper_damage1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_damage2-hd.png">
+      <Name>mutantPepper_damage2-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_damage2.png">
+      <Name>mutantPepper_damage2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_damage3-hd.png">
+      <Name>mutantPepper_damage3-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="mutantPepper_damage3.png">
+      <Name>mutantPepper_damage3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_air-hd.png">
+      <Name>ninjaBlue_air-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_air.png">
+      <Name>ninjaBlue_air</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_blink-hd.png">
+      <Name>ninjaBlue_blink-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_blink.png">
+      <Name>ninjaBlue_blink</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_in_sling-hd.png">
+      <Name>ninjaBlue_in_sling-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_in_sling.png">
+      <Name>ninjaBlue_in_sling</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_on_ground-hd.png">
+      <Name>ninjaBlue_on_ground-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_on_ground.png">
+      <Name>ninjaBlue_on_ground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_roll-hd.png">
+      <Name>ninjaBlue_roll-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_roll.png">
+      <Name>ninjaBlue_roll</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_roll0001-hd.png">
+      <Name>ninjaBlue_roll0001-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_roll0001.png">
+      <Name>ninjaBlue_roll0001</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_roll0002-hd.png">
+      <Name>ninjaBlue_roll0002-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_roll0002.png">
+      <Name>ninjaBlue_roll0002</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_roll0003-hd.png">
+      <Name>ninjaBlue_roll0003-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_roll0003.png">
+      <Name>ninjaBlue_roll0003</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_standing-hd.png">
+      <Name>ninjaBlue_standing-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBlue_standing.png">
+      <Name>ninjaBlue_standing</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_air-hd.png">
+      <Name>ninjaBrown_air-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_air.png">
+      <Name>ninjaBrown_air</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_blink-hd.png">
+      <Name>ninjaBrown_blink-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_blink.png">
+      <Name>ninjaBrown_blink</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_in_sling-hd.png">
+      <Name>ninjaBrown_in_sling-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_in_sling.png">
+      <Name>ninjaBrown_in_sling</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_on_ground-hd.png">
+      <Name>ninjaBrown_on_ground-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_on_ground.png">
+      <Name>ninjaBrown_on_ground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_roll-hd.png">
+      <Name>ninjaBrown_roll-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_roll.png">
+      <Name>ninjaBrown_roll</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_roll0001-hd.png">
+      <Name>ninjaBrown_roll0001-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_roll0001.png">
+      <Name>ninjaBrown_roll0001</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_roll0002-hd.png">
+      <Name>ninjaBrown_roll0002-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_roll0002.png">
+      <Name>ninjaBrown_roll0002</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_roll0003-hd.png">
+      <Name>ninjaBrown_roll0003-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_roll0003.png">
+      <Name>ninjaBrown_roll0003</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_standing-hd.png">
+      <Name>ninjaBrown_standing-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaBrown_standing.png">
+      <Name>ninjaBrown_standing</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_air-hd.png">
+      <Name>ninjaGreen_air-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_air.png">
+      <Name>ninjaGreen_air</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_blink-hd.png">
+      <Name>ninjaGreen_blink-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_blink.png">
+      <Name>ninjaGreen_blink</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_in_sling-hd.png">
+      <Name>ninjaGreen_in_sling-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_in_sling.png">
+      <Name>ninjaGreen_in_sling</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_on_ground-hd.png">
+      <Name>ninjaGreen_on_ground-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_on_ground.png">
+      <Name>ninjaGreen_on_ground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_roll-hd.png">
+      <Name>ninjaGreen_roll-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_roll.png">
+      <Name>ninjaGreen_roll</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_roll0001-hd.png">
+      <Name>ninjaGreen_roll0001-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_roll0001.png">
+      <Name>ninjaGreen_roll0001</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_roll0002-hd.png">
+      <Name>ninjaGreen_roll0002-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_roll0002.png">
+      <Name>ninjaGreen_roll0002</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_roll0003-hd.png">
+      <Name>ninjaGreen_roll0003-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_roll0003.png">
+      <Name>ninjaGreen_roll0003</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_standing-hd.png">
+      <Name>ninjaGreen_standing-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaGreen_standing.png">
+      <Name>ninjaGreen_standing</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_air-hd.png">
+      <Name>ninjaRed_air-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_air.png">
+      <Name>ninjaRed_air</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_blink-hd.png">
+      <Name>ninjaRed_blink-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_blink.png">
+      <Name>ninjaRed_blink</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_in_sling-hd.png">
+      <Name>ninjaRed_in_sling-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_in_sling.png">
+      <Name>ninjaRed_in_sling</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_on_ground-hd.png">
+      <Name>ninjaRed_on_ground-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_on_ground.png">
+      <Name>ninjaRed_on_ground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_roll-hd.png">
+      <Name>ninjaRed_roll-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_roll.png">
+      <Name>ninjaRed_roll</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_roll0001-hd.png">
+      <Name>ninjaRed_roll0001-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_roll0001.png">
+      <Name>ninjaRed_roll0001</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_roll0002-hd.png">
+      <Name>ninjaRed_roll0002-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_roll0002.png">
+      <Name>ninjaRed_roll0002</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_roll0003-hd.png">
+      <Name>ninjaRed_roll0003-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_roll0003.png">
+      <Name>ninjaRed_roll0003</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_standing-hd.png">
+      <Name>ninjaRed_standing-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninjaRed_standing.png">
+      <Name>ninjaRed_standing</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_air-hd.png">
+      <Name>ninja_air-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_air.png">
+      <Name>ninja_air</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_blink-hd.png">
+      <Name>ninja_blink-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_blink.png">
+      <Name>ninja_blink</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_in_sling-hd.png">
+      <Name>ninja_in_sling-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_in_sling.png">
+      <Name>ninja_in_sling</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_on_ground-hd.png">
+      <Name>ninja_on_ground-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_on_ground.png">
+      <Name>ninja_on_ground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_roll-hd.png">
+      <Name>ninja_roll-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_roll.png">
+      <Name>ninja_roll</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_roll0001-hd.png">
+      <Name>ninja_roll0001-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_roll0001.png">
+      <Name>ninja_roll0001</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_roll0002-hd.png">
+      <Name>ninja_roll0002-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_roll0002.png">
+      <Name>ninja_roll0002</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_roll0003-hd.png">
+      <Name>ninja_roll0003-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_roll0003.png">
+      <Name>ninja_roll0003</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_standing-hd.png">
+      <Name>ninja_standing-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ninja_standing.png">
+      <Name>ninja_standing</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="octogonShape-hd.png">
+      <Name>octogonShape-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="octogonShape.png">
+      <Name>octogonShape</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="parallelogram-hd.png">
+      <Name>parallelogram-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="parallelogram.png">
+      <Name>parallelogram</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="parallelogram2-hd.png">
+      <Name>parallelogram2-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="parallelogram2.png">
+      <Name>parallelogram2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="pentagon-hd.png">
+      <Name>pentagon-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="pentagon.png">
+      <Name>pentagon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="platform-hd.png">
+      <Name>platform-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="platform.png">
+      <Name>platform</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0001-hd.png">
+      <Name>puffs_0001-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0001.png">
+      <Name>puffs_0001</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0002-hd.png">
+      <Name>puffs_0002-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0002.png">
+      <Name>puffs_0002</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0003-hd.png">
+      <Name>puffs_0003-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0003.png">
+      <Name>puffs_0003</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0004-hd.png">
+      <Name>puffs_0004-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0004.png">
+      <Name>puffs_0004</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0005-hd.png">
+      <Name>puffs_0005-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0005.png">
+      <Name>puffs_0005</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0006-hd.png">
+      <Name>puffs_0006-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0006.png">
+      <Name>puffs_0006</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0007-hd.png">
+      <Name>puffs_0007-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="puffs_0007.png">
+      <Name>puffs_0007</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="slingshot_front-hd.png">
+      <Name>slingshot_front-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="slingshot_front.png">
+      <Name>slingshot_front</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="soundFX-hd.png">
+      <Name>soundFX-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="soundFX-ipad-hd.png">
+      <Name>soundFX-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="soundFX-ipad.png">
+      <Name>soundFX-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="soundFX.png">
+      <Name>soundFX</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="soundFX_dim-hd.png">
+      <Name>soundFX_dim-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="soundFX_dim-ipad-hd.png">
+      <Name>soundFX_dim-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="soundFX_dim-ipad.png">
+      <Name>soundFX_dim-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="soundFX_dim.png">
+      <Name>soundFX_dim</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="stonePillar-hd.png">
+      <Name>stonePillar-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="stonePillar.png">
+      <Name>stonePillar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="strap-hd.png">
+      <Name>strap-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="strap.png">
+      <Name>strap</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="strapBack-hd.png">
+      <Name>strapBack-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="strapBack.png">
+      <Name>strapBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="strapEmpty-hd.png">
+      <Name>strapEmpty-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="strapEmpty.png">
+      <Name>strapEmpty</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="trapezoid-hd.png">
+      <Name>trapezoid-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="trapezoid.png">
+      <Name>trapezoid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="trapezoid2-hd.png">
+      <Name>trapezoid2-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="trapezoid2.png">
+      <Name>trapezoid2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="triangleLarge-hd.png">
+      <Name>triangleLarge-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="triangleLarge.png">
+      <Name>triangleLarge</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="triangleMedium-hd.png">
+      <Name>triangleMedium-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="triangleMedium.png">
+      <Name>triangleMedium</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="triangleRightAngle-hd.png">
+      <Name>triangleRightAngle-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="triangleRightAngle.png">
+      <Name>triangleRightAngle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="triangleSmall-hd.png">
+      <Name>triangleSmall-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="triangleSmall.png">
+      <Name>triangleSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="triangleTall-hd.png">
+      <Name>triangleTall-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="triangleTall.png">
+      <Name>triangleTall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="voiceFX-hd.png">
+      <Name>voiceFX-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="voiceFX-ipad-hd.png">
+      <Name>voiceFX-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="voiceFX-ipad.png">
+      <Name>voiceFX-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="voiceFX.png">
+      <Name>voiceFX</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="voiceFX_dim-hd.png">
+      <Name>voiceFX_dim-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="voiceFX_dim-ipad-hd.png">
+      <Name>voiceFX_dim-ipad-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="voiceFX_dim-ipad.png">
+      <Name>voiceFX_dim-ipad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="voiceFX_dim.png">
+      <Name>voiceFX_dim</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1-hd.png">
+      <Name>woodShape1-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1.png">
+      <Name>woodShape1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0001-hd.png">
+      <Name>woodShape1_0001-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0001.png">
+      <Name>woodShape1_0001</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0002-hd.png">
+      <Name>woodShape1_0002-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0002.png">
+      <Name>woodShape1_0002</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0003-hd.png">
+      <Name>woodShape1_0003-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0003.png">
+      <Name>woodShape1_0003</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0004-hd.png">
+      <Name>woodShape1_0004-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0004.png">
+      <Name>woodShape1_0004</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0005-hd.png">
+      <Name>woodShape1_0005-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0005.png">
+      <Name>woodShape1_0005</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0006-hd.png">
+      <Name>woodShape1_0006-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0006.png">
+      <Name>woodShape1_0006</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0007-hd.png">
+      <Name>woodShape1_0007-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0007.png">
+      <Name>woodShape1_0007</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0008-hd.png">
+      <Name>woodShape1_0008-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0008.png">
+      <Name>woodShape1_0008</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0009-hd.png">
+      <Name>woodShape1_0009-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0009.png">
+      <Name>woodShape1_0009</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0010-hd.png">
+      <Name>woodShape1_0010-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape1_0010.png">
+      <Name>woodShape1_0010</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape2-hd.png">
+      <Name>woodShape2-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape2.png">
+      <Name>woodShape2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape3-hd.png">
+      <Name>woodShape3-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape3.png">
+      <Name>woodShape3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape4-hd.png">
+      <Name>woodShape4-hd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="woodShape4.png">
+      <Name>woodShape4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\birds.mp3">
+      <Name>birds</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\frogs.mp3">
+      <Name>frogs</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
+  <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

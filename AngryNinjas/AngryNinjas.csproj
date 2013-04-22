@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0E553FB5-2BA1-45AF-803E-75170A8C7234}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AngryNinjas</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>AngryNinjas</AssemblyName>
+    <StartupObject>AngryNinjas.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;IOS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>True</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;IOS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchDebug>True</MtouchDebug>
+    <CodesignKey>iPhone Developer: Kenneth James Pouncey (83ASFFXWXR)</CodesignKey>
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DefineConstants>IOS</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <BuildIpa>True</BuildIpa>
+    <ConsolePause>False</ConsolePause>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <DefineConstants>IOS</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Content\" />
+    <Folder Include="Content\fonts\" />
+    <Folder Include="Content\Sounds\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Game.ico" />
+    <None Include="controller.cs" />
+    <None Include="PhoneGameThumb_iPad.png" />
+    <None Include="PhoneGameThumb_iPhone.png" />
+    <None Include="PhoneGameThumb.png" />
+    <None Include="Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="IntroLayer.cs" />
+    <Compile Include="TheLevel.cs" />
+    <Compile Include="GameData.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="GroundPlane.cs" />
+    <Compile Include="BodyNode.cs" />
+    <Compile Include="StartPlatform.cs" />
+    <Compile Include="Ninja.cs" />
+    <Compile Include="ContactListener.cs" />
+    <Compile Include="TheStack.cs" />
+    <Compile Include="StackObject.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="CustomAnimation.cs" />
+    <Compile Include="TheMenu.cs" />
+    <Compile Include="GameSounds.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="GameThumbnail.png">
+      <DependentUpon>Info.plist</DependentUpon>
+    </BundleResource>
+    <BundleResource Include="Default-568h%402x.png" />
+    <BundleResource Include="Default-Portrait%402x~ipad.png" />
+    <BundleResource Include="Default-Portrait~ipad.png" />
+    <BundleResource Include="Default%402x.png" />
+    <BundleResource Include="Icon-144.png" />
+    <BundleResource Include="Default-Landscape%402x~ipad.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default-Landscape~ipad.png" />
+    <BundleResource Include="Resources\Icon-144.png" />
+    <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="Resources\Icon-72.png" />
+    <BundleResource Include="Resources\Default_ipad.png" />
+    <BundleResource Include="Resources\Default_hd.png" />
+    <BundleResource Include="Resources\Default-Landscape.png" />
+    <BundleResource Include="Content\IntroLayer-hd.png" />
+    <BundleResource Include="Content\IntroLayer.png" />
+    <BundleResource Include="Content\IntroLayer-ipadhd.png" />
+    <BundleResource Include="Content\IntroLayer-ipad.png" />
+    <BundleResource Include="Content\blocks.png" />
+    <BundleResource Include="Content\fps_images-hd.png" />
+    <BundleResource Include="Content\fps_images-ipadhd.png" />
+    <BundleResource Include="Content\fps_images.png" />
+    <BundleResource Include="Content\Default.png" />
+    <BundleResource Include="Content\Default-Landscape~ipad.png" />
+    <BundleResource Include="Content\menu_background-ipad-hd.png" />
+    <BundleResource Include="Content\ground_plane-hd.png" />
+    <BundleResource Include="Content\background_hills-hd.png" />
+    <BundleResource Include="Content\background_clouds-hd.png" />
+    <BundleResource Include="Content\Icon-144.png" />
+    <BundleResource Include="Content\levelButton8_locked-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton8-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton9_locked-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton9-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton7_locked-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton6_locked-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton7-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton5_locked-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton6-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton4_locked-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton5-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton4-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton3_locked-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton3-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton2_locked-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton2-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton10_locked-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton1-ipad-hd.png" />
+    <BundleResource Include="Content\levelButton10-ipad-hd.png" />
+    <BundleResource Include="Content\ambientFX_dim-ipad-hd.png" />
+    <BundleResource Include="Content\ambientFX-ipad-hd.png" />
+    <BundleResource Include="Content\grid_example.png" />
+    <BundleResource Include="Content\Icon.png" />
+    <BundleResource Include="Content\Icon%402x.png" />
+    <BundleResource Include="Content\Icon-72.png" />
+    <BundleResource Include="Content\Default_ipad.png" />
+    <BundleResource Include="Content\Default_hd.png" />
+    <BundleResource Include="Content\menu_background.png" />
+    <BundleResource Include="Content\menu_background-hd.png" />
+    <BundleResource Include="Content\ambientFX.png" />
+    <BundleResource Include="Content\ambientFX_dim.png" />
+    <BundleResource Include="Content\menu_background-ipad.png" />
+    <BundleResource Include="Content\ambientFX_dim-hd.png" />
+    <BundleResource Include="Content\ambientFX_dim-ipad.png" />
+    <BundleResource Include="Content\ambientFX-hd.png" />
+    <BundleResource Include="Content\ambientFX-ipad.png" />
+    <BundleResource Include="Content\soundFX_dim-hd.png" />
+    <BundleResource Include="Content\soundFX_dim-ipad.png" />
+    <BundleResource Include="Content\soundFX-hd.png" />
+    <BundleResource Include="Content\soundFX-ipad.png" />
+    <BundleResource Include="Content\voiceFX_dim-hd.png" />
+    <BundleResource Include="Content\voiceFX_dim-ipad.png" />
+    <BundleResource Include="Content\voiceFX-hd.png" />
+    <BundleResource Include="Content\voiceFX-ipad.png" />
+    <BundleResource Include="Content\gameMenu.png" />
+    <BundleResource Include="Content\gameMenu-hd.png" />
+    <BundleResource Include="Content\gameMenu-ipad.png" />
+    <BundleResource Include="Content\5000points.png" />
+    <BundleResource Include="Content\500points.png" />
+    <BundleResource Include="Content\5000points-hd.png" />
+    <BundleResource Include="Content\500points-hd.png" />
+    <BundleResource Include="Content\levelButton10_locked.png" />
+    <BundleResource Include="Content\levelButton9_locked.png" />
+    <BundleResource Include="Content\levelButton8_locked.png" />
+    <BundleResource Include="Content\levelButton7_locked.png" />
+    <BundleResource Include="Content\levelButton6_locked.png" />
+    <BundleResource Include="Content\levelButton5_locked.png" />
+    <BundleResource Include="Content\levelButton4_locked.png" />
+    <BundleResource Include="Content\levelButton3_locked.png" />
+    <BundleResource Include="Content\levelButton2_locked.png" />
+    <BundleResource Include="Content\levelButton10_locked-hd.png" />
+    <BundleResource Include="Content\levelButton10_locked-ipad.png" />
+    <BundleResource Include="Content\levelButton9_locked-hd.png" />
+    <BundleResource Include="Content\levelButton9_locked-ipad.png" />
+    <BundleResource Include="Content\levelButton8_locked-hd.png" />
+    <BundleResource Include="Content\levelButton8_locked-ipad.png" />
+    <BundleResource Include="Content\levelButton7_locked-hd.png" />
+    <BundleResource Include="Content\levelButton7_locked-ipad.png" />
+    <BundleResource Include="Content\levelButton6_locked-hd.png" />
+    <BundleResource Include="Content\levelButton6_locked-ipad.png" />
+    <BundleResource Include="Content\levelButton5_locked-hd.png" />
+    <BundleResource Include="Content\levelButton5_locked-ipad.png" />
+    <BundleResource Include="Content\levelButton4_locked-hd.png" />
+    <BundleResource Include="Content\levelButton4_locked-ipad.png" />
+    <BundleResource Include="Content\levelButton3_locked-hd.png" />
+    <BundleResource Include="Content\levelButton3_locked-ipad.png" />
+    <BundleResource Include="Content\levelButton2_locked-hd.png" />
+    <BundleResource Include="Content\levelButton2_locked-ipad.png" />
+    <BundleResource Include="Content\levelLocked.png" />
+    <BundleResource Include="Content\levelLocked-hd.png" />
+    <BundleResource Include="Content\levelLocked-ipad.png" />
+    <BundleResource Include="Content\levelButton10.png" />
+    <BundleResource Include="Content\levelButton9.png" />
+    <BundleResource Include="Content\levelButton8.png" />
+    <BundleResource Include="Content\levelButton7.png" />
+    <BundleResource Include="Content\levelButton6.png" />
+    <BundleResource Include="Content\levelButton5.png" />
+    <BundleResource Include="Content\levelButton4.png" />
+    <BundleResource Include="Content\levelButton3.png" />
+    <BundleResource Include="Content\levelButton2.png" />
+    <BundleResource Include="Content\levelButton1.png" />
+    <BundleResource Include="Content\levelButton10-hd.png" />
+    <BundleResource Include="Content\levelButton10-ipad.png" />
+    <BundleResource Include="Content\levelButton9-hd.png" />
+    <BundleResource Include="Content\levelButton9-ipad.png" />
+    <BundleResource Include="Content\levelButton8-hd.png" />
+    <BundleResource Include="Content\levelButton8-ipad.png" />
+    <BundleResource Include="Content\levelButton7-hd.png" />
+    <BundleResource Include="Content\levelButton7-ipad.png" />
+    <BundleResource Include="Content\levelButton6-hd.png" />
+    <BundleResource Include="Content\levelButton6-ipad.png" />
+    <BundleResource Include="Content\levelButton5-hd.png" />
+    <BundleResource Include="Content\levelButton5-ipad.png" />
+    <BundleResource Include="Content\levelButton4-hd.png" />
+    <BundleResource Include="Content\levelButton4-ipad.png" />
+    <BundleResource Include="Content\levelButton3-hd.png" />
+    <BundleResource Include="Content\levelButton3-ipad.png" />
+    <BundleResource Include="Content\levelButton2-hd.png" />
+    <BundleResource Include="Content\levelButton2-ipad.png" />
+    <BundleResource Include="Content\levelButton1-hd.png" />
+    <BundleResource Include="Content\levelButton1-ipad.png" />
+    <BundleResource Include="Content\woodShape4-hd.png" />
+    <BundleResource Include="Content\marbleSquare.png" />
+    <BundleResource Include="Content\woodShape2-hd.png" />
+    <BundleResource Include="Content\woodShape3-hd.png" />
+    <BundleResource Include="Content\stonePillar-hd.png" />
+    <BundleResource Include="Content\marbleSquare-hd.png" />
+    <BundleResource Include="Content\mutantPepper_damage3.png" />
+    <BundleResource Include="Content\mutantPepper_damage2.png" />
+    <BundleResource Include="Content\mutantPepper_damage1.png" />
+    <BundleResource Include="Content\mutantPepper_break0010.png" />
+    <BundleResource Include="Content\mutantPepper_break0009.png" />
+    <BundleResource Include="Content\mutantPepper_break0008.png" />
+    <BundleResource Include="Content\mutantPepper_break0007.png" />
+    <BundleResource Include="Content\mutantPepper_break0006.png" />
+    <BundleResource Include="Content\mutantPepper_break0005.png" />
+    <BundleResource Include="Content\mutantPepper_break0004.png" />
+    <BundleResource Include="Content\mutantPepper_break0003.png" />
+    <BundleResource Include="Content\mutantPepper_break0002.png" />
+    <BundleResource Include="Content\mutantPepper_break0001.png" />
+    <BundleResource Include="Content\mutantPepper_blink.png" />
+    <BundleResource Include="Content\mutantPepper.png" />
+    <BundleResource Include="Content\mutantPepper_break0008-hd.png" />
+    <BundleResource Include="Content\mutantPepper_break0009-hd.png" />
+    <BundleResource Include="Content\mutantPepper_break0010-hd.png" />
+    <BundleResource Include="Content\mutantPepper_break0001-hd.png" />
+    <BundleResource Include="Content\mutantPepper_break0002-hd.png" />
+    <BundleResource Include="Content\mutantPepper_break0003-hd.png" />
+    <BundleResource Include="Content\mutantPepper_break0004-hd.png" />
+    <BundleResource Include="Content\mutantPepper_break0005-hd.png" />
+    <BundleResource Include="Content\mutantPepper_break0006-hd.png" />
+    <BundleResource Include="Content\mutantPepper_break0007-hd.png" />
+    <BundleResource Include="Content\mutantPepper_damage3-hd.png" />
+    <BundleResource Include="Content\mutantPepper_damage2-hd.png" />
+    <BundleResource Include="Content\mutantPepper_damage1-hd.png" />
+    <BundleResource Include="Content\mutantPepper_blink-hd.png" />
+    <BundleResource Include="Content\mutantPepper-hd.png" />
+    <BundleResource Include="Content\ninjaGreen_blink.png" />
+    <BundleResource Include="Content\ninjaRed_blink.png" />
+    <BundleResource Include="Content\ninja_blink.png" />
+    <BundleResource Include="Content\ninjaBrown_blink.png" />
+    <BundleResource Include="Content\ninjaBlue_blink.png" />
+    <BundleResource Include="Content\ninja_blink-hd.png" />
+    <BundleResource Include="Content\ninjaBlue_blink-hd.png" />
+    <BundleResource Include="Content\ninjaBrown_blink-hd.png" />
+    <BundleResource Include="Content\ninjaRed_standing.png" />
+    <BundleResource Include="Content\ninjaRed_blink-hd.png" />
+    <BundleResource Include="Content\ninjaGreen_blink-hd.png" />
+    <BundleResource Include="Content\ninja_roll0003.png" />
+    <BundleResource Include="Content\ninja_roll0002.png" />
+    <BundleResource Include="Content\ninja_roll0001.png" />
+    <BundleResource Include="Content\ninjaBrown_roll0003.png" />
+    <BundleResource Include="Content\ninjaBrown_roll0002.png" />
+    <BundleResource Include="Content\ninjaBrown_roll0001.png" />
+    <BundleResource Include="Content\ninja_roll0003-hd.png" />
+    <BundleResource Include="Content\ninja_roll0002-hd.png" />
+    <BundleResource Include="Content\ninja_roll0001-hd.png" />
+    <BundleResource Include="Content\ninjaBrown_roll0003-hd.png" />
+    <BundleResource Include="Content\ninjaBrown_roll0002-hd.png" />
+    <BundleResource Include="Content\ninjaBrown_roll0001-hd.png" />
+    <BundleResource Include="Content\ninjaBlue_roll0003.png" />
+    <BundleResource Include="Content\ninjaBlue_roll0002.png" />
+    <BundleResource Include="Content\ninjaBlue_roll0001.png" />
+    <BundleResource Include="Content\ninjaBlue_roll0003-hd.png" />
+    <BundleResource Include="Content\ninjaBlue_roll0002-hd.png" />
+    <BundleResource Include="Content\ninjaBlue_roll0001-hd.png" />
+    <BundleResource Include="Content\ninjaRed_roll0003.png" />
+    <BundleResource Include="Content\ninjaRed_roll0002.png" />
+    <BundleResource Include="Content\ninjaRed_roll0001.png" />
+    <BundleResource Include="Content\ninjaRed_roll0003-hd.png" />
+    <BundleResource Include="Content\ninjaRed_roll0002-hd.png" />
+    <BundleResource Include="Content\ninjaRed_roll0001-hd.png" />
+    <BundleResource Include="Content\ninjaGreen_roll0003.png" />
+    <BundleResource Include="Content\ninjaGreen_roll0002.png" />
+    <BundleResource Include="Content\ninjaGreen_roll0001.png" />
+    <BundleResource Include="Content\ninjaGreen_roll0003-hd.png" />
+    <BundleResource Include="Content\ninjaGreen_roll0001-hd.png" />
+    <BundleResource Include="Content\ninjaGreen_roll0002-hd.png" />
+    <BundleResource Include="Content\explosion_0011.png" />
+    <BundleResource Include="Content\explosion_0010.png" />
+    <BundleResource Include="Content\explosion_0009.png" />
+    <BundleResource Include="Content\explosion_0008.png" />
+    <BundleResource Include="Content\explosion_0007.png" />
+    <BundleResource Include="Content\explosion_0006.png" />
+    <BundleResource Include="Content\explosion_0005.png" />
+    <BundleResource Include="Content\explosion_0004.png" />
+    <BundleResource Include="Content\explosion_0003.png" />
+    <BundleResource Include="Content\explosion_0002.png" />
+    <BundleResource Include="Content\explosion_0001.png" />
+    <BundleResource Include="Content\explosion_0005-hd.png" />
+    <BundleResource Include="Content\explosion_0006-hd.png" />
+    <BundleResource Include="Content\explosion_0007-hd.png" />
+    <BundleResource Include="Content\explosion_0008-hd.png" />
+    <BundleResource Include="Content\explosion_0009-hd.png" />
+    <BundleResource Include="Content\explosion_0010-hd.png" />
+    <BundleResource Include="Content\explosion_0011-hd.png" />
+    <BundleResource Include="Content\explosion_0001-hd.png" />
+    <BundleResource Include="Content\explosion_0002-hd.png" />
+    <BundleResource Include="Content\explosion_0003-hd.png" />
+    <BundleResource Include="Content\explosion_0004-hd.png" />
+    <BundleResource Include="Content\puffs_0005-hd.png" />
+    <BundleResource Include="Content\puffs_0006-hd.png" />
+    <BundleResource Include="Content\puffs_0007-hd.png" />
+    <BundleResource Include="Content\puffs_0001-hd.png" />
+    <BundleResource Include="Content\puffs_0002-hd.png" />
+    <BundleResource Include="Content\puffs_0003-hd.png" />
+    <BundleResource Include="Content\puffs_0004-hd.png" />
+    <BundleResource Include="Content\10000points.png" />
+    <BundleResource Include="Content\1000points.png" />
+    <BundleResource Include="Content\100points.png" />
+    <BundleResource Include="Content\10000points-hd.png" />
+    <BundleResource Include="Content\1000points-hd.png" />
+    <BundleResource Include="Content\100points-hd.png" />
+    <BundleResource Include="Content\woodShape1_0006-hd.png" />
+    <BundleResource Include="Content\woodShape1_0007-hd.png" />
+    <BundleResource Include="Content\woodShape1_0008-hd.png" />
+    <BundleResource Include="Content\woodShape1_0009-hd.png" />
+    <BundleResource Include="Content\woodShape1_0010-hd.png" />
+    <BundleResource Include="Content\woodShape1_0003-hd.png" />
+    <BundleResource Include="Content\woodShape1_0004-hd.png" />
+    <BundleResource Include="Content\woodShape1_0005-hd.png" />
+    <BundleResource Include="Content\woodShape1_0001-hd.png" />
+    <BundleResource Include="Content\woodShape1_0002-hd.png" />
+    <BundleResource Include="Content\ninjaGreen_air.png" />
+    <BundleResource Include="Content\ninjaGreen_in_sling.png" />
+    <BundleResource Include="Content\ninjaGreen_on_ground.png" />
+    <BundleResource Include="Content\ninjaGreen_roll.png" />
+    <BundleResource Include="Content\ninjaGreen_standing.png" />
+    <BundleResource Include="Content\ninjaGreen_standing-hd.png" />
+    <BundleResource Include="Content\ninjaGreen_air-hd.png" />
+    <BundleResource Include="Content\ninjaGreen_on_ground-hd.png" />
+    <BundleResource Include="Content\ninjaGreen_in_sling-hd.png" />
+    <BundleResource Include="Content\ninjaGreen_roll-hd.png" />
+    <BundleResource Include="Content\ninja_roll.png" />
+    <BundleResource Include="Content\ninja_roll-hd.png" />
+    <BundleResource Include="Content\ninjaBrown_standing.png" />
+    <BundleResource Include="Content\ninjaBrown_roll.png" />
+    <BundleResource Include="Content\ninjaBrown_on_ground.png" />
+    <BundleResource Include="Content\ninjaBrown_in_sling.png" />
+    <BundleResource Include="Content\ninjaBrown_air.png" />
+    <BundleResource Include="Content\ninjaBrown_air-hd.png" />
+    <BundleResource Include="Content\ninjaBrown_on_ground-hd.png" />
+    <BundleResource Include="Content\ninjaBrown_roll-hd.png" />
+    <BundleResource Include="Content\ninjaBrown_standing-hd.png" />
+    <BundleResource Include="Content\ninjaBrown_in_sling-hd.png" />
+    <BundleResource Include="Content\ninjaBlue_standing.png" />
+    <BundleResource Include="Content\ninjaBlue_roll.png" />
+    <BundleResource Include="Content\ninjaBlue_on_ground.png" />
+    <BundleResource Include="Content\ninjaBlue_in_sling.png" />
+    <BundleResource Include="Content\ninjaBlue_air.png" />
+    <BundleResource Include="Content\ninjaBlue_in_sling-hd.png" />
+    <BundleResource Include="Content\ninjaBlue_air-hd.png" />
+    <BundleResource Include="Content\ninjaBlue_on_ground-hd.png" />
+    <BundleResource Include="Content\ninjaBlue_roll-hd.png" />
+    <BundleResource Include="Content\ninjaBlue_standing-hd.png" />
+    <BundleResource Include="Content\ninjaRed_roll.png" />
+    <BundleResource Include="Content\ninjaRed_in_sling.png" />
+    <BundleResource Include="Content\ninjaRed_air.png" />
+    <BundleResource Include="Content\ninjaRed_in_sling-hd.png" />
+    <BundleResource Include="Content\ninjaRed_air-hd.png" />
+    <BundleResource Include="Content\ninjaRed_roll-hd.png" />
+    <BundleResource Include="Content\ninjaRed_on_ground.png" />
+    <BundleResource Include="Content\ninjaRed_on_ground-hd.png" />
+    <BundleResource Include="Content\pentagon-hd.png" />
+    <BundleResource Include="Content\parallelogram2-hd.png" />
+    <BundleResource Include="Content\parallelogram-hd.png" />
+    <BundleResource Include="Content\octogonShape-hd.png" />
+    <BundleResource Include="Content\trapezoid2-hd.png" />
+    <BundleResource Include="Content\trapezoid-hd.png" />
+    <BundleResource Include="Content\triangleRightAngle-hd.png" />
+    <BundleResource Include="Content\triangleTall-hd.png" />
+    <BundleResource Include="Content\triangleSmall-hd.png" />
+    <BundleResource Include="Content\triangleLarge-hd.png" />
+    <BundleResource Include="Content\hexagonShape2.png" />
+    <BundleResource Include="Content\hexagonShape2-hd.png" />
+    <BundleResource Include="Content\hexagonShape.png" />
+    <BundleResource Include="Content\hexagonShape-hd.png" />
+    <BundleResource Include="Content\circleShape.png" />
+    <BundleResource Include="Content\circleShape-hd.png" />
+    <BundleResource Include="Content\triangleMedium-hd.png" />
+    <BundleResource Include="Content\ninja_on_ground.png" />
+    <BundleResource Include="Content\ninja_standing.png" />
+    <BundleResource Include="Content\ninja_standing-hd.png" />
+    <BundleResource Include="Content\ninja_on_ground-hd.png" />
+    <BundleResource Include="Content\ninja_in_sling.png" />
+    <BundleResource Include="Content\ninja_air.png" />
+    <BundleResource Include="Content\ninja_air-hd.png" />
+    <BundleResource Include="Content\ninja_in_sling-hd.png" />
+    <BundleResource Include="Content\woodShape1-hd.png" />
+    <BundleResource Include="Content\ground_plane.png" />
+    <BundleResource Include="Content\background_hills.png" />
+    <BundleResource Include="Content\background_clouds.png" />
+    <BundleResource Include="Content\strapEmpty-hd.png" />
+    <BundleResource Include="Content\strapBack-hd.png" />
+    <BundleResource Include="Content\strap-hd.png" />
+    <BundleResource Include="Content\circle.png" />
+    <BundleResource Include="Content\circle-hd.png" />
+    <BundleResource Include="Content\slingshot_front-hd.png" />
+    <BundleResource Include="Content\platform-hd.png" />
+    <BundleResource Include="Content\blocks-ipad.png" />
+    <BundleResource Include="Content\fire.png" />
+    <BundleResource Include="Content\Icon-Small-50.png" />
+    <BundleResource Include="Content\Icon-Small.png" />
+    <BundleResource Include="Content\Icon-Small%402x.png" />
+    <BundleResource Include="Content\slingshot_front.png" />
+    <BundleResource Include="Content\strap.png" />
+    <BundleResource Include="Content\strapBack.png" />
+    <BundleResource Include="Content\strapEmpty.png" />
+    <BundleResource Include="Content\platform.png" />
+    <BundleResource Include="Content\woodShape1.png" />
+    <BundleResource Include="Content\woodShape1_0001.png" />
+    <BundleResource Include="Content\woodShape1_0002.png" />
+    <BundleResource Include="Content\woodShape1_0003.png" />
+    <BundleResource Include="Content\woodShape1_0004.png" />
+    <BundleResource Include="Content\woodShape1_0005.png" />
+    <BundleResource Include="Content\woodShape1_0006.png" />
+    <BundleResource Include="Content\woodShape1_0007.png" />
+    <BundleResource Include="Content\woodShape1_0008.png" />
+    <BundleResource Include="Content\woodShape1_0009.png" />
+    <BundleResource Include="Content\woodShape1_0010.png" />
+    <BundleResource Include="Content\woodShape2.png" />
+    <BundleResource Include="Content\woodShape3.png" />
+    <BundleResource Include="Content\woodShape4.png" />
+    <BundleResource Include="Content\triangleMedium.png" />
+    <BundleResource Include="Content\triangleLarge.png" />
+    <BundleResource Include="Content\triangleSmall.png" />
+    <BundleResource Include="Content\triangleTall.png" />
+    <BundleResource Include="Content\triangleRightAngle.png" />
+    <BundleResource Include="Content\trapezoid.png" />
+    <BundleResource Include="Content\trapezoid2.png" />
+    <BundleResource Include="Content\octogonShape.png" />
+    <BundleResource Include="Content\parallelogram.png" />
+    <BundleResource Include="Content\parallelogram2.png" />
+    <BundleResource Include="Content\pentagon.png" />
+    <BundleResource Include="Content\puffs_0001.png" />
+    <BundleResource Include="Content\puffs_0002.png" />
+    <BundleResource Include="Content\puffs_0003.png" />
+    <BundleResource Include="Content\puffs_0004.png" />
+    <BundleResource Include="Content\puffs_0005.png" />
+    <BundleResource Include="Content\puffs_0006.png" />
+    <BundleResource Include="Content\puffs_0007.png" />
+    <BundleResource Include="Content\soundFX.png" />
+    <BundleResource Include="Content\soundFX_dim.png" />
+    <BundleResource Include="Content\soundFX_dim-ipad-hd.png" />
+    <BundleResource Include="Content\soundFX-ipad-hd.png" />
+    <BundleResource Include="Content\voiceFX.png" />
+    <BundleResource Include="Content\voiceFX_dim.png" />
+    <BundleResource Include="Content\voiceFX_dim-ipad-hd.png" />
+    <BundleResource Include="Content\voiceFX-ipad-hd.png" />
+    <BundleResource Include="Content\Sounds\bloop.mp3" />
+    <BundleResource Include="Content\Sounds\gong.mp3" />
+    <BundleResource Include="Content\Sounds\impact1.mp3" />
+    <BundleResource Include="Content\Sounds\impact2.mp3" />
+    <BundleResource Include="Content\Sounds\impact3.mp3" />
+    <BundleResource Include="Content\Sounds\impact4.mp3" />
+    <BundleResource Include="Content\Sounds\impact5.mp3" />
+    <BundleResource Include="Content\Sounds\birds.mp3" />
+    <BundleResource Include="Content\Sounds\frogs.mp3" />
+    <BundleResource Include="Content\Sounds\whoosh.mp3" />
+    <BundleResource Include="Content\Sounds\drums.mp3" />
+    <BundleResource Include="Content\Sounds\grunt8.mp3" />
+    <BundleResource Include="Content\Sounds\grunt7.mp3" />
+    <BundleResource Include="Content\Sounds\grunt6.mp3" />
+    <BundleResource Include="Content\Sounds\grunt3.mp3" />
+    <BundleResource Include="Content\Sounds\grunt4.mp3" />
+    <BundleResource Include="Content\Sounds\grunt5.mp3" />
+    <BundleResource Include="Content\Sounds\grunt2.mp3" />
+    <BundleResource Include="Content\Sounds\grunt1.mp3" />
+    <BundleResource Include="Content\Sounds\break1.mp3" />
+    <BundleResource Include="Content\Sounds\break2.mp3" />
+    <BundleResource Include="Content\Sounds\break3.mp3" />
+    <BundleResource Include="Icon-Small-50.png" />
+    <BundleResource Include="Icon-Small.png" />
+    <BundleResource Include="Icon-Small%402x.png" />
+    <BundleResource Include="Content\fonts\MarkerFelt-16.xnb" />
+    <BundleResource Include="Content\fonts\MarkerFelt-22.xnb" />
+    <BundleResource Include="Content\fonts\MarkerFelt-18.xnb" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="Resources\iTunesArtwork" />
+    <ITunesArtwork Include="Content\iTunesArtwork" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\cocos2d-xna\cocos2d\cocos2d.iOS.csproj">
+      <Project>{A83510D8-7AED-411E-9616-DCFEA180969E}</Project>
+      <Name>cocos2d.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.iOS.csproj">
+      <Project>{DB8508BB-9849-4CC2-BC0F-8EB5DACB3C47}</Project>
+      <Name>MonoGame.Framework.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\cocos2d-xna\box2d\box2d.iOS.csproj">
+      <Project>{7877D4F9-F781-465A-9C1F-D113F246A994}</Project>
+      <Name>box2d.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

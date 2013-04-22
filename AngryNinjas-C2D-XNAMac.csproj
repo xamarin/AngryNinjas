@@ -1,0 +1,1350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF1F2B39-3C06-467F-BCD8-579626640482}</ProjectGuid>
+    <ProjectTypeGuids>{948B3504-5B70-4649-8FE4-BDE1FB46EC69};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AngryNinjas</RootNamespace>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <AssemblyName>AngryNinjas-C2D-XNAMac</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG; MONOMAC</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>false</UseSGen>
+    <PlatformTarget>x86</PlatformTarget>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <ConsolePause>false</ConsolePause>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <CreatePackage>false</CreatePackage>
+    <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <StartupObject>AngryNinjas.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseSGen>false</UseSGen>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <PlatformTarget>x86</PlatformTarget>
+    <LinkMode>Full</LinkMode>
+    <EnableCodeSigning>true</EnableCodeSigning>
+    <ConsolePause>false</ConsolePause>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <CreatePackage>true</CreatePackage>
+    <CodeSigningKey>Developer ID Application</CodeSigningKey>
+    <StartupObject>AngryNinjas.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseSGen>false</UseSGen>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <PlatformTarget>x86</PlatformTarget>
+    <LinkMode>Full</LinkMode>
+    <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
+    <EnableCodeSigning>true</EnableCodeSigning>
+    <ConsolePause>false</ConsolePause>
+    <EnablePackageSigning>true</EnablePackageSigning>
+    <CreatePackage>true</CreatePackage>
+    <CodeSigningKey>3rd Party Mac Developer Application</CodeSigningKey>
+    <StartupObject>AngryNinjas.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="MonoMac" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="AngryNinjas\" />
+    <Folder Include="AngryNinjas\Content\" />
+    <Folder Include="AngryNinjas\Content\fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AngryNinjas\Background.png" />
+    <None Include="AngryNinjas\Default-568h%402x.png" />
+    <None Include="AngryNinjas\Default-Landscape%402x~ipad.png" />
+    <None Include="AngryNinjas\Default-Portrait%402x~ipad.png" />
+    <None Include="AngryNinjas\Default-Portrait~ipad.png" />
+    <None Include="AngryNinjas\Default%402x.png" />
+    <None Include="AngryNinjas\Game.ico" />
+    <None Include="AngryNinjas\GameThumbnail.png" />
+    <None Include="AngryNinjas\Icon-144.png" />
+    <None Include="AngryNinjas\PhoneGameThumb.png" />
+    <None Include="AngryNinjas\PhoneGameThumb_iPad.png" />
+    <None Include="AngryNinjas\PhoneGameThumb_iPhone.png" />
+    <None Include="AngryNinjas\Resources\Default-Landscape.png" />
+    <None Include="AngryNinjas\Resources\Default-Landscape~ipad.png" />
+    <None Include="AngryNinjas\Resources\Default.png" />
+    <None Include="AngryNinjas\Resources\Default_hd.png" />
+    <None Include="AngryNinjas\Resources\Default_ipad.png" />
+    <None Include="AngryNinjas\Resources\Icon-144.png" />
+    <None Include="AngryNinjas\Resources\Icon-72.png" />
+    <None Include="AngryNinjas\Resources\Icon.png" />
+    <None Include="AngryNinjas\Resources\Icon%402x.png" />
+    <None Include="AngryNinjas\Resources\iTunesArtwork" />
+    <None Include="Info.Mac.plist" />
+    <None Include="Info.plist" />
+    <None Include="AngryNinjas\Assets\Content\levelLocked-hd.xnb">
+      <Link>AngryNinjas\Content\levelLocked-hd.xnb</Link>
+    </None>
+    <None Include="AngryNinjas\Assets\Content\levelLocked-ipad.xnb">
+      <Link>AngryNinjas\Content\levelLocked-ipad.xnb</Link>
+    </None>
+    <None Include="AngryNinjas\Assets\Content\levelLocked.xnb">
+      <Link>AngryNinjas\Content\levelLocked.xnb</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Mono\MonoMac\v0.0\Mono.MonoMac.targets" />
+  <ItemGroup>
+    <Compile Include="AngryNinjas\AppDelegate.cs" />
+    <Compile Include="AngryNinjas\BodyNode.cs" />
+    <Compile Include="AngryNinjas\Constants.cs" />
+    <Compile Include="AngryNinjas\ContactListener.cs" />
+    <Compile Include="AngryNinjas\Game1.cs" />
+    <Compile Include="AngryNinjas\GameData.cs" />
+    <Compile Include="AngryNinjas\GroundPlane.cs" />
+    <Compile Include="AngryNinjas\IntroLayer.cs" />
+    <Compile Include="AngryNinjas\Ninja.cs" />
+    <Compile Include="AngryNinjas\Program.cs" />
+    <Compile Include="AngryNinjas\StackObject.cs" />
+    <Compile Include="AngryNinjas\StartPlatform.cs" />
+    <Compile Include="AngryNinjas\TheLevel.cs" />
+    <Compile Include="AngryNinjas\TheStack.cs" />
+    <Compile Include="AngryNinjas\Enemy.cs" />
+    <Compile Include="AngryNinjas\CustomAnimation.cs" />
+    <Compile Include="AngryNinjas\TheMenu.cs" />
+    <Compile Include="AngryNinjas\GameSounds.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.MacOS.csproj">
+      <Project>{AE483C29-042E-4226-BA52-D247CE7676DA}</Project>
+      <Name>Lidgren.Network.MacOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonoGame\MonoGame.Framework\MonoGame.Framework.MacOS.csproj">
+      <Project>{36C538E6-C32A-4A8D-A39C-566173D7118E}</Project>
+      <Name>MonoGame.Framework.MacOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cocos2d-xna\cocos2d\cocos2d.MacOS.csproj">
+      <Project>{A83510D8-7AED-411E-9616-DCFEA180969E}</Project>
+      <Name>cocos2d.MacOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\birds.mp3">
+      <Link>AngryNinjas\Content\Sounds\birds.mp3</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\bloop.wav">
+      <Link>AngryNinjas\Content\Sounds\bloop.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\break1.wav">
+      <Link>AngryNinjas\Content\Sounds\break1.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\break2.wav">
+      <Link>AngryNinjas\Content\Sounds\break2.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\break3.wav">
+      <Link>AngryNinjas\Content\Sounds\break3.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\drums.wav">
+      <Link>AngryNinjas\Content\Sounds\drums.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\frogs.mp3">
+      <Link>AngryNinjas\Content\Sounds\frogs.mp3</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\gong.wav">
+      <Link>AngryNinjas\Content\Sounds\gong.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\grunt1.wav">
+      <Link>AngryNinjas\Content\Sounds\grunt1.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\grunt2.wav">
+      <Link>AngryNinjas\Content\Sounds\grunt2.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\grunt3.wav">
+      <Link>AngryNinjas\Content\Sounds\grunt3.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\grunt4.wav">
+      <Link>AngryNinjas\Content\Sounds\grunt4.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\grunt5.wav">
+      <Link>AngryNinjas\Content\Sounds\grunt5.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\grunt6.wav">
+      <Link>AngryNinjas\Content\Sounds\grunt6.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\grunt7.wav">
+      <Link>AngryNinjas\Content\Sounds\grunt7.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\grunt8.wav">
+      <Link>AngryNinjas\Content\Sounds\grunt8.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\impact1.wav">
+      <Link>AngryNinjas\Content\Sounds\impact1.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\impact2.wav">
+      <Link>AngryNinjas\Content\Sounds\impact2.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\impact3.wav">
+      <Link>AngryNinjas\Content\Sounds\impact3.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\impact4.wav">
+      <Link>AngryNinjas\Content\Sounds\impact4.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\impact5.wav">
+      <Link>AngryNinjas\Content\Sounds\impact5.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Sounds\whoosh.wav">
+      <Link>AngryNinjas\Content\Sounds\whoosh.wav</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\10000points-hd.xnb">
+      <Link>AngryNinjas\Content\10000points-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\10000points.xnb">
+      <Link>AngryNinjas\Content\10000points.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\1000points-hd.xnb">
+      <Link>AngryNinjas\Content\1000points-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\1000points.xnb">
+      <Link>AngryNinjas\Content\1000points.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\100points-hd.xnb">
+      <Link>AngryNinjas\Content\100points-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\100points.xnb">
+      <Link>AngryNinjas\Content\100points.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\5000points-hd.xnb">
+      <Link>AngryNinjas\Content\5000points-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\5000points.xnb">
+      <Link>AngryNinjas\Content\5000points.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\500points-hd.xnb">
+      <Link>AngryNinjas\Content\500points-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\500points.xnb">
+      <Link>AngryNinjas\Content\500points.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ambientFX-hd.xnb">
+      <Link>AngryNinjas\Content\ambientFX-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ambientFX-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\ambientFX-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ambientFX-ipad.xnb">
+      <Link>AngryNinjas\Content\ambientFX-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ambientFX.xnb">
+      <Link>AngryNinjas\Content\ambientFX.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ambientFX_dim-hd.xnb">
+      <Link>AngryNinjas\Content\ambientFX_dim-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ambientFX_dim-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\ambientFX_dim-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ambientFX_dim-ipad.xnb">
+      <Link>AngryNinjas\Content\ambientFX_dim-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ambientFX_dim.xnb">
+      <Link>AngryNinjas\Content\ambientFX_dim.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\background_clouds-hd.xnb">
+      <Link>AngryNinjas\Content\background_clouds-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\background_clouds.xnb">
+      <Link>AngryNinjas\Content\background_clouds.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\background_hills.xnb">
+      <Link>AngryNinjas\Content\background_hills.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Default-Landscape~ipad.xnb">
+      <Link>AngryNinjas\Content\Default-Landscape~ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Default.xnb">
+      <Link>AngryNinjas\Content\Default.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Default_hd.xnb">
+      <Link>AngryNinjas\Content\Default_hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Default_ipad.xnb">
+      <Link>AngryNinjas\Content\Default_ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\background_hills-hd.xnb">
+      <Link>AngryNinjas\Content\background_hills-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\blocks-ipad.xnb">
+      <Link>AngryNinjas\Content\blocks-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\blocks.xnb">
+      <Link>AngryNinjas\Content\blocks.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\circle-hd.xnb">
+      <Link>AngryNinjas\Content\circle-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\circle.xnb">
+      <Link>AngryNinjas\Content\circle.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\circleShape-hd.xnb">
+      <Link>AngryNinjas\Content\circleShape-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\circleShape.xnb">
+      <Link>AngryNinjas\Content\circleShape.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0001-hd.xnb">
+      <Link>AngryNinjas\Content\explosion_0001-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0001.xnb">
+      <Link>AngryNinjas\Content\explosion_0001.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0002-hd.xnb">
+      <Link>AngryNinjas\Content\explosion_0002-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0002.xnb">
+      <Link>AngryNinjas\Content\explosion_0002.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0003-hd.xnb">
+      <Link>AngryNinjas\Content\explosion_0003-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0003.xnb">
+      <Link>AngryNinjas\Content\explosion_0003.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0004-hd.xnb">
+      <Link>AngryNinjas\Content\explosion_0004-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0004.xnb">
+      <Link>AngryNinjas\Content\explosion_0004.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0005-hd.xnb">
+      <Link>AngryNinjas\Content\explosion_0005-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0005.xnb">
+      <Link>AngryNinjas\Content\explosion_0005.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0006-hd.xnb">
+      <Link>AngryNinjas\Content\explosion_0006-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0006.xnb">
+      <Link>AngryNinjas\Content\explosion_0006.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0007-hd.xnb">
+      <Link>AngryNinjas\Content\explosion_0007-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0007.xnb">
+      <Link>AngryNinjas\Content\explosion_0007.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0008-hd.xnb">
+      <Link>AngryNinjas\Content\explosion_0008-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0008.xnb">
+      <Link>AngryNinjas\Content\explosion_0008.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0009-hd.xnb">
+      <Link>AngryNinjas\Content\explosion_0009-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0009.xnb">
+      <Link>AngryNinjas\Content\explosion_0009.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0010-hd.xnb">
+      <Link>AngryNinjas\Content\explosion_0010-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0010.xnb">
+      <Link>AngryNinjas\Content\explosion_0010.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0011-hd.xnb">
+      <Link>AngryNinjas\Content\explosion_0011-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\explosion_0011.xnb">
+      <Link>AngryNinjas\Content\explosion_0011.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\fire.xnb">
+      <Link>AngryNinjas\Content\fire.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\fps_images-hd.xnb">
+      <Link>AngryNinjas\Content\fps_images-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\fps_images-ipadhd.xnb">
+      <Link>AngryNinjas\Content\fps_images-ipadhd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\fps_images.xnb">
+      <Link>AngryNinjas\Content\fps_images.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\gameMenu-hd.xnb">
+      <Link>AngryNinjas\Content\gameMenu-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\gameMenu-ipad.xnb">
+      <Link>AngryNinjas\Content\gameMenu-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\gameMenu.xnb">
+      <Link>AngryNinjas\Content\gameMenu.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\grid_example.xnb">
+      <Link>AngryNinjas\Content\grid_example.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ground_plane-hd.xnb">
+      <Link>AngryNinjas\Content\ground_plane-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ground_plane.xnb">
+      <Link>AngryNinjas\Content\ground_plane.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\hexagonShape-hd.xnb">
+      <Link>AngryNinjas\Content\hexagonShape-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\hexagonShape.xnb">
+      <Link>AngryNinjas\Content\hexagonShape.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\hexagonShape2-hd.xnb">
+      <Link>AngryNinjas\Content\hexagonShape2-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\hexagonShape2.xnb">
+      <Link>AngryNinjas\Content\hexagonShape2.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Icon-144.xnb">
+      <Link>AngryNinjas\Content\Icon-144.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Icon-72.xnb">
+      <Link>AngryNinjas\Content\Icon-72.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Icon-Small-50.xnb">
+      <Link>AngryNinjas\Content\Icon-Small-50.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Icon-Small.xnb">
+      <Link>AngryNinjas\Content\Icon-Small.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Icon-Small%402x.xnb">
+      <Link>AngryNinjas\Content\Icon-Small%402x.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Icon.xnb">
+      <Link>AngryNinjas\Content\Icon.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\Icon%402x.xnb">
+      <Link>AngryNinjas\Content\Icon%402x.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\IntroLayer-hd.xnb">
+      <Link>AngryNinjas\Content\IntroLayer-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\IntroLayer-ipad.xnb">
+      <Link>AngryNinjas\Content\IntroLayer-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\IntroLayer-ipadhd.xnb">
+      <Link>AngryNinjas\Content\IntroLayer-ipadhd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\IntroLayer.xnb">
+      <Link>AngryNinjas\Content\IntroLayer.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton1-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton1-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton1-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton1-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton1-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton1-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton1.xnb">
+      <Link>AngryNinjas\Content\levelButton1.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton10-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton10-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton10-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton10-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton10-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton10-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton10.xnb">
+      <Link>AngryNinjas\Content\levelButton10.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton10_locked-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton10_locked-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton10_locked-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton10_locked-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton10_locked-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton10_locked-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton10_locked.xnb">
+      <Link>AngryNinjas\Content\levelButton10_locked.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton2-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton2-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton2-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton2-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton2-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton2-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton2.xnb">
+      <Link>AngryNinjas\Content\levelButton2.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton2_locked-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton2_locked-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton2_locked-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton2_locked-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton2_locked-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton2_locked-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton2_locked.xnb">
+      <Link>AngryNinjas\Content\levelButton2_locked.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton3-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton3-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton3-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton3-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton3-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton3-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton3.xnb">
+      <Link>AngryNinjas\Content\levelButton3.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton3_locked-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton3_locked-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton3_locked-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton3_locked-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton3_locked-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton3_locked-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton3_locked.xnb">
+      <Link>AngryNinjas\Content\levelButton3_locked.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton4-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton4-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton4-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton4-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton4-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton4-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton4.xnb">
+      <Link>AngryNinjas\Content\levelButton4.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton4_locked-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton4_locked-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton4_locked-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton4_locked-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton4_locked-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton4_locked-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton4_locked.xnb">
+      <Link>AngryNinjas\Content\levelButton4_locked.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton5-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton5-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton5-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton5-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton5-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton5-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton5.xnb">
+      <Link>AngryNinjas\Content\levelButton5.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton5_locked-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton5_locked-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton5_locked-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton5_locked-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton5_locked-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton5_locked-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton5_locked.xnb">
+      <Link>AngryNinjas\Content\levelButton5_locked.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton6-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton6-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton6-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton6-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton6-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton6-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton6.xnb">
+      <Link>AngryNinjas\Content\levelButton6.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton6_locked-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton6_locked-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton6_locked-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton6_locked-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton6_locked-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton6_locked-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton6_locked.xnb">
+      <Link>AngryNinjas\Content\levelButton6_locked.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton7-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton7-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton7-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton7-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton7-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton7-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton7.xnb">
+      <Link>AngryNinjas\Content\levelButton7.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton7_locked-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton7_locked-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton7_locked-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton7_locked-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton7_locked-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton7_locked-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton7_locked.xnb">
+      <Link>AngryNinjas\Content\levelButton7_locked.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton8-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton8-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton8-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton8-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton8-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton8-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton8.xnb">
+      <Link>AngryNinjas\Content\levelButton8.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton8_locked-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton8_locked-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton8_locked-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton8_locked-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton8_locked-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton8_locked-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton8_locked.xnb">
+      <Link>AngryNinjas\Content\levelButton8_locked.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton9-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton9-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton9-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton9-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton9-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton9-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton9.xnb">
+      <Link>AngryNinjas\Content\levelButton9.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton9_locked-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton9_locked-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton9_locked-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\levelButton9_locked-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton9_locked-ipad.xnb">
+      <Link>AngryNinjas\Content\levelButton9_locked-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\levelButton9_locked.xnb">
+      <Link>AngryNinjas\Content\levelButton9_locked.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\marbleSquare-hd.xnb">
+      <Link>AngryNinjas\Content\marbleSquare-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\marbleSquare.xnb">
+      <Link>AngryNinjas\Content\marbleSquare.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\menu_background-hd.xnb">
+      <Link>AngryNinjas\Content\menu_background-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\menu_background-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\menu_background-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\menu_background-ipad.xnb">
+      <Link>AngryNinjas\Content\menu_background-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\menu_background.xnb">
+      <Link>AngryNinjas\Content\menu_background.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper.xnb">
+      <Link>AngryNinjas\Content\mutantPepper.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_blink-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_blink-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_blink.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_blink.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0001-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0001-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0001.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0001.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0002-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0002-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0002.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0002.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0003-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0003-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0003.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0003.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0004-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0004-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0004.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0004.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0005-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0005-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0005.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0005.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0006-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0006-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0006.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0006.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0007-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0007-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0007.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0007.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0008-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0008-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0008.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0008.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0009-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0009-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0009.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0009.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0010-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0010-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_break0010.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_break0010.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_damage1-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_damage1-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_damage1.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_damage1.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_damage2-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_damage2-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_damage2.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_damage2.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_damage3-hd.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_damage3-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\mutantPepper_damage3.xnb">
+      <Link>AngryNinjas\Content\mutantPepper_damage3.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_air-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_air-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_air.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_air.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_blink-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_blink-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_blink.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_blink.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_in_sling-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_in_sling-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_in_sling.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_in_sling.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_on_ground-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_on_ground-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_on_ground.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_on_ground.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_roll-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_roll-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_roll.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_roll.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_roll0001-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_roll0001-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_roll0001.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_roll0001.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_roll0002-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_roll0002-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_roll0002.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_roll0002.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_roll0003-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_roll0003-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_roll0003.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_roll0003.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_standing-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_standing-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBlue_standing.xnb">
+      <Link>AngryNinjas\Content\ninjaBlue_standing.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_air-hd.xnb">
+      <Link>AngryNinjas\Content\ninja_air-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_air.xnb">
+      <Link>AngryNinjas\Content\ninja_air.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_blink-hd.xnb">
+      <Link>AngryNinjas\Content\ninja_blink-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_blink.xnb">
+      <Link>AngryNinjas\Content\ninja_blink.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_in_sling-hd.xnb">
+      <Link>AngryNinjas\Content\ninja_in_sling-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_in_sling.xnb">
+      <Link>AngryNinjas\Content\ninja_in_sling.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_on_ground-hd.xnb">
+      <Link>AngryNinjas\Content\ninja_on_ground-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_on_ground.xnb">
+      <Link>AngryNinjas\Content\ninja_on_ground.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_roll-hd.xnb">
+      <Link>AngryNinjas\Content\ninja_roll-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_roll.xnb">
+      <Link>AngryNinjas\Content\ninja_roll.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_roll0001-hd.xnb">
+      <Link>AngryNinjas\Content\ninja_roll0001-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_roll0001.xnb">
+      <Link>AngryNinjas\Content\ninja_roll0001.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_roll0002-hd.xnb">
+      <Link>AngryNinjas\Content\ninja_roll0002-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_roll0002.xnb">
+      <Link>AngryNinjas\Content\ninja_roll0002.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_roll0003-hd.xnb">
+      <Link>AngryNinjas\Content\ninja_roll0003-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_roll0003.xnb">
+      <Link>AngryNinjas\Content\ninja_roll0003.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_standing-hd.xnb">
+      <Link>AngryNinjas\Content\ninja_standing-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninja_standing.xnb">
+      <Link>AngryNinjas\Content\ninja_standing.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_air-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_air-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_air.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_air.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_blink-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_blink-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_blink.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_blink.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_in_sling-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_in_sling-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_in_sling.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_in_sling.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_on_ground-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_on_ground-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_on_ground.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_on_ground.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_roll-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_roll-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_roll.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_roll.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_roll0001-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_roll0001-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_roll0001.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_roll0001.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_roll0002-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_roll0002-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_roll0002.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_roll0002.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_roll0003-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_roll0003-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_roll0003.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_roll0003.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_standing-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_standing-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaBrown_standing.xnb">
+      <Link>AngryNinjas\Content\ninjaBrown_standing.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_air-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_air-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_air.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_air.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_blink-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_blink-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_blink.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_blink.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_in_sling-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_in_sling-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_in_sling.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_in_sling.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_on_ground-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_on_ground-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_on_ground.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_on_ground.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_roll-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_roll-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_roll.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_roll.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_roll0001-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_roll0001-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_roll0001.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_roll0001.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_roll0002-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_roll0002-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_roll0002.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_roll0002.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_roll0003-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_roll0003-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_roll0003.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_roll0003.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_standing-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_standing-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaGreen_standing.xnb">
+      <Link>AngryNinjas\Content\ninjaGreen_standing.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_air-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_air-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_air.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_air.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_blink-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_blink-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_blink.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_blink.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_in_sling-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_in_sling-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_in_sling.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_in_sling.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_on_ground-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_on_ground-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_on_ground.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_on_ground.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_roll-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_roll-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_roll.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_roll.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_roll0001-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_roll0001-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_roll0001.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_roll0001.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_roll0002-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_roll0002-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_roll0002.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_roll0002.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_roll0003-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_roll0003-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_roll0003.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_roll0003.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_standing-hd.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_standing-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\ninjaRed_standing.xnb">
+      <Link>AngryNinjas\Content\ninjaRed_standing.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\octogonShape-hd.xnb">
+      <Link>AngryNinjas\Content\octogonShape-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\octogonShape.xnb">
+      <Link>AngryNinjas\Content\octogonShape.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\parallelogram-hd.xnb">
+      <Link>AngryNinjas\Content\parallelogram-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\parallelogram.xnb">
+      <Link>AngryNinjas\Content\parallelogram.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\parallelogram2-hd.xnb">
+      <Link>AngryNinjas\Content\parallelogram2-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\parallelogram2.xnb">
+      <Link>AngryNinjas\Content\parallelogram2.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\pentagon-hd.xnb">
+      <Link>AngryNinjas\Content\pentagon-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\pentagon.xnb">
+      <Link>AngryNinjas\Content\pentagon.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\platform-hd.xnb">
+      <Link>AngryNinjas\Content\platform-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\platform.xnb">
+      <Link>AngryNinjas\Content\platform.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0001-hd.xnb">
+      <Link>AngryNinjas\Content\puffs_0001-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0001.xnb">
+      <Link>AngryNinjas\Content\puffs_0001.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0002-hd.xnb">
+      <Link>AngryNinjas\Content\puffs_0002-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0002.xnb">
+      <Link>AngryNinjas\Content\puffs_0002.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0003-hd.xnb">
+      <Link>AngryNinjas\Content\puffs_0003-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0003.xnb">
+      <Link>AngryNinjas\Content\puffs_0003.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0004-hd.xnb">
+      <Link>AngryNinjas\Content\puffs_0004-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0004.xnb">
+      <Link>AngryNinjas\Content\puffs_0004.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0005-hd.xnb">
+      <Link>AngryNinjas\Content\puffs_0005-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0005.xnb">
+      <Link>AngryNinjas\Content\puffs_0005.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0006-hd.xnb">
+      <Link>AngryNinjas\Content\puffs_0006-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0006.xnb">
+      <Link>AngryNinjas\Content\puffs_0006.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0007-hd.xnb">
+      <Link>AngryNinjas\Content\puffs_0007-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\puffs_0007.xnb">
+      <Link>AngryNinjas\Content\puffs_0007.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\slingshot_front-hd.xnb">
+      <Link>AngryNinjas\Content\slingshot_front-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\slingshot_front.xnb">
+      <Link>AngryNinjas\Content\slingshot_front.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\soundFX-hd.xnb">
+      <Link>AngryNinjas\Content\soundFX-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\soundFX-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\soundFX-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\soundFX-ipad.xnb">
+      <Link>AngryNinjas\Content\soundFX-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\soundFX.xnb">
+      <Link>AngryNinjas\Content\soundFX.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\soundFX_dim-hd.xnb">
+      <Link>AngryNinjas\Content\soundFX_dim-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\soundFX_dim-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\soundFX_dim-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\soundFX_dim-ipad.xnb">
+      <Link>AngryNinjas\Content\soundFX_dim-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\soundFX_dim.xnb">
+      <Link>AngryNinjas\Content\soundFX_dim.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\stonePillar-hd.xnb">
+      <Link>AngryNinjas\Content\stonePillar-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\stonePillar.xnb">
+      <Link>AngryNinjas\Content\stonePillar.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\strap-hd.xnb">
+      <Link>AngryNinjas\Content\strap-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\strap.xnb">
+      <Link>AngryNinjas\Content\strap.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\strapBack-hd.xnb">
+      <Link>AngryNinjas\Content\strapBack-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\strapBack.xnb">
+      <Link>AngryNinjas\Content\strapBack.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\strapEmpty-hd.xnb">
+      <Link>AngryNinjas\Content\strapEmpty-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\strapEmpty.xnb">
+      <Link>AngryNinjas\Content\strapEmpty.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\trapezoid-hd.xnb">
+      <Link>AngryNinjas\Content\trapezoid-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\trapezoid.xnb">
+      <Link>AngryNinjas\Content\trapezoid.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\trapezoid2-hd.xnb">
+      <Link>AngryNinjas\Content\trapezoid2-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\trapezoid2.xnb">
+      <Link>AngryNinjas\Content\trapezoid2.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\triangleLarge-hd.xnb">
+      <Link>AngryNinjas\Content\triangleLarge-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\triangleLarge.xnb">
+      <Link>AngryNinjas\Content\triangleLarge.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\triangleMedium-hd.xnb">
+      <Link>AngryNinjas\Content\triangleMedium-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\triangleMedium.xnb">
+      <Link>AngryNinjas\Content\triangleMedium.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\triangleRightAngle-hd.xnb">
+      <Link>AngryNinjas\Content\triangleRightAngle-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\triangleRightAngle.xnb">
+      <Link>AngryNinjas\Content\triangleRightAngle.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\triangleSmall-hd.xnb">
+      <Link>AngryNinjas\Content\triangleSmall-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\triangleSmall.xnb">
+      <Link>AngryNinjas\Content\triangleSmall.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\triangleTall-hd.xnb">
+      <Link>AngryNinjas\Content\triangleTall-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\triangleTall.xnb">
+      <Link>AngryNinjas\Content\triangleTall.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\voiceFX-hd.xnb">
+      <Link>AngryNinjas\Content\voiceFX-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\voiceFX-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\voiceFX-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\voiceFX-ipad.xnb">
+      <Link>AngryNinjas\Content\voiceFX-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\voiceFX.xnb">
+      <Link>AngryNinjas\Content\voiceFX.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\voiceFX_dim-hd.xnb">
+      <Link>AngryNinjas\Content\voiceFX_dim-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\voiceFX_dim-ipad-hd.xnb">
+      <Link>AngryNinjas\Content\voiceFX_dim-ipad-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\voiceFX_dim-ipad.xnb">
+      <Link>AngryNinjas\Content\voiceFX_dim-ipad.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\voiceFX_dim.xnb">
+      <Link>AngryNinjas\Content\voiceFX_dim.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape1-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1.xnb">
+      <Link>AngryNinjas\Content\woodShape1.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0001-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0001-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0001.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0001.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0002-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0002-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0002.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0002.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0003-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0003-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0003.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0003.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0004-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0004-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0004.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0004.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0005-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0005-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0005.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0005.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0006-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0006-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0006.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0006.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0007-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0007-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0007.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0007.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0008-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0008-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0008.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0008.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0009-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0009-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0009.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0009.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0010-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0010-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape1_0010.xnb">
+      <Link>AngryNinjas\Content\woodShape1_0010.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape2-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape2-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape2.xnb">
+      <Link>AngryNinjas\Content\woodShape2.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape3-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape3-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape3.xnb">
+      <Link>AngryNinjas\Content\woodShape3.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape4-hd.xnb">
+      <Link>AngryNinjas\Content\woodShape4-hd.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\woodShape4.xnb">
+      <Link>AngryNinjas\Content\woodShape4.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\fonts\MarkerFelt-16.xnb">
+      <Link>AngryNinjas\Content\fonts\MarkerFelt-16.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\fonts\MarkerFelt-18.xnb">
+      <Link>AngryNinjas\Content\fonts\MarkerFelt-18.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Assets\Content\fonts\MarkerFelt-22.xnb">
+      <Link>AngryNinjas\Content\fonts\MarkerFelt-22.xnb</Link>
+    </Content>
+    <Content Include="AngryNinjas\Content\fonts\Arial.xnb" />
+  </ItemGroup>
+</Project>

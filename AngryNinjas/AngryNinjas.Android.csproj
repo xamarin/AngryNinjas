@@ -1,0 +1,1330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0E553FB5-2BA1-45AF-803E-75170A8C7234}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngryNinjas</RootNamespace>
+    <AssemblyName>AngryNinjas</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidSupportedAbis>armeabi-v7a%3bx86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <TargetFrameworkVersion>v2.3</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Android\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Android\Release\</OutputPath>
+    <DefineConstants>TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="OpenTK" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="PhoneGameThumb.png" />
+    <None Include="Background.png" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="IntroLayer.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheLevel.cs" />
+    <Compile Include="GameData.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="GroundPlane.cs" />
+    <Compile Include="BodyNode.cs" />
+    <Compile Include="StartPlatform.cs" />
+    <Compile Include="Ninja.cs" />
+    <Compile Include="ContactListener.cs" />
+    <Compile Include="TheStack.cs" />
+    <Compile Include="StackObject.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="CustomAnimation.cs" />
+    <Compile Include="TheMenu.cs" />
+    <Compile Include="GameSounds.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\10000points-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\10000points.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\1000points-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\1000points.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\100points-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\100points.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\5000points-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\5000points.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\500points-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\500points.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ambientFX-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ambientFX-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ambientFX-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ambientFX.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ambientFX_dim-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ambientFX_dim-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ambientFX_dim-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ambientFX_dim.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\background_clouds-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\background_clouds.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\background_hills-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\background_hills.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\blocks-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\blocks.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\circle-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\circle.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\circleShape-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\circleShape.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Default-Landscape~ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Default.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Default_hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Default_ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0001-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0002-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0003-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0003.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0004-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0004.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0005-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0005.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0006-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0006.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0007-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0007.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0008-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0008.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0009-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0009.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0010-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0010.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0011-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\explosion_0011.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\fire.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\fps_images-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\fps_images-ipadhd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\fps_images.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\gameMenu-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\gameMenu-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\gameMenu.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\grid_example.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ground_plane-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ground_plane.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\hexagonShape-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\hexagonShape.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\hexagonShape2-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\hexagonShape2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Icon-144.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Icon-72.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Icon-Small-50.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Icon-Small.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Icon.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\IntroLayer-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\IntroLayer-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\IntroLayer-ipadhd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\IntroLayer.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton1-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton1-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton1-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton10-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton10-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton10-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton10.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton10_locked-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton10_locked-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton10_locked-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton10_locked.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton2-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton2-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton2-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton2_locked-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton2_locked-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton2_locked-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton2_locked.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton3-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton3-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton3-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton3.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton3_locked-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton3_locked-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton3_locked-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton3_locked.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton4-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton4-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton4-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton4.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton4_locked-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton4_locked-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton4_locked-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton4_locked.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton5-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton5-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton5-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton5.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton5_locked-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton5_locked-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton5_locked-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton5_locked.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton6-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton6-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton6-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton6.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton6_locked-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton6_locked-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton6_locked-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton6_locked.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton7-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton7-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton7-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton7.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton7_locked-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton7_locked-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton7_locked-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton7_locked.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton8-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton8-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton8-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton8.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton8_locked-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton8_locked-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton8_locked-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton8_locked.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton9-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton9-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton9-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton9.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton9_locked-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton9_locked-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton9_locked-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelButton9_locked.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelLocked-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelLocked-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\levelLocked.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\marbleSquare-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\marbleSquare.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\menu_background-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\menu_background-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\menu_background-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\menu_background.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_blink-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_blink.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0001-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0002-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0003-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0003.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0004-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0004.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0005-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0005.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0006-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0006.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0007-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0007.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0008-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0008.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0009-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0009.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0010-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_break0010.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_damage1-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_damage1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_damage2-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_damage2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_damage3-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\mutantPepper_damage3.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_air-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_air.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_blink-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_blink.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_in_sling-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_in_sling.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_on_ground-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_on_ground.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_roll-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_roll.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_roll0001-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_roll0001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_roll0002-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_roll0002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_roll0003-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_roll0003.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_standing-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBlue_standing.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_air-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_air.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_blink-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_blink.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_in_sling-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_in_sling.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_on_ground-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_on_ground.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_roll-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_roll.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_roll0001-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_roll0001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_roll0002-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_roll0002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_roll0003-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_roll0003.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_standing-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaBrown_standing.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_air-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_air.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_blink-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_blink.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_in_sling-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_in_sling.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_on_ground-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_on_ground.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_roll-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_roll.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_roll0001-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_roll0001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_roll0002-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_roll0002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_roll0003-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_roll0003.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_standing-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaGreen_standing.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_air-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_air.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_blink-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_blink.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_in_sling-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_in_sling.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_on_ground-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_on_ground.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_roll-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_roll.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_roll0001-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_roll0001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_roll0002-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_roll0002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_roll0003-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_roll0003.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_standing-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninjaRed_standing.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_air-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_air.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_blink-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_blink.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_in_sling-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_in_sling.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_on_ground-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_on_ground.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_roll-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_roll.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_roll0001-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_roll0001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_roll0002-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_roll0002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_roll0003-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_roll0003.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_standing-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\ninja_standing.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\octogonShape-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\octogonShape.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\parallelogram-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\parallelogram.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\parallelogram2-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\parallelogram2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\pentagon-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\pentagon.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\platform-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\platform.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0001-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0002-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0003-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0003.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0004-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0004.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0005-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0005.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0006-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0006.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0007-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\puffs_0007.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\slingshot_front-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\slingshot_front.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\soundFX-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\soundFX-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\soundFX-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\soundFX.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\soundFX_dim-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\soundFX_dim-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\soundFX_dim-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\soundFX_dim.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\stonePillar-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\stonePillar.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\strap-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\strap.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\strapBack-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\strapBack.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\strapEmpty-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\strapEmpty.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\trapezoid-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\trapezoid.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\trapezoid2-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\trapezoid2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\triangleLarge-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\triangleLarge.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\triangleMedium-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\triangleMedium.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\triangleRightAngle-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\triangleRightAngle.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\triangleSmall-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\triangleSmall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\triangleTall-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\triangleTall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\voiceFX-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\voiceFX-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\voiceFX-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\voiceFX.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\voiceFX_dim-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\voiceFX_dim-ipad-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\voiceFX_dim-ipad.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\voiceFX_dim.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0001-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0002-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0003-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0003.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0004-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0004.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0005-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0005.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0006-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0006.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0007-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0007.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0008-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0008.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0009-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0009.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0010-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape1_0010.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape2-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape3-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape3.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape4-hd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\woodShape4.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\fonts\MarkerFelt-16.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\fonts\MarkerFelt-18.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\fonts\MarkerFelt-22.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\birds.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\bloop.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\break1.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\break2.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\break3.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\drums.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\frogs.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\gong.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\grunt1.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\grunt2.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\grunt3.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\grunt4.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\grunt5.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\grunt6.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\grunt7.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\grunt8.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\impact1.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\impact2.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\impact3.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\impact4.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\impact5.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Sounds\whoosh.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Icon-Small%402x.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\Icon%402x.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\Main.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+    <AndroidResource Include="Resources\Values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ouya_icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\cocos2d-xna\box2d\box2d.Android.csproj">
+      <Project>{B81B6701-7A78-4846-BF6F-04E0591F0F38}</Project>
+      <Name>box2d.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\cocos2d-xna\cocos2d\cocos2d.Android.csproj">
+      <Project>{64725C5B-A1BC-4974-8538-A1158BABF572}</Project>
+      <Name>cocos2d.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.Android.csproj">
+      <Project>{565129E0-4EE5-4F6F-B403-C3484C9740BE}</Project>
+      <Name>Lidgren.Network.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Android.csproj">
+      <Project>{BA9476CF-99BA-4D03-92F2-73D2C5E58883}</Project>
+      <Name>MonoGame.Framework.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

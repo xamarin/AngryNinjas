@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C0A9FED-800F-41FB-9139-255A449056E0}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Windows Phone</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngryNinjas</RootNamespace>
+    <AssemblyName>AngryNinjas</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows Phone</XnaPlatform>
+    <XnaProfile>Reach</XnaProfile>
+    <XnaCrossPlatformGroupID>c33a6796-aae0-4084-8878-f02e8c8da387</XnaCrossPlatformGroupID>
+    <XnaOutputType>Game</XnaOutputType>
+    <XnaRefreshLevel>1</XnaRefreshLevel>
+    <WPTombstoneEnabled>false</WPTombstoneEnabled>
+    <XapFilename>$(AssemblyName).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <XnaWindowsPhoneManifestTemplate>Properties\WMAppManifest.xml</XnaWindowsPhoneManifestTemplate>
+    <TileImage>Background.png</TileImage>
+    <TileTitle>AngryNinjas</TileTitle>
+    <SupportedCultures>
+    </SupportedCultures>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>PhoneGameThumb.png</Thumbnail>
+    <GameStartupType>AngryNinjas.Game1</GameStartupType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Windows Phone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Windows Phone\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS_PHONE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <XnaCompressContent>false</XnaCompressContent>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Windows Phone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Windows Phone\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS_PHONE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <XnaCompressContent>false</XnaCompressContent>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="GameThumbnail.png">
+      <XnaPlatformSpecific>true</XnaPlatformSpecific>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Game.ico" />
+    <None Include="Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="IntroLayer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheLevel.cs" />
+    <Compile Include="GameData.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="GroundPlane.cs" />
+    <Compile Include="BodyNode.cs" />
+    <Compile Include="StartPlatform.cs" />
+    <Compile Include="Ninja.cs" />
+    <Compile Include="ContactListener.cs" />
+    <Compile Include="TheStack.cs" />
+    <Compile Include="StackObject.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="CustomAnimation.cs" />
+    <Compile Include="TheMenu.cs" />
+    <Compile Include="GameSounds.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\AppManifest.xml" />
+    <Content Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Game" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices" />
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\cocos2d-xna\box2d\box2d.Phone.csproj">
+      <Project>{8165599E-6F37-41B7-91CD-C7C66232B5F2}</Project>
+      <Name>box2d.Phone</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\cocos2d-xna\cocos2d\cocos2d.Phone.csproj">
+      <Project>{47EE6CE6-493D-4967-944A-5E55B71AA9FD}</Project>
+      <Name>cocos2d.Phone</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ContentProject\AngryNinjasContent.contentproj">
+      <Name>AngryNinjasContent %28Content%29</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{2CE0B38F-5C9C-4088-8FEC-D3B58EE48E35}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+</Project>
