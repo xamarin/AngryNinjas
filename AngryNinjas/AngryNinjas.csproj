@@ -95,7 +95,6 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Game.ico" />
-    <None Include="controller.cs" />
     <None Include="PhoneGameThumb_iPad.png" />
     <None Include="PhoneGameThumb_iPhone.png" />
     <None Include="PhoneGameThumb.png" />

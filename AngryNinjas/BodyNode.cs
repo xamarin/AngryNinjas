@@ -16,9 +16,6 @@ namespace AngryNinjas
 	{
 		protected b2Body body;
 		protected CCSprite sprite;
-		static int count = 0, fixtureCount = 0;
-		public BodyNode ()
-		{ }
 
 		public b2Body Body { get { return body; } }
 		
@@ -42,7 +39,6 @@ namespace AngryNinjas
 			{
 				
 				body.CreateFixture(fixtureDef.Value);
-				fixtureCount++;
 			}
 
 		}

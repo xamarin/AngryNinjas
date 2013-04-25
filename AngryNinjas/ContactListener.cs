@@ -349,30 +349,16 @@ namespace AngryNinjas
 			//throw new NotImplementedException ();
 		}
 
-//		void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold)
-//		{
-//			
-//		}
-//		
 		public override void PostSolve (b2Contact contact, ref b2ContactImpulse impulse)
 		{
 			//throw new NotImplementedException ();
 		}
-//		void ContactListener::PostSolve(b2Contact* contact, const b2ContactImpulse* impulse)
-//		{
-//			
-//			
-//		}
-//		
+
 		public override void EndContact (b2Contact contact)
 		{
 			base.EndContact (contact);
 		}
 
-//		void ContactListener::EndContact(b2Contact* contact)
-//		{
-//		}
-//
 	}
 }
 

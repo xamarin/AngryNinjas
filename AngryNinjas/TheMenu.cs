@@ -304,45 +304,17 @@ namespace AngryNinjas
 			AddChild(Menu2,1);
 
 
-			if ( !GameData.SharedData.AreSoundFXMuted ) {
-				
-				CreateSoundFXMenuOn();
-				
-			} else {
-				
-				CreateSoundFXMenuOff();
-				
-			}
-			
-			
-			if ( !GameData.SharedData.AreVoiceFXMuted ) {
-				
-				CreateVoiceFXMenuOn();
-				
-			} else {
-				
-				CreateVoiceFXMenuOff();
-				
-			}
-			
-			
-			if ( !GameData.SharedData.AreAmbientFXMuted ) {
-				
-				CreateAmbientFXMenuOn();
-				
-			} else {
-				
-				CreateAmbientFXMenuOff();
-				
-			}
-			
+			CreateSoundFXMenu = !GameData.SharedData.AreSoundFXMuted;
+
+			CreateVoiceFXMenu = !GameData.SharedData.AreVoiceFXMuted;
+
+			CreateAmbientFXMenu = !GameData.SharedData.AreAmbientFXMuted;
 		}			
 
 		void PlayNegativeSound (object sender)
 		 {
 			
 			//play a sound indicating this level isn't available
-			
 			GameSounds.SharedGameSounds.PlaySoundFX("bloop.mp3");
 			
 			
@@ -503,8 +475,6 @@ namespace AngryNinjas
 			CCDirector.SharedDirector.PopScene();
 			
 			//when TheLevel scene reloads it will start with a new level
-			
-			
 			TheLevel.SharedLevel.TransitionAfterMenuPop();
 			
 
@@ -520,45 +490,40 @@ namespace AngryNinjas
 		#endregion
 
 		#region VOICE FX
-		
-		void CreateVoiceFXMenuOn()
+
+		bool CreateVoiceFXMenu
 		{
-			
-			RemoveChild(VoiceFXMenu, true);
-			
-			
-			CCMenuItem button1 = new CCMenuItemImage(voiceButtonName, voiceButtonName, TurnVoiceFXOff);
-			
-			VoiceFXMenu = new CCMenu(button1);
-			VoiceFXMenu.Position= VoiceFXMenuLocation;
-			
-			AddChild(VoiceFXMenu, 10);
-			
-			
+			set
+			{
+				RemoveChild(VoiceFXMenu, true);
+				CCMenuItem button1;
+
+				if (value)
+				{
+					button1 = new CCMenuItemImage(voiceButtonNameDim, voiceButtonNameDim, TurnVoiceFXOn);
+				}
+				else
+				{
+					button1 = new CCMenuItemImage(voiceButtonName, voiceButtonName, TurnVoiceFXOff);
+				}
+
+				VoiceFXMenu = new CCMenu(button1);
+				VoiceFXMenu.Position= VoiceFXMenuLocation;
+				
+				AddChild(VoiceFXMenu, 10);
+				
+			}
+
 		}
-		void CreateVoiceFXMenuOff() 
-		{
-			
-			RemoveChild(VoiceFXMenu, true);
-			
-			
-			CCMenuItem button1 = new CCMenuItemImage(voiceButtonNameDim, voiceButtonNameDim, TurnVoiceFXOn);
-			
-			VoiceFXMenu = new CCMenu(button1);
-			VoiceFXMenu.Position= VoiceFXMenuLocation;
-			
-			AddChild(VoiceFXMenu, 10 );
-			
-			
-		}
-		
+
+
 		void TurnVoiceFXOn(object sender)
 		{
 			
 			GameData.SharedData.TurnVoiceFXOn();
 			
 			GameSounds.SharedGameSounds.EnableVoiceFX();
-			CreateVoiceFXMenuOn();
+			CreateVoiceFXMenu = true;
 			
 			
 		}
@@ -568,51 +533,46 @@ namespace AngryNinjas
 			GameData.SharedData.TurnVoiceFXOff();
 			
 			GameSounds.SharedGameSounds.DisableVoiceFX();
-			CreateVoiceFXMenuOff();
+			CreateVoiceFXMenu = false;
 		}
 
 		#endregion
 
 		#region Sound FX
-		
-		void CreateSoundFXMenuOn()
+
+		bool CreateSoundFXMenu
 		{
-			
-			RemoveChild(SoundFXMenu, true);
-			
-			
-			CCMenuItem button1 = new CCMenuItemImage(soundButtonName,soundButtonName, TurnSoundFXOff);
-			
-			SoundFXMenu = new CCMenu(button1);
-			SoundFXMenu.Position= SoundFXMenuLocation;
-			
-			AddChild(SoundFXMenu, 10);
-			
-			
+			set 
+			{
+				RemoveChild(SoundFXMenu, true);
+
+				CCMenuItem button1;
+
+				if (value)
+				{
+					button1 = new CCMenuItemImage(soundButtonNameDim, soundButtonNameDim, TurnSoundFXOn);
+
+				}
+				else
+				{
+					button1 = new CCMenuItemImage(soundButtonName,soundButtonName, TurnSoundFXOff);
+				}
+
+				SoundFXMenu = new CCMenu(button1);
+				SoundFXMenu.Position= SoundFXMenuLocation;
+				
+				AddChild(SoundFXMenu, 10);
+
+			}
 		}
-		void CreateSoundFXMenuOff()
-		{
-			
-			RemoveChild(SoundFXMenu, true);
-			
-			
-			CCMenuItem button1 = new CCMenuItemImage(soundButtonNameDim, soundButtonNameDim, TurnSoundFXOn);
-			
-			SoundFXMenu = new CCMenu(button1);
-			SoundFXMenu.Position= SoundFXMenuLocation;
-			
-			AddChild(SoundFXMenu,10 );
-			
-			
-		}
-		
+
 		void TurnSoundFXOn(object sender)
 		{
 			
 			GameData.SharedData.TurnSoundFXOn();
 
 			GameSounds.SharedGameSounds.EnableSoundFX();
-			CreateSoundFXMenuOn();
+			CreateSoundFXMenu = true;
 			
 			
 		}
@@ -622,49 +582,46 @@ namespace AngryNinjas
 			GameData.SharedData.TurnSoundFXOff();
 
 			GameSounds.SharedGameSounds.DisableSoundFX();
-			CreateSoundFXMenuOff();
+			CreateSoundFXMenu = false;
 		}
 
 		#endregion
 
 		#region Ambient FX
-		
-		void CreateAmbientFXMenuOn()
+
+		bool CreateAmbientFXMenu
 		{
-			
-			RemoveChild(AmbientFXMenu, true);
-			
-			
-			CCMenuItem button1 = new CCMenuItemImage( ambientButtonName,ambientButtonName,TurnAmbientFXOff);
-			
-			AmbientFXMenu = new CCMenu(button1);
-			AmbientFXMenu.Position= AmbientFXMenuLocation;
-			
-			AddChild(AmbientFXMenu, 10  );
-			
-			
+			set
+			{
+				RemoveChild(AmbientFXMenu, true);
+
+				CCMenuItem button1;
+
+				if (value)
+				{
+					button1 = new CCMenuItemImage( ambientButtonNameDim, ambientButtonNameDim, TurnAmbientFXOn);
+
+				}
+				else
+				{
+					button1 = new CCMenuItemImage( ambientButtonName,ambientButtonName,TurnAmbientFXOff);
+				}
+
+				AmbientFXMenu = new CCMenu(button1);
+				AmbientFXMenu.Position= AmbientFXMenuLocation;
+				
+				AddChild(AmbientFXMenu, 10  );
+
+			}
+
 		}
-		void CreateAmbientFXMenuOff() {
-			
-			RemoveChild(AmbientFXMenu, true);
-			
-			
-			CCMenuItem button1 = new CCMenuItemImage( ambientButtonNameDim, ambientButtonNameDim, TurnAmbientFXOn);
-			
-			AmbientFXMenu = new CCMenu(button1);
-			AmbientFXMenu.Position= AmbientFXMenuLocation;
-			
-			AddChild(AmbientFXMenu, 10  );
-			
-			
-		}
-		
+
 		void TurnAmbientFXOn (object sender) {
 			
 			GameData.SharedData.TurnAmbientFXOn();
 			
 			GameSounds.SharedGameSounds.RestartBackgroundMusic();
-			CreateAmbientFXMenuOn();
+			CreateAmbientFXMenu = true;
 			
 			
 		}
@@ -673,7 +630,7 @@ namespace AngryNinjas
 			GameData.SharedData.TurnAmbientFXOff();
 			
 			GameSounds.SharedGameSounds.StopBackgroundMusic();
-			CreateAmbientFXMenuOff();
+			CreateAmbientFXMenu = false;
 		}
 
 		#endregion
