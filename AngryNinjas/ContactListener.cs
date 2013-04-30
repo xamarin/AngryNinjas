@@ -120,9 +120,9 @@ namespace AngryNinjas
 				
 				if ( theEnemy.BreaksOnNextDamage ) {
 					
-					if (theEnemy.pointValue != 0) { // if it has a score value for impact with Ninja
+					if (theEnemy.PointValue != 0) { // if it has a score value for impact with Ninja
 						
-						TheLevel.SharedLevel.showPoints(theEnemy.pointValue, theEnemy.Position, theEnemy.simpleScoreVisualFX); //show points
+						TheLevel.SharedLevel.showPoints(theEnemy.PointValue, theEnemy.Position, theEnemy.SimpleScoreVisualFX); //show points
 						theEnemy.MakeUnScoreable();  //prevents scoring off same object twice
 						
 					}
@@ -151,9 +151,9 @@ namespace AngryNinjas
 				
 				if ( theEnemy.BreaksOnNextDamage) {
 					
-					if (theEnemy.pointValue != 0) { // if it has a score value for impact with Ninja
+					if (theEnemy.PointValue != 0) { // if it has a score value for impact with Ninja
 
-						TheLevel.SharedLevel.showPoints(theEnemy.pointValue, theEnemy.Position, theEnemy.simpleScoreVisualFX); //show points
+						TheLevel.SharedLevel.showPoints(theEnemy.PointValue, theEnemy.Position, theEnemy.SimpleScoreVisualFX); //show points
 						theEnemy.MakeUnScoreable();  //prevents scoring off same object twice
 						
 					}
@@ -178,13 +178,13 @@ namespace AngryNinjas
 				StackObject theStackObject = (StackObject)bodyNodeA;
 				Enemy theEnemy = (Enemy)bodyNodeB;
 				
-				if (theStackObject.canDamageEnemy && theEnemy.damagesFromDamageEnabledStackObjects ) {
+				if (theStackObject.canDamageEnemy && theEnemy.DamagesFromDamageEnabledStackObjects ) {
 					
 					if ( theEnemy.BreaksOnNextDamage ) {
 						
-						if (theEnemy.pointValue != 0) { // if it has a score value for impact with Ninja
+						if (theEnemy.PointValue != 0) { // if it has a score value for impact with Ninja
 
-							TheLevel.SharedLevel.showPoints(theEnemy.pointValue, theEnemy.Position, theEnemy.simpleScoreVisualFX); //show points
+							TheLevel.SharedLevel.showPoints(theEnemy.PointValue, theEnemy.Position, theEnemy.SimpleScoreVisualFX); //show points
 
 							theEnemy.MakeUnScoreable();  //prevents scoring off same object twice
 							
@@ -208,13 +208,13 @@ namespace AngryNinjas
 				StackObject theStackObject = (StackObject)bodyNodeB;
 				Enemy theEnemy = (Enemy)bodyNodeA;
 				
-				if (theStackObject.canDamageEnemy && theEnemy.damagesFromDamageEnabledStackObjects ) {
+				if (theStackObject.canDamageEnemy && theEnemy.DamagesFromDamageEnabledStackObjects ) {
 					
 					if ( theEnemy.BreaksOnNextDamage ) {
 						
-						if (theEnemy.pointValue != 0) { // if it has a score value for impact with Ninja
+						if (theEnemy.PointValue != 0) { // if it has a score value for impact with Ninja
 
-							TheLevel.SharedLevel.showPoints(theEnemy.pointValue, theEnemy.Position, theEnemy.simpleScoreVisualFX); //show points
+							TheLevel.SharedLevel.showPoints(theEnemy.PointValue, theEnemy.Position, theEnemy.SimpleScoreVisualFX); //show points
 
 							theEnemy.MakeUnScoreable();  //prevents scoring off same object twice
 							
@@ -243,13 +243,13 @@ namespace AngryNinjas
 				
 				Enemy theEnemy = (Enemy)bodyNodeB;
 				
-				if ( theEnemy.damagesFromGroundContact ) {
+				if ( theEnemy.DamagesFromGroundContact ) {
 					
 					if ( theEnemy.BreaksOnNextDamage ) {
 						
-						if (theEnemy.pointValue != 0) { // if it has a score value for impact with Ninja
+						if (theEnemy.PointValue != 0) { // if it has a score value for impact with Ninja
 
-							TheLevel.SharedLevel.showPoints(theEnemy.pointValue, theEnemy.Position, theEnemy.simpleScoreVisualFX); //show points
+							TheLevel.SharedLevel.showPoints(theEnemy.PointValue, theEnemy.Position, theEnemy.SimpleScoreVisualFX); //show points
 
 							theEnemy.MakeUnScoreable();  //prevents scoring off same object twice
 							
@@ -273,13 +273,13 @@ namespace AngryNinjas
 				
 				Enemy theEnemy = (Enemy)bodyNodeA;
 				
-				if ( theEnemy.damagesFromGroundContact ) {
+				if ( theEnemy.DamagesFromGroundContact ) {
 					
 					if ( theEnemy.BreaksOnNextDamage ) {
 						
-						if (theEnemy.pointValue != 0) { // if it has a score value for impact with Ninja
+						if (theEnemy.PointValue != 0) { // if it has a score value for impact with Ninja
 
-							TheLevel.SharedLevel.showPoints(theEnemy.pointValue, theEnemy.Position, theEnemy.simpleScoreVisualFX); //show points
+							TheLevel.SharedLevel.showPoints(theEnemy.PointValue, theEnemy.Position, theEnemy.SimpleScoreVisualFX); //show points
 
 							theEnemy.MakeUnScoreable();  //prevents scoring off same object twice
 							
