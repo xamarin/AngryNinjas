@@ -58,15 +58,15 @@ namespace AngryNinjas
 
 		public TheMenu ()
 		{
-			CCSize screenSize = CCDirector.SharedDirector.WinSize;
+			var screenSize = CCDirector.SharedDirector.WinSize;
 			
 			CCPoint menu1Position;
 			CCPoint menu2Position;
 			
 			menuBackgroundName = "menu_background.png";  
-			//will use @"menu_background.png" for non-Retina Phones 
-			//will use   @"menu_background-hd.png"; for retina phones
-			//will use @"menu_background-ipad.png";
+			//will use "menu_background.png" for non-Retina Phones 
+			//will use   "menu_background-hd.png"; for retina phones
+			//will use "menu_background-ipad.png";
 			
 			//same goes for images below..
 			
@@ -189,7 +189,7 @@ namespace AngryNinjas
 				
 			}
 			
-			CCSprite theBackground = new CCSprite(menuBackgroundName);
+			var theBackground = new CCSprite(menuBackgroundName);
 			theBackground.Position = new CCPoint(screenSize.Width / 2 , screenSize.Height / 2);
 			AddChild(theBackground,0);
 			
@@ -289,10 +289,6 @@ namespace AngryNinjas
 				button10 = new CCMenuItemImage(lvlButtonName10, lvlButtonName10, GoToFirstLevelSection10);
 			}
 			
-			
-			
-
-
 			CCMenu Menu = new CCMenu(button1, button2, button3, button4, button5);
 			Menu.Position = menu1Position;
 			Menu.AlignItemsHorizontallyWithPadding(10);
@@ -304,11 +300,11 @@ namespace AngryNinjas
 			AddChild(Menu2,1);
 
 
-			CreateSoundFXMenu = !GameData.SharedData.AreSoundFXMuted;
+			IsSoundFXMenuItemActive = !GameData.SharedData.AreSoundFXMuted;
 
-			CreateVoiceFXMenu = !GameData.SharedData.AreVoiceFXMuted;
+			IsVoiceFXMenuActive = !GameData.SharedData.AreVoiceFXMuted;
 
-			CreateAmbientFXMenu = !GameData.SharedData.AreAmbientFXMuted;
+			IsAmbientFXMenuActive = !GameData.SharedData.AreAmbientFXMuted;
 		}			
 
 		void PlayNegativeSound (object sender)
@@ -491,14 +487,14 @@ namespace AngryNinjas
 
 		#region VOICE FX
 
-		bool CreateVoiceFXMenu
+		bool IsVoiceFXMenuActive
 		{
 			set
 			{
 				RemoveChild(VoiceFXMenu, true);
 				CCMenuItem button1;
 
-				if (value)
+				if (!value)
 				{
 					button1 = new CCMenuItemImage(voiceButtonNameDim, voiceButtonNameDim, TurnVoiceFXOn);
 				}
@@ -520,10 +516,10 @@ namespace AngryNinjas
 		void TurnVoiceFXOn(object sender)
 		{
 			
-			GameData.SharedData.AreVoiceFXMuted = true;
+			GameData.SharedData.AreVoiceFXMuted = false;
 			
-			GameSounds.SharedGameSounds.AreVoiceFXMuted = true;
-			CreateVoiceFXMenu = true;
+			GameSounds.SharedGameSounds.AreVoiceFXMuted = false;
+			IsVoiceFXMenuActive = true;
 			
 			
 		}
@@ -533,14 +529,14 @@ namespace AngryNinjas
 			GameData.SharedData.AreVoiceFXMuted = true;
 			
 			GameSounds.SharedGameSounds.AreVoiceFXMuted = true;
-			CreateVoiceFXMenu = false;
+			IsVoiceFXMenuActive = false;
 		}
 
 		#endregion
 
 		#region Sound FX
 
-		bool CreateSoundFXMenu
+		bool IsSoundFXMenuItemActive
 		{
 			set 
 			{
@@ -548,7 +544,7 @@ namespace AngryNinjas
 
 				CCMenuItem button1;
 
-				if (value)
+				if (!value)
 				{
 					button1 = new CCMenuItemImage(soundButtonNameDim, soundButtonNameDim, TurnSoundFXOn);
 
@@ -569,27 +565,27 @@ namespace AngryNinjas
 		void TurnSoundFXOn(object sender)
 		{
 			
-			GameData.SharedData.AreSoundFXMuted = true;
+			GameData.SharedData.AreSoundFXMuted = false;
 
 			GameSounds.SharedGameSounds.AreSoundFXMuted = false;
-			CreateSoundFXMenu = true;
-			
-			
+			IsSoundFXMenuItemActive = true;
+
 		}
+
 		void TurnSoundFXOff (object sender)
 		{
 			
 			GameData.SharedData.AreSoundFXMuted = true;
 
 			GameSounds.SharedGameSounds.AreSoundFXMuted = true;
-			CreateSoundFXMenu = false;
+			IsSoundFXMenuItemActive = false;
 		}
 
 		#endregion
 
 		#region Ambient FX
 
-		bool CreateAmbientFXMenu
+		bool IsAmbientFXMenuActive
 		{
 			set
 			{
@@ -597,7 +593,7 @@ namespace AngryNinjas
 
 				CCMenuItem button1;
 
-				if (value)
+				if (!value)
 				{
 					button1 = new CCMenuItemImage( ambientButtonNameDim, ambientButtonNameDim, TurnAmbientFXOn);
 
@@ -621,7 +617,7 @@ namespace AngryNinjas
 			GameData.SharedData.AreAmbientFXMuted = true;
 			
 			GameSounds.SharedGameSounds.RestartBackgroundMusic();
-			CreateAmbientFXMenu = true;
+			IsAmbientFXMenuActive = true;
 			
 			
 		}
@@ -630,7 +626,7 @@ namespace AngryNinjas
 			GameData.SharedData.AreAmbientFXMuted = false;
 			
 			GameSounds.SharedGameSounds.StopBackgroundMusic();
-			CreateAmbientFXMenu = false;
+			IsAmbientFXMenuActive = false;
 		}
 
 		#endregion

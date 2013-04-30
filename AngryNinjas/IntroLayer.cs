@@ -13,11 +13,8 @@ namespace AngryNinjas
 			// ask director for the window size
 			var size = CCDirector.SharedDirector.WinSize;
 			
-			CCSprite background;
+			var background = new CCSprite ("IntroLayer");
 
-			// on iPhone
-			background = new CCSprite ("IntroLayer");
-			
 			background.Position = new CCPoint (size.Width / 2, size.Height / 2);
 
 			// add the background as a child to this Layer
