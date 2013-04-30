@@ -13,7 +13,7 @@ namespace AngryNinjas
 		
 		string delayedSoundName;
 		
-		int musicChoice;
+		AmbientFXSounds musicChoice;
 
 		const string soundsFolder = "Sounds";
 
@@ -287,7 +287,7 @@ namespace AngryNinjas
 		}
 		
 		
-		public void PlayBackgroundMusic(int track) {  //or AMBIENT SOUND FX
+		public void PlayBackgroundMusic(AmbientFXSounds track) {  //or AMBIENT SOUND FX
 			
 			musicChoice = track;
 
@@ -295,9 +295,9 @@ namespace AngryNinjas
 			
 			if ( !ambientFXTurnedOff ) {
 				
-				if ( musicChoice == Constants.K_FrogSounds ) {
+				if ( musicChoice == AmbientFXSounds.Frogs ) {
 					SimpleAudioEngine.SharedEngine.PlayBackgroundMusic(FormatSoundFilePath("birds.mp3"), true);
-				}  else if ( musicChoice == Constants.K_InsectSounds ) {
+				}  else if ( musicChoice == AmbientFXSounds.Insects ) {
 					SimpleAudioEngine.SharedEngine.PlayBackgroundMusic(FormatSoundFilePath("frogs.mp3"), true);
 				}
 				

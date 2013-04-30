@@ -33,17 +33,6 @@ namespace AngryNinjas
 		public const int TagForWhiteDotsEvenNumberedTurn = 1000;
 		public const int TagForWhiteDotsOddNumberedTurn = 2000;
 
-
-//		public const int BreakEffectNone = 0;
-//		public const int BreakEffectSmokePuffs = 1;
-//		public const int BreakEffectExplosion = 2;
-
-		
-		//sounds
-		
-		public const int K_FrogSounds = 1;
-		public const int K_InsectSounds = 2;
-
 	}
 
 	//creation methods
@@ -74,11 +63,19 @@ namespace AngryNinjas
 
 	}
 
+	// Break Effects
 	public enum BreakEffect
 	{
 		None = 0,
 		SmokePuffs = 1,
 		Explosion = 2
+	}
+
+	// Ambient Sounds
+	public enum AmbientFXSounds
+	{
+		Frogs = 1,
+		Insects = 2
 	}
 }
 

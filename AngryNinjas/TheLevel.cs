@@ -554,11 +554,11 @@ namespace AngryNinjas
 			
 			if ( GameData.SharedData.Level == 1 ) {
 				
-				GameSounds.SharedGameSounds.PlayBackgroundMusic(Constants.K_FrogSounds);
+				GameSounds.SharedGameSounds.PlayBackgroundMusic(AmbientFXSounds.Frogs);
 				
 			} else {
 				
-				GameSounds.SharedGameSounds.PlayBackgroundMusic(Constants.K_InsectSounds); 
+				GameSounds.SharedGameSounds.PlayBackgroundMusic(AmbientFXSounds.Insects); 
 			}
 
             if (GameData.SharedData.FirstRunEver && openWithMenuInsteadOfGame)
