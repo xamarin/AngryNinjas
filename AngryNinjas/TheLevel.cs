@@ -1351,7 +1351,7 @@ namespace AngryNinjas
 						
 					} else {
 						
-						startScreenPanToTargets(); 
+						StartScreenPanToTargets(); 
 					}
 					
 				}
@@ -1489,7 +1489,7 @@ namespace AngryNinjas
 
 		#region SCREEN PANNING
 
-		void startScreenPanToTargets() {
+		void StartScreenPanToTargets() {
 			
 			panAmount = initialPanAmount;
 			
