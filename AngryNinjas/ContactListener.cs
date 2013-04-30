@@ -72,9 +72,9 @@ namespace AngryNinjas
 
 				theStackObject.PlayBreakAnimationFromNinjaContact();
 
-				if (theStackObject.pointValue != 0) { // if it has a score value for impact with Ninja
+				if (theStackObject.PointValue != 0) { // if it has a score value for impact with Ninja
 
-					TheLevel.SharedLevel.showPoints(theStackObject.pointValue, theStackObject.Position, theStackObject.simpleScoreVisualFX);  //show points
+					TheLevel.SharedLevel.showPoints(theStackObject.PointValue, theStackObject.Position, theStackObject.SimpleScoreVisualFX);  //show points
 					theStackObject.MakeUnScoreable(); //prevents scoring off same object twice
 				}
 
@@ -93,9 +93,9 @@ namespace AngryNinjas
 				
 				theStackObject.PlayBreakAnimationFromNinjaContact();
 				
-				if (theStackObject.pointValue != 0) { // if it has a score value for impact with Ninja
+				if (theStackObject.PointValue != 0) { // if it has a score value for impact with Ninja
 					
-					TheLevel.SharedLevel.showPoints(theStackObject.pointValue, theStackObject.Position,  theStackObject.simpleScoreVisualFX); //show points
+					TheLevel.SharedLevel.showPoints(theStackObject.PointValue, theStackObject.Position,  theStackObject.SimpleScoreVisualFX); //show points
 					theStackObject.MakeUnScoreable();  //prevents scoring off same object twice
 					
 				}
@@ -178,7 +178,7 @@ namespace AngryNinjas
 				StackObject theStackObject = (StackObject)bodyNodeA;
 				Enemy theEnemy = (Enemy)bodyNodeB;
 				
-				if (theStackObject.canDamageEnemy && theEnemy.DamagesFromDamageEnabledStackObjects ) {
+				if (theStackObject.IsCanDamageEnemy && theEnemy.DamagesFromDamageEnabledStackObjects ) {
 					
 					if ( theEnemy.BreaksOnNextDamage ) {
 						
@@ -208,7 +208,7 @@ namespace AngryNinjas
 				StackObject theStackObject = (StackObject)bodyNodeB;
 				Enemy theEnemy = (Enemy)bodyNodeA;
 				
-				if (theStackObject.canDamageEnemy && theEnemy.DamagesFromDamageEnabledStackObjects ) {
+				if (theStackObject.IsCanDamageEnemy && theEnemy.DamagesFromDamageEnabledStackObjects ) {
 					
 					if ( theEnemy.BreaksOnNextDamage ) {
 						
@@ -314,10 +314,10 @@ namespace AngryNinjas
 				
 				theStackObject.PlayBreakAnimationFromGroundContact();
 				
-				if (theStackObject.pointValue != 0 && theStackObject.breaksOnGroundContact) 
+				if (theStackObject.PointValue != 0 && theStackObject.IsBreaksOnGroundContact) 
 				{ // if it has a score value for impact with Ninja
 					
-					TheLevel.SharedLevel.showPoints(theStackObject.pointValue, theStackObject.Position, theStackObject.simpleScoreVisualFX);  //show points
+					TheLevel.SharedLevel.showPoints(theStackObject.PointValue, theStackObject.Position, theStackObject.SimpleScoreVisualFX);  //show points
 					
 					
 					theStackObject.MakeUnScoreable(); //prevents scoring off same object twice
@@ -333,9 +333,9 @@ namespace AngryNinjas
 				
 				theStackObject.PlayBreakAnimationFromGroundContact();
 				
-				if (theStackObject.pointValue != 0 && theStackObject.breaksOnGroundContact) { // if it has a score value for impact with Ninja
+				if (theStackObject.PointValue != 0 && theStackObject.IsBreaksOnGroundContact) { // if it has a score value for impact with Ninja
 					
-					TheLevel.SharedLevel.showPoints(theStackObject.pointValue, theStackObject.Position, theStackObject.simpleScoreVisualFX);  //show points
+					TheLevel.SharedLevel.showPoints(theStackObject.PointValue, theStackObject.Position, theStackObject.SimpleScoreVisualFX);  //show points
 					theStackObject.MakeUnScoreable();  //prevents scoring off same object twice
 					
 				}

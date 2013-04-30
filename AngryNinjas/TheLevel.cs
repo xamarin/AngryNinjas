@@ -699,7 +699,7 @@ namespace AngryNinjas
 						if ( myActor != null ) 
 						{
 							
-							if ( !myActor.isStatic  ) {
+							if ( !myActor.IsStatic  ) {
 								myActor.Body.SetType(b2BodyType.b2_dynamicBody);
 								myActor.Body.SetAwake(true);
 								//myActor.Body.SetActive(true);

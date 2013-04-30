@@ -20,10 +20,10 @@ namespace AngryNinjas
 		CCPoint initialLocation;
 		
 		bool addedAnimatedBreakFrames;
-		public bool breaksOnGroundContact { get; set; }
-		public bool breaksOnNinjaContact { get; set; }
-		public bool canDamageEnemy { get; set; }
-		public bool isStatic { get; set; }  //will always be static
+		public bool IsBreaksOnGroundContact { get; set; }
+		public bool IsBreaksOnNinjaContact { get; set; }
+		public bool IsCanDamageEnemy { get; set; }
+		public bool IsStatic { get; set; }  //will always be static
 		float theDensity;
 		int shapeCreationMethod;
 		
@@ -32,8 +32,8 @@ namespace AngryNinjas
 		int currentFrame;
 		int framesToAnimate;
 		
-		public int  pointValue { get; set; }
-		public int  simpleScoreVisualFX { get; set; } //defined in Constants.cs
+		public int  PointValue { get; set; }
+		public int  SimpleScoreVisualFX { get; set; } //defined in Constants.cs
 
 		public StackObject (b2World world, 
 		                    CCPoint location,
@@ -83,20 +83,20 @@ namespace AngryNinjas
 			this.baseImageName = spriteFileName;
 			this.spriteImageName =  String.Format("{0}.png", baseImageName);
 			
-			this.breaksOnGroundContact = breaksOnGround; 
-			this.breaksOnNinjaContact = breaksFromNinja; 
+			this.IsBreaksOnGroundContact = breaksOnGround; 
+			this.IsBreaksOnNinjaContact = breaksFromNinja; 
 			this.addedAnimatedBreakFrames = hasAnimatedBreakFrames;
-			this.canDamageEnemy = damagesEnemy;
+			this.IsCanDamageEnemy = damagesEnemy;
 			this.theDensity = density;
 			this.shapeCreationMethod = createHow;
 			this.angle = angleChange;
-			this.isStatic = makeImmovable;
+			this.IsStatic = makeImmovable;
 			
-			currentFrame = 0;
-			framesToAnimate = 10;
+			this.currentFrame = 0;
+			this.framesToAnimate = 10;
 			
-			this.pointValue = points ;
-			this.simpleScoreVisualFX = simpleScoreVisualFXType;
+			this.PointValue = points ;
+			this.SimpleScoreVisualFX = simpleScoreVisualFXType;
 			
 			CreateObject();
 				
@@ -107,18 +107,18 @@ namespace AngryNinjas
 			
 			
 			// Define the dynamic body.
-			b2BodyDef bodyDef = b2BodyDef.Create();
+			var bodyDef = b2BodyDef.Create();
 			bodyDef.type = b2BodyType.b2_dynamicBody; //or you could use b2_staticBody
 
 			bodyDef.position.Set(initialLocation.X/Constants.PTM_RATIO, initialLocation.Y/Constants.PTM_RATIO);
 			
-			b2PolygonShape shape = new b2PolygonShape();
-			b2CircleShape shapeCircle = new b2CircleShape();
+			var shape = new b2PolygonShape();
+			var shapeCircle = new b2CircleShape();
 			
 			if (shapeCreationMethod == Constants.useDiameterOfImageForCircle) {
 				
-				CCSprite tempSprite = new CCSprite(spriteImageName);
-				float radiusInMeters = (tempSprite.ContentSize.Width / Constants.PTM_RATIO) * 0.5f;
+				var tempSprite = new CCSprite(spriteImageName);
+				var radiusInMeters = (tempSprite.ContentSize.Width / Constants.PTM_RATIO) * 0.5f;
 				
 				shapeCircle.Radius = radiusInMeters;
 				
@@ -127,9 +127,9 @@ namespace AngryNinjas
 			
 			else if ( shapeCreationMethod == Constants.useShapeOfSourceImage) {
 				
-				CCSprite tempSprite = new CCSprite(spriteImageName);
+				var tempSprite = new CCSprite(spriteImageName);
 				
-				int num = 4;
+				var num = 4;
 				b2Vec2[] vertices = {
 					new b2Vec2( (tempSprite.ContentSize.Width / -2 ) / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / 2 ) / Constants.PTM_RATIO), //top left corner
 					new b2Vec2( (tempSprite.ContentSize.Width / -2 ) / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / -2 ) / Constants.PTM_RATIO), //bottom left corner
@@ -140,9 +140,9 @@ namespace AngryNinjas
 			}
 			
 			else if ( shapeCreationMethod == Constants.useTriangle) {
-				CCSprite tempSprite = new CCSprite(spriteImageName);
+				var tempSprite = new CCSprite(spriteImageName);
 				
-				int num = 3;
+				var num = 3;
 				b2Vec2[] vertices = {
 					new b2Vec2((tempSprite.ContentSize.Width / -2 ) / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / -2 ) / Constants.PTM_RATIO), //bottom left corner
 					new b2Vec2( (tempSprite.ContentSize.Width / 2 ) / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / -2 ) / Constants.PTM_RATIO), //bottom right corner
@@ -153,9 +153,9 @@ namespace AngryNinjas
 			}
 			
 			else if ( shapeCreationMethod == Constants.useTriangleRightAngle) {
-				CCSprite tempSprite = new CCSprite(spriteImageName);
+				var tempSprite = new CCSprite(spriteImageName);
 				
-				int num = 3;
+				var num = 3;
 				b2Vec2[] vertices = {
 					new b2Vec2((tempSprite.ContentSize.Width / 2 ) / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / 2 ) / Constants.PTM_RATIO),  //top right corner
 					new b2Vec2( (tempSprite.ContentSize.Width / -2 ) / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / 2 ) / Constants.PTM_RATIO), //top left corner
@@ -166,9 +166,9 @@ namespace AngryNinjas
 			}
 			
 			else if ( shapeCreationMethod == Constants.useTrapezoid) {
-				CCSprite tempSprite = new CCSprite(spriteImageName);
+				var tempSprite = new CCSprite(spriteImageName);
 				
-				int num = 4;
+				var num = 4;
 				b2Vec2[] vertices = {
 					new b2Vec2((tempSprite.ContentSize.Width / 4 ) / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / 2 ) / Constants.PTM_RATIO),  //top of image, 3/4's across
 					new b2Vec2( (tempSprite.ContentSize.Width / -4 ) / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / 2 ) / Constants.PTM_RATIO),  //top of image, 1/4's across
@@ -182,9 +182,9 @@ namespace AngryNinjas
 			
 			else if ( shapeCreationMethod == Constants.useHexagon) {
 				
-				CCSprite tempSprite = new CCSprite(spriteImageName);
+				var tempSprite = new CCSprite(spriteImageName);
 				
-				int num = 6;
+				var num = 6;
 				b2Vec2[] vertices = {
 					new b2Vec2( (tempSprite.ContentSize.Width / -4 ) / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / 2 ) / Constants.PTM_RATIO), //top of image, 1/4 across
 					new b2Vec2( (tempSprite.ContentSize.Width / -2 )  / Constants.PTM_RATIO, 0.0f / Constants.PTM_RATIO), // left, center
@@ -199,9 +199,9 @@ namespace AngryNinjas
 			
 			else if ( shapeCreationMethod == Constants.usePentagon) {
 				
-				CCSprite tempSprite = new CCSprite(spriteImageName);
+				var tempSprite = new CCSprite(spriteImageName);
 				
-				int num = 5;
+				var num = 5;
 				b2Vec2[] vertices = {
 					new b2Vec2( 0 / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / 2 ) / Constants.PTM_RATIO), //top of image, center 
 					new b2Vec2( (tempSprite.ContentSize.Width / -2 )  / Constants.PTM_RATIO, 0.0f / Constants.PTM_RATIO), // left, center
@@ -216,9 +216,9 @@ namespace AngryNinjas
 			
 			else if ( shapeCreationMethod == Constants.useOctagon) {
 				
-				CCSprite tempSprite = new CCSprite(spriteImageName);
+				var tempSprite = new CCSprite(spriteImageName);
 				
-				int num = 8;
+				var num = 8;
 				b2Vec2[] vertices = {
 					new b2Vec2( (tempSprite.ContentSize.Width / -6 ) / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / 2 ) / Constants.PTM_RATIO), //use the source image octogonShape.png for reference
 					new b2Vec2( (tempSprite.ContentSize.Width / -2 )  / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / 6 ) / Constants.PTM_RATIO), 
@@ -234,9 +234,9 @@ namespace AngryNinjas
 			}
 			else if ( shapeCreationMethod == Constants.useParallelogram) {
 				
-				CCSprite tempSprite = new CCSprite(spriteImageName);
+				var tempSprite = new CCSprite(spriteImageName);
 				
-				int num = 4;
+				var num = 4;
 				b2Vec2[] vertices = {
 					new b2Vec2( (tempSprite.ContentSize.Width / -4 ) / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / 2 ) / Constants.PTM_RATIO), //top of image, 1/4 across
 					new b2Vec2( (tempSprite.ContentSize.Width / -2 ) / Constants.PTM_RATIO, (tempSprite.ContentSize.Height / -2 ) / Constants.PTM_RATIO), //bottom left corner
@@ -249,7 +249,7 @@ namespace AngryNinjas
 			
 			else if ( shapeCreationMethod == Constants.customCoordinates1) {  //use your own custom coordinates from a program like Vertex Helper Pro
 				
-				int num = 4;
+				var num = 4;
 				b2Vec2[] vertices = {
 					new b2Vec2(-64.0f / Constants.PTM_RATIO, 16.0f / Constants.PTM_RATIO),
 					new b2Vec2(-64.0f / Constants.PTM_RATIO, -16.0f / Constants.PTM_RATIO),
@@ -263,7 +263,7 @@ namespace AngryNinjas
 			
 			
 			// Define the dynamic body fixture.
-			b2FixtureDef fixtureDef = b2FixtureDef.Create();
+			var fixtureDef = b2FixtureDef.Create();
 			
 			if ( shapeCreationMethod == Constants.useDiameterOfImageForCircle) {
 				
@@ -289,7 +289,7 @@ namespace AngryNinjas
 				
 			}
 			
-			if (isStatic) {
+			if (IsStatic) {
 				
 				MakeBodyStatic();
 			}
@@ -298,7 +298,7 @@ namespace AngryNinjas
 		public void PlayBreakAnimationFromNinjaContact ()
 		{
 			
-			if ( breaksOnNinjaContact) 
+			if ( IsBreaksOnNinjaContact) 
 			{
 				
 				Schedule(StartBreakAnimation, 1.0f/30.0f);
@@ -310,7 +310,7 @@ namespace AngryNinjas
 		public void PlayBreakAnimationFromGroundContact()
 		{
 			
-			if ( breaksOnGroundContact) {
+			if ( IsBreaksOnGroundContact) {
 				
 				Schedule(StartBreakAnimation, 1.0f/30.0f);
 			}
@@ -357,10 +357,11 @@ namespace AngryNinjas
 			
 		}
 		
-		public void MakeUnScoreable() {
+		public void MakeUnScoreable() 
+		{
 			
-			pointValue = 0;
-			CCLog.Log("points have been accumulated for this object");
+			PointValue = 0;
+			CCLog.Log("Points have been accumulated for this object");
 		}
 
 	}
