@@ -50,19 +50,19 @@ namespace AngryNinjas
 			onGround = false;
 			
 			// Define the dynamic body.
-			b2BodyDef bodyDef = b2BodyDef.Create();
+			var bodyDef = b2BodyDef.Create();
 			bodyDef.type = b2BodyType.b2_staticBody; //or you could use b2DynamicBody to start the ninja as dynamic
 			
 			bodyDef.position.Set(initialLocation.X/Constants.PTM_RATIO, initialLocation.Y/Constants.PTM_RATIO);
 			
-			b2CircleShape shape = new b2CircleShape();
-			float radiusInMeters = (40 / Constants.PTM_RATIO) * 0.5f; //increase or decrease 40 for a different circle size definition
+			var shape = new b2CircleShape();
+			var radiusInMeters = (40 / Constants.PTM_RATIO) * 0.5f; //increase or decrease 40 for a different circle size definition
 			
 			shape.Radius = radiusInMeters;
 			
 			
 			// Define the dynamic body fixture.
-			b2FixtureDef fixtureDef = b2FixtureDef.Create();
+			var fixtureDef = b2FixtureDef.Create();
 			fixtureDef.shape = shape;	
 			fixtureDef.density = 1.0f;
 			fixtureDef.friction = 1.0f;
@@ -89,7 +89,7 @@ namespace AngryNinjas
 			
 			sprite.Texture = new CCSprite(String.Format("{0}_standing.png", baseImageName)).Texture;
 
-			int blinkInterval = cocos2d.Random.Next(3,8); // range 3 to 8
+			var blinkInterval = cocos2d.Random.Next(3,8); // range 3 to 8
 			
 			Schedule(Blink, blinkInterval);
 		}

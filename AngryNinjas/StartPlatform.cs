@@ -38,14 +38,14 @@ namespace AngryNinjas
 		void CreatePlatform() {
 			
 			// Define the dynamic body.
-			b2BodyDef bodyDef = b2BodyDef.Create();
+			var bodyDef = b2BodyDef.Create();
 			bodyDef.type = b2BodyType.b2_staticBody; //or you could use b2_staticBody
 			
 			bodyDef.position.Set(initialLocation.X/Constants.PTM_RATIO, initialLocation.Y/Constants.PTM_RATIO);
 
-			b2PolygonShape shape = new b2PolygonShape();
+			var shape = new b2PolygonShape();
 			
-			int num = 4;
+			var num = 4;
 			b2Vec2[] vertices = {
 				new b2Vec2(-102.0f / Constants.PTM_RATIO, -49.5f / Constants.PTM_RATIO),
 				new b2Vec2(-113.0f / Constants.PTM_RATIO, -81.5f / Constants.PTM_RATIO),
@@ -57,7 +57,7 @@ namespace AngryNinjas
 			
 			
 			// Define the dynamic body fixture.
-			b2FixtureDef fixtureDef = b2FixtureDef.Create();
+			var fixtureDef = b2FixtureDef.Create();
 			fixtureDef.shape = shape;	
 			fixtureDef.density = 1.0f;
 			fixtureDef.friction = 0.3f;
@@ -70,7 +70,7 @@ namespace AngryNinjas
 			// THIS IS THE Sling base....
 			
 			//row 1, col 1
-			int num2 = 4;
+			var num2 = 4;
 			b2Vec2[] vertices2 = {
 				new b2Vec2(41.0f / Constants.PTM_RATIO, -6.5f / Constants.PTM_RATIO),
 				new b2Vec2(35.0f / Constants.PTM_RATIO, -57.5f / Constants.PTM_RATIO),
