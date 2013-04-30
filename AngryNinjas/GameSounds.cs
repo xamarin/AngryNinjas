@@ -295,9 +295,9 @@ namespace AngryNinjas
 			
 			if ( !ambientFXTurnedOff ) {
 				
-				if ( musicChoice == Constants.kFrogSounds ) {
+				if ( musicChoice == Constants.K_FrogSounds ) {
 					SimpleAudioEngine.SharedEngine.PlayBackgroundMusic(FormatSoundFilePath("birds.mp3"), true);
-				}  else if ( musicChoice == Constants.kInsectSounds ) {
+				}  else if ( musicChoice == Constants.K_InsectSounds ) {
 					SimpleAudioEngine.SharedEngine.PlayBackgroundMusic(FormatSoundFilePath("frogs.mp3"), true);
 				}
 				

@@ -91,12 +91,12 @@ namespace AngryNinjas
                                           true,
                                           false,
                                           0.25f,
-                                          Constants.useShapeOfSourceImage,
+                                          Constants.UseShapeOfSourceImage,
                                           90,
                                           false,
                                           100,
-                                          Constants.breakEffectSmokePuffs);
-            AddChild(object1, Constants.depthStack);
+                                          Constants.BreakEffectSmokePuffs);
+            AddChild(object1, Constants.DepthStack);
 
             object1 = new StackObject(world,
                                                       new CCPoint(95 + stackLocationX, 65 + stackLocationY),
@@ -106,12 +106,12 @@ namespace AngryNinjas
                                                       true,
                                                       false,
                                                       0.25f,
-                                                      Constants.useShapeOfSourceImage,
+                                                      Constants.UseShapeOfSourceImage,
                                                       90,
                                                       false,
                                                       100,
-                                                      Constants.breakEffectSmokePuffs);
-            AddChild(object1, Constants.depthStack);
+                                                      Constants.BreakEffectSmokePuffs);
+            AddChild(object1, Constants.DepthStack);
             object1 = new StackObject(world,
                                                       new CCPoint(47 + stackLocationX, 145 + stackLocationY),
                                                       "woodShape1",
@@ -120,12 +120,12 @@ namespace AngryNinjas
                                                       true,
                                                       false,
                                                       0.25f,
-                                                      Constants.useShapeOfSourceImage,
+                                                      Constants.UseShapeOfSourceImage,
                                                       0,
                                                       false,
                                                       100,
-                                                      Constants.breakEffectSmokePuffs);
-            AddChild(object1, Constants.depthStack);
+                                                      Constants.BreakEffectSmokePuffs);
+            AddChild(object1, Constants.DepthStack);
             object1 = new StackObject(world,
                                                       new CCPoint(0 + stackLocationX, 225 + stackLocationY),
                                                       "woodShape1",
@@ -134,12 +134,12 @@ namespace AngryNinjas
                                                       true,
                                                       false,
                                                       0.25f,
-                                                      Constants.useShapeOfSourceImage,
+                                                      Constants.UseShapeOfSourceImage,
                                                       90,
                                                       false,
                                                       100,
-                                                      Constants.breakEffectSmokePuffs);
-            AddChild(object1, Constants.depthStack);
+                                                      Constants.BreakEffectSmokePuffs);
+            AddChild(object1, Constants.DepthStack);
             object1 = new StackObject(world,
                                                       new CCPoint(95 + stackLocationX, 225 + stackLocationY),
                                                       "woodShape1",
@@ -148,12 +148,12 @@ namespace AngryNinjas
                                                       true,
                                                       false,
                                                       0.25f,
-                                                      Constants.useShapeOfSourceImage,
+                                                      Constants.UseShapeOfSourceImage,
                                                       90,
                                                       false,
                                                       100,
-                                                      Constants.breakEffectSmokePuffs);
-            AddChild(object1, Constants.depthStack);
+                                                      Constants.BreakEffectSmokePuffs);
+            AddChild(object1, Constants.DepthStack);
             object1 = new StackObject(world,
                                                       new CCPoint(50 + stackLocationX, 305 + stackLocationY),
                                                       "woodShape1",
@@ -162,12 +162,12 @@ namespace AngryNinjas
                                                       true,
                                                       false,
                                                       0.25f,
-                                                      Constants.useShapeOfSourceImage,
+                                                      Constants.UseShapeOfSourceImage,
                                                       0,
                                                       false,
                                                       100,
-                                                      Constants.breakEffectSmokePuffs);
-            AddChild(object1, Constants.depthStack);
+                                                      Constants.BreakEffectSmokePuffs);
+            AddChild(object1, Constants.DepthStack);
             #endregion
             #region Medium Triangle Test Object
             var object8 = new StackObject(world,
@@ -178,12 +178,12 @@ namespace AngryNinjas
                                           false,
                                           false,
                                           0.25f,
-                                          Constants.useTriangle,
+                                          Constants.UseTriangle,
                                           0,
                                           false,
                                           100,
-                                          Constants.breakEffectExplosion);
-            AddChild(object8, Constants.depthStack);
+                                          Constants.BreakEffectExplosion);
+            AddChild(object8, Constants.DepthStack);
             object8 = new StackObject(world,
                                           new CCPoint(95 + stackLocationX, 345 + stackLocationY),
                                           "triangleMedium",
@@ -192,12 +192,12 @@ namespace AngryNinjas
                                           false,
                                           false,
                                           0.25f,
-                                          Constants.useTriangle,
+                                          Constants.UseTriangle,
                                           0,
                                           false,
                                           100,
-                                          Constants.breakEffectExplosion);
-            AddChild(object8, Constants.depthStack);
+                                          Constants.BreakEffectExplosion);
+            AddChild(object8, Constants.DepthStack);
             #endregion
         }
 
@@ -229,38 +229,38 @@ namespace AngryNinjas
 
             }
 
-                StackObject object1 = new StackObject(world , new CCPoint( 0 + stackLocationX , 65 + stackLocationY) , "woodShape1" , false, true  , true  , false , 0.25f , Constants.useShapeOfSourceImage , 90 , false , 100 , Constants.breakEffectSmokePuffs);
-   AddChild(object1, Constants.depthStack);
+                StackObject object1 = new StackObject(world , new CCPoint( 0 + stackLocationX , 65 + stackLocationY) , "woodShape1" , false, true  , true  , false , 0.25f , Constants.UseShapeOfSourceImage , 90 , false , 100 , Constants.BreakEffectSmokePuffs);
+   AddChild(object1, Constants.DepthStack);
     
-    StackObject object2 = new StackObject(world , new CCPoint(95 + stackLocationX , 65 + stackLocationY) , "woodShape1" , false, true  , true , false , 0.25f , Constants.useShapeOfSourceImage , 90 , false , 100 , Constants.breakEffectSmokePuffs);
-   AddChild(object2, Constants.depthStack);
+    StackObject object2 = new StackObject(world , new CCPoint(95 + stackLocationX , 65 + stackLocationY) , "woodShape1" , false, true  , true , false , 0.25f , Constants.UseShapeOfSourceImage , 90 , false , 100 , Constants.BreakEffectSmokePuffs);
+   AddChild(object2, Constants.DepthStack);
     
-    StackObject object3 = new StackObject(world , new CCPoint(47 + stackLocationX, 145 + stackLocationY) , "woodShape1" , false, true  , true , false , 0.25f , Constants.useShapeOfSourceImage , 0 , false , 100 , Constants.breakEffectExplosion);
-   AddChild(object3, Constants.depthStack);
+    StackObject object3 = new StackObject(world , new CCPoint(47 + stackLocationX, 145 + stackLocationY) , "woodShape1" , false, true  , true , false , 0.25f , Constants.UseShapeOfSourceImage , 0 , false , 100 , Constants.BreakEffectExplosion);
+   AddChild(object3, Constants.DepthStack);
     
-    StackObject object4 = new StackObject(world , new CCPoint( 0 + stackLocationX, 225 + stackLocationY) , "woodShape1" , false, true  , true , false , 0.25f , Constants.useShapeOfSourceImage , 90 , false , 100 , Constants.breakEffectExplosion);
-   AddChild(object4, Constants.depthStack);
+    StackObject object4 = new StackObject(world , new CCPoint( 0 + stackLocationX, 225 + stackLocationY) , "woodShape1" , false, true  , true , false , 0.25f , Constants.UseShapeOfSourceImage , 90 , false , 100 , Constants.BreakEffectExplosion);
+   AddChild(object4, Constants.DepthStack);
     
-    StackObject object5 = new StackObject(world , new CCPoint(95 + stackLocationX, 225 + stackLocationY) , "woodShape1" , false, true  , true , false , 0.25f , Constants.useShapeOfSourceImage , 90 , false , 100 , Constants.breakEffectExplosion);
-   AddChild(object5, Constants.depthStack);
+    StackObject object5 = new StackObject(world , new CCPoint(95 + stackLocationX, 225 + stackLocationY) , "woodShape1" , false, true  , true , false , 0.25f , Constants.UseShapeOfSourceImage , 90 , false , 100 , Constants.BreakEffectExplosion);
+   AddChild(object5, Constants.DepthStack);
     
-    StackObject object6 = new StackObject(world , new CCPoint(50 + stackLocationX, 305 + stackLocationY) , "woodShape1" , false, true  , true , false , 0.25f , Constants.useShapeOfSourceImage , 0 , false , 100 , Constants.breakEffectSmokePuffs);
-   AddChild(object6, Constants.depthStack);
+    StackObject object6 = new StackObject(world , new CCPoint(50 + stackLocationX, 305 + stackLocationY) , "woodShape1" , false, true  , true , false , 0.25f , Constants.UseShapeOfSourceImage , 0 , false , 100 , Constants.BreakEffectSmokePuffs);
+   AddChild(object6, Constants.DepthStack);
     
-    StackObject object7 = new StackObject(world , new CCPoint(0 + stackLocationX , 345 + stackLocationY) , "triangleMedium" , false, true  , false , true , 0.25f , Constants.useTriangle , 0 , false , 100 , Constants.breakEffectSmokePuffs) ;
-   AddChild(object7, Constants.depthStack);
+    StackObject object7 = new StackObject(world , new CCPoint(0 + stackLocationX , 345 + stackLocationY) , "triangleMedium" , false, true  , false , true , 0.25f , Constants.UseTriangle , 0 , false , 100 , Constants.BreakEffectSmokePuffs) ;
+   AddChild(object7, Constants.DepthStack);
     
-    StackObject object8 = new StackObject(world , new CCPoint(95 + stackLocationX, 345 + stackLocationY) , "triangleMedium" , false, true , false , true , 0.25f , Constants.useTriangle , 0 , false , 100 , Constants.breakEffectExplosion);
-   AddChild(object8, Constants.depthStack);
+    StackObject object8 = new StackObject(world , new CCPoint(95 + stackLocationX, 345 + stackLocationY) , "triangleMedium" , false, true , false , true , 0.25f , Constants.UseTriangle , 0 , false , 100 , Constants.BreakEffectExplosion);
+   AddChild(object8, Constants.DepthStack);
     
-    StackObject object9 = new StackObject(world , new CCPoint(50 + stackLocationX, 350 + stackLocationY) , "triangleLarge" , false, true , false , true , 0.25f , Constants.useTriangle , 180 , false , 500 , Constants.breakEffectSmokePuffs);
-   AddChild(object9, Constants.depthStack);
+    StackObject object9 = new StackObject(world , new CCPoint(50 + stackLocationX, 350 + stackLocationY) , "triangleLarge" , false, true , false , true , 0.25f , Constants.UseTriangle , 180 , false , 500 , Constants.BreakEffectSmokePuffs);
+   AddChild(object9, Constants.DepthStack);
     
-    StackObject object10 = new StackObject(world , new CCPoint(25 + stackLocationX, 394 + stackLocationY) , "triangleSmall" , false, true , false , false , 0.25f , Constants.useTriangle , 0 , false , 100 , Constants.breakEffectExplosion);
-   AddChild(object10, Constants.depthStack);
+    StackObject object10 = new StackObject(world , new CCPoint(25 + stackLocationX, 394 + stackLocationY) , "triangleSmall" , false, true , false , false , 0.25f , Constants.UseTriangle , 0 , false , 100 , Constants.BreakEffectExplosion);
+   AddChild(object10, Constants.DepthStack);
     
-    StackObject object11 = new StackObject(world , new CCPoint(75 + stackLocationX, 394 + stackLocationY) , "triangleSmall" , false, true , false , false , 0.25f , Constants.useTriangle , 0 , false , 100 , Constants.breakEffectSmokePuffs);
-   AddChild(object11, Constants.depthStack);
+    StackObject object11 = new StackObject(world , new CCPoint(75 + stackLocationX, 394 + stackLocationY) , "triangleSmall" , false, true , false , false , 0.25f , Constants.UseTriangle , 0 , false , 100 , Constants.BreakEffectSmokePuffs);
+   AddChild(object11, Constants.DepthStack);
 
             Enemy enemy1 = new Enemy(world,
                                       new CCPoint(45 + stackLocationX, 200 + stackLocationY),
@@ -272,11 +272,11 @@ namespace AngryNinjas
                                       true,
                                       10,
                                       1.0f,
-                                      Constants.useShapeOfSourceImageButSlightlySmaller,
+                                      Constants.UseShapeOfSourceImageButSlightlySmaller,
                                       10000,
-                                      Constants.breakEffectSmokePuffs);
+                                      Constants.BreakEffectSmokePuffs);
 
-            AddChild(enemy1, Constants.depthStack);
+            AddChild(enemy1, Constants.DepthStack);
         }
 
 
@@ -319,12 +319,12 @@ namespace AngryNinjas
                                           false,
                                           false,
                                           0.25f,
-                                          Constants.useShapeOfSourceImage,
+                                          Constants.UseShapeOfSourceImage,
                                           90,
                                           true,
                                           0,
-                                          Constants.breakEffectNone);
-            AddChild(object1, Constants.depthStack);
+                                          Constants.BreakEffectNone);
+            AddChild(object1, Constants.DepthStack);
             object1 = new StackObject(world,
                                           new CCPoint(190 + stackLocationX, 40 + stackLocationY),
                                           "marbleSquare",
@@ -333,12 +333,12 @@ namespace AngryNinjas
                                           false,
                                           false,
                                           0.25f,
-                                          Constants.useShapeOfSourceImage,
+                                          Constants.UseShapeOfSourceImage,
                                           90,
                                           true,
                                           0,
-                                          Constants.breakEffectNone);
-            AddChild(object1, Constants.depthStack);
+                                          Constants.BreakEffectNone);
+            AddChild(object1, Constants.DepthStack);
             #endregion
             #region stone pillars
             object1 = new StackObject(world,
@@ -349,12 +349,12 @@ namespace AngryNinjas
                                           false,
                                           false,
                                           0.25f,
-                                          Constants.useShapeOfSourceImage,
+                                          Constants.UseShapeOfSourceImage,
                                           90,
                                           true,
                                           0,
-                                          Constants.breakEffectNone);
-            AddChild(object1, Constants.depthStack);
+                                          Constants.BreakEffectNone);
+            AddChild(object1, Constants.DepthStack);
             object1 = new StackObject(world,
                                           new CCPoint(27 + stackLocationX, 220 + stackLocationY),
                                           "stonePillar",
@@ -363,12 +363,12 @@ namespace AngryNinjas
                                           false,
                                           false,
                                           0.25f,
-                                          Constants.useShapeOfSourceImage,
+                                          Constants.UseShapeOfSourceImage,
                                           90,
                                           true,
                                           0,
-                                          Constants.breakEffectNone);
-            AddChild(object1, Constants.depthStack);
+                                          Constants.BreakEffectNone);
+            AddChild(object1, Constants.DepthStack);
             #endregion
             #region wood shapes
             object1 = new StackObject(world,
@@ -379,12 +379,12 @@ namespace AngryNinjas
                                                       false,
                                                       false,
                                                       0.25f,
-                                                      Constants.useShapeOfSourceImage,
+                                                      Constants.UseShapeOfSourceImage,
                                                       0,
                                                       false,
                                                       100,
-                                                      Constants.breakEffectExplosion);
-            AddChild(object1, Constants.depthStack);
+                                                      Constants.BreakEffectExplosion);
+            AddChild(object1, Constants.DepthStack);
             object1 = new StackObject(world,
                                                       new CCPoint(57 + stackLocationX, 128 + stackLocationY),
                                                       "woodShape4",
@@ -393,12 +393,12 @@ namespace AngryNinjas
                                                       false,
                                                       true,
                                                       0.25f,
-                                                      Constants.useShapeOfSourceImage,
+                                                      Constants.UseShapeOfSourceImage,
                                                       90,
                                                       false,
                                                       100,
-                                                      Constants.breakEffectExplosion);
-            AddChild(object1, Constants.depthStack);
+                                                      Constants.BreakEffectExplosion);
+            AddChild(object1, Constants.DepthStack);
             object1 = new StackObject(world,
                                                       new CCPoint(114 + stackLocationX, 128 + stackLocationY),
                                                       "woodShape4",
@@ -407,12 +407,12 @@ namespace AngryNinjas
                                                       false,
                                                       false,
                                                       0.25f,
-                                                      Constants.useShapeOfSourceImage,
+                                                      Constants.UseShapeOfSourceImage,
                                                       90,
                                                       false,
                                                       100,
-                                                      Constants.breakEffectExplosion);
-            AddChild(object1, Constants.depthStack);
+                                                      Constants.BreakEffectExplosion);
+            AddChild(object1, Constants.DepthStack);
             object1 = new StackObject(world,
                                                       new CCPoint(168 + stackLocationX, 128 + stackLocationY),
                                                       "woodShape4",
@@ -421,12 +421,12 @@ namespace AngryNinjas
                                                       false,
                                                       false,
                                                       0.25f,
-                                                      Constants.useShapeOfSourceImage,
+                                                      Constants.UseShapeOfSourceImage,
                                                       90,
                                                       false,
                                                       100,
-                                                      Constants.breakEffectExplosion);
-            AddChild(object1, Constants.depthStack);
+                                                      Constants.BreakEffectExplosion);
+            AddChild(object1, Constants.DepthStack);
             object1 = new StackObject(world,
                                                       new CCPoint(124 + stackLocationX, 166 + stackLocationY),
                                                       "woodShape3",
@@ -435,46 +435,46 @@ namespace AngryNinjas
                                                       false,
                                                       false,
                                                       0.25f,
-                                                      Constants.useShapeOfSourceImage,
+                                                      Constants.UseShapeOfSourceImage,
                                                       0,
                                                       false,
                                                       100,
-                                                      Constants.breakEffectExplosion);
-            AddChild(object1, Constants.depthStack);
+                                                      Constants.BreakEffectExplosion);
+            AddChild(object1, Constants.DepthStack);
             #endregion
 
 
-            StackObject object11 = new StackObject(world, new CCPoint(45 + stackLocationX, 210 + stackLocationY), "woodShape4", false, true, false, true, 0.25f, Constants.useShapeOfSourceImage, 90, false, 100, Constants.breakEffectExplosion);
-            AddChild(object11, Constants.depthStack);
+            StackObject object11 = new StackObject(world, new CCPoint(45 + stackLocationX, 210 + stackLocationY), "woodShape4", false, true, false, true, 0.25f, Constants.UseShapeOfSourceImage, 90, false, 100, Constants.BreakEffectExplosion);
+            AddChild(object11, Constants.DepthStack);
 
-            StackObject object12 = new StackObject(world, new CCPoint(95 + stackLocationX, 210 + stackLocationY), "woodShape4", false, true, false, true, 0.25f, Constants.useShapeOfSourceImage, 90, false, 100, Constants.breakEffectExplosion);
-            AddChild(object12, Constants.depthStack);
+            StackObject object12 = new StackObject(world, new CCPoint(95 + stackLocationX, 210 + stackLocationY), "woodShape4", false, true, false, true, 0.25f, Constants.UseShapeOfSourceImage, 90, false, 100, Constants.BreakEffectExplosion);
+            AddChild(object12, Constants.DepthStack);
 
-            StackObject object13 = new StackObject(world, new CCPoint(145 + stackLocationX, 210 + stackLocationY), "woodShape4", false, true, false, true, 0.25f, Constants.useShapeOfSourceImage, 90, false, 100, Constants.breakEffectExplosion);
-            AddChild(object13, Constants.depthStack);
+            StackObject object13 = new StackObject(world, new CCPoint(145 + stackLocationX, 210 + stackLocationY), "woodShape4", false, true, false, true, 0.25f, Constants.UseShapeOfSourceImage, 90, false, 100, Constants.BreakEffectExplosion);
+            AddChild(object13, Constants.DepthStack);
 
-            StackObject object14 = new StackObject(world, new CCPoint(200 + stackLocationX, 210 + stackLocationY), "woodShape4", false, true, false, true, 0.25f, Constants.useShapeOfSourceImage, 90, false, 100, Constants.breakEffectExplosion);
-            AddChild(object14, Constants.depthStack);
+            StackObject object14 = new StackObject(world, new CCPoint(200 + stackLocationX, 210 + stackLocationY), "woodShape4", false, true, false, true, 0.25f, Constants.UseShapeOfSourceImage, 90, false, 100, Constants.BreakEffectExplosion);
+            AddChild(object14, Constants.DepthStack);
 
-            StackObject object15 = new StackObject(world, new CCPoint(80 + stackLocationX, 250 + stackLocationY), "stonePillar", false, false, false, true, .5f, Constants.useShapeOfSourceImage, 90, false, 0, Constants.breakEffectNone);
-            AddChild(object15, Constants.depthStack);
+            StackObject object15 = new StackObject(world, new CCPoint(80 + stackLocationX, 250 + stackLocationY), "stonePillar", false, false, false, true, .5f, Constants.UseShapeOfSourceImage, 90, false, 0, Constants.BreakEffectNone);
+            AddChild(object15, Constants.DepthStack);
 
-            StackObject object16 = new StackObject(world, new CCPoint(180 + stackLocationX, 250 + stackLocationY), "stonePillar", false, false, false, true, .5f, Constants.useShapeOfSourceImage, 90, false, 0, Constants.breakEffectNone);
-            AddChild(object16, Constants.depthStack);
-
-
-            StackObject object17 = new StackObject(world, new CCPoint(95 + stackLocationX, 285 + stackLocationY), "triangleMedium", false, true, false, true, 0.25f, Constants.useTriangle, 0, false, 100, Constants.breakEffectExplosion);
-            AddChild(object17, Constants.depthStack);
-
-            StackObject object18 = new StackObject(world, new CCPoint(181 + stackLocationX, 285 + stackLocationY), "triangleMedium", false, true, false, true, 0.25f, Constants.useTriangle, 0, false, 100, Constants.breakEffectExplosion);
-            AddChild(object18, Constants.depthStack);
-
-            StackObject object19 = new StackObject(world, new CCPoint(138 + stackLocationX, 280 + stackLocationY), "triangleSmall", false, true, false, true, 0.25f, Constants.useTriangle, 180, false, 500, Constants.breakEffectExplosion);
-            AddChild(object19, Constants.depthStack);
+            StackObject object16 = new StackObject(world, new CCPoint(180 + stackLocationX, 250 + stackLocationY), "stonePillar", false, false, false, true, .5f, Constants.UseShapeOfSourceImage, 90, false, 0, Constants.BreakEffectNone);
+            AddChild(object16, Constants.DepthStack);
 
 
-            StackObject object5 = new StackObject(world, new CCPoint(137 + stackLocationX, 340 + stackLocationY), "stonePillar", false, false, false, true, .5f, Constants.useShapeOfSourceImage, 0, false, 0, Constants.breakEffectNone);
-            AddChild(object5, Constants.depthStack);
+            StackObject object17 = new StackObject(world, new CCPoint(95 + stackLocationX, 285 + stackLocationY), "triangleMedium", false, true, false, true, 0.25f, Constants.UseTriangle, 0, false, 100, Constants.BreakEffectExplosion);
+            AddChild(object17, Constants.DepthStack);
+
+            StackObject object18 = new StackObject(world, new CCPoint(181 + stackLocationX, 285 + stackLocationY), "triangleMedium", false, true, false, true, 0.25f, Constants.UseTriangle, 0, false, 100, Constants.BreakEffectExplosion);
+            AddChild(object18, Constants.DepthStack);
+
+            StackObject object19 = new StackObject(world, new CCPoint(138 + stackLocationX, 280 + stackLocationY), "triangleSmall", false, true, false, true, 0.25f, Constants.UseTriangle, 180, false, 500, Constants.BreakEffectExplosion);
+            AddChild(object19, Constants.DepthStack);
+
+
+            StackObject object5 = new StackObject(world, new CCPoint(137 + stackLocationX, 340 + stackLocationY), "stonePillar", false, false, false, true, .5f, Constants.UseShapeOfSourceImage, 0, false, 0, Constants.BreakEffectNone);
+            AddChild(object5, Constants.DepthStack);
 
 
 
@@ -488,11 +488,11 @@ namespace AngryNinjas
                                       true,
                                       10,
                                       1.0f,
-                                      Constants.useShapeOfSourceImage,
+                                      Constants.UseShapeOfSourceImage,
                                       10000,
-                                      Constants.breakEffectSmokePuffs);
+                                      Constants.BreakEffectSmokePuffs);
 
-            AddChild(enemy1, Constants.depthStack);
+            AddChild(enemy1, Constants.DepthStack);
             enemy1 = new Enemy(world,
                                       new CCPoint(206 + stackLocationX, 120 + stackLocationY),
                                       "mutantPepper",
@@ -503,11 +503,11 @@ namespace AngryNinjas
                                       true,
                                       10,
                                       1.0f,
-                                      Constants.useShapeOfSourceImageButSlightlySmaller,
+                                      Constants.UseShapeOfSourceImageButSlightlySmaller,
                                       10000,
-                                      Constants.breakEffectSmokePuffs);
+                                      Constants.BreakEffectSmokePuffs);
 
-            AddChild(enemy1, Constants.depthStack);
+            AddChild(enemy1, Constants.DepthStack);
         }
 
 

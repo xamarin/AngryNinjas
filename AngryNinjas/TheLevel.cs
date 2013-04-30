@@ -215,24 +215,24 @@ namespace AngryNinjas
 			//set up background art
 			
 			backgroundLayerClouds = new CCSprite (GameData.SharedData.BackgroundCloudsFileName);  // will return the background clouds file for a particular level
-			AddChild (backgroundLayerClouds, Constants.depthClouds);
+			AddChild (backgroundLayerClouds, Constants.DepthClouds);
 
 			backgroundLayerHills = new CCSprite (GameData.SharedData.BackgroundHillsFileName);  // will return the background hills file for a particular level
-			AddChild (backgroundLayerHills, Constants.depthHills);
+			AddChild (backgroundLayerHills, Constants.DepthHills);
 			backgroundLayerHills.ScaleX = 1.05f;
 
 			slingShotFront = new CCSprite ("slingshot_front.png"); 
-			AddChild (slingShotFront, Constants.depthSlingShotFront);
+			AddChild (slingShotFront, Constants.DepthSlingShotFront);
 
 			strapFront = new CCSprite ("strap.png"); 
-			AddChild (strapFront, Constants.depthStrapFront);
+			AddChild (strapFront, Constants.DepthStrapFront);
 
 
 			strapBack = new CCSprite ("strapBack.png");
-			AddChild (strapBack, Constants.depthStrapBack);
+			AddChild (strapBack, Constants.DepthStrapBack);
 
 			strapEmpty = new CCSprite ("strapEmpty.png");
-			AddChild (strapEmpty, Constants.depthStrapBack);
+			AddChild (strapEmpty, Constants.DepthStrapBack);
 
 
 			strapBack.Visible = false;  //visible only when stretching
@@ -384,7 +384,7 @@ namespace AngryNinjas
 
 			MenuButton = new CCMenu (button1);
 			MenuButton.Position = menuStartPosition;
-			AddChild (MenuButton, Constants.depthScore);
+			AddChild (MenuButton, Constants.DepthScore);
 			
 			
 			
@@ -449,13 +449,13 @@ namespace AngryNinjas
 			//Set up the ground plane
 			
 			theGroundPlane = new GroundPlane (world, groundPlaneStartPosition, GameData.SharedData.GroundPlaneFileName);
-			AddChild(theGroundPlane, Constants.depthFloor);
+			AddChild(theGroundPlane, Constants.DepthFloor);
 
 			
 			//Set up the starting platform
 			
 			thePlatform = new StartPlatform(world, platformStartPosition, "platform.png"); 
-			AddChild(thePlatform, Constants.depthPlatform);
+			AddChild(thePlatform, Constants.DepthPlatform);
 
 			//Set up ninjas
 			
@@ -465,7 +465,7 @@ namespace AngryNinjas
 			
 			
 			ninja1 = new Ninja( world, ninjaStartPosition1, @"ninja");
-			AddChild(ninja1, Constants.depthNinjas);
+			AddChild(ninja1, Constants.DepthNinjas);
 			
 			currentBodyNode = ninja1;
 
@@ -474,46 +474,46 @@ namespace AngryNinjas
 			if ( ninjasToTossThisLevel >= 2) {
 				
 				ninja2 = new Ninja( world, ninjaStartPosition2, @"ninjaRed");
-				AddChild(ninja2, Constants.depthNinjas);
+				AddChild(ninja2, Constants.DepthNinjas);
 				ninja2.SpriteInStandingState();
 
 			}
 			if ( ninjasToTossThisLevel >= 3) {
 				
 				ninja3 = new Ninja( world, ninjaStartPosition3, @"ninjaBlue");
-				AddChild(ninja3, Constants.depthNinjas);
+				AddChild(ninja3, Constants.DepthNinjas);
 				ninja3.SpriteInStandingState();
 			}
 			if ( ninjasToTossThisLevel >= 4) {
 				
 				ninja4 = new Ninja( world, ninjaStartPosition4, @"ninjaBrown");
-				AddChild(ninja4, Constants.depthNinjas);
+				AddChild(ninja4, Constants.DepthNinjas);
 				ninja4.SpriteInStandingState();
 			}
 			if ( ninjasToTossThisLevel >= 5) {
 				
 				ninja5 = new Ninja( world, ninjaStartPosition5, @"ninjaGreen");
-				AddChild(ninja5, Constants.depthNinjas);
+				AddChild(ninja5, Constants.DepthNinjas);
 				ninja5.SpriteInStandingState();
 			}
 
 			//Build the Stack. 
 			
 			stack = new TheStack(world);
-			AddChild(stack, Constants.depthStack);
+			AddChild(stack, Constants.DepthStack);
 			
 			
 			//give the stack a moment to drop, then switches every pieces to static (locks it into position, until the first slingshot)...
 			ScheduleOnce(SwitchAllStackObjectsToStatic, 1.0f);
 
 			currentScoreLabel = new CCLabelTTF(String.Format("{0}: Needed", pointsToPassLevel), "MarkerFelt", fontSizeForScore);
-			AddChild(currentScoreLabel, Constants.depthScore);
+			AddChild(currentScoreLabel, Constants.DepthScore);
 			currentScoreLabel.Color = new CCColor3B(255,255,255);
 			currentScoreLabel.Position = currentScoreLabelStartPosition;
 			currentScoreLabel.AnchorPoint = new CCPoint( 1, .5f);
 			// HighScoreForLevel
 			highScoreLabel = new CCLabelTTF(String.Format("High Score: {0}", GameData.SharedData.HighScoreForLevel), "MarkerFelt", fontSizeForScore);
-			AddChild(highScoreLabel, Constants.depthScore);
+			AddChild(highScoreLabel, Constants.DepthScore);
 			highScoreLabel.Color = new CCColor3B(255,255,255);
 
             highScoreLabel.Position = currentScoreLabel.Position - new CCPoint(0, highScoreLabel.ContentSize.Height);// highScoreLabelStartPosition;
@@ -554,11 +554,11 @@ namespace AngryNinjas
 			
 			if ( GameData.SharedData.Level == 1 ) {
 				
-				GameSounds.SharedGameSounds.PlayBackgroundMusic(Constants.kFrogSounds);
+				GameSounds.SharedGameSounds.PlayBackgroundMusic(Constants.K_FrogSounds);
 				
 			} else {
 				
-				GameSounds.SharedGameSounds.PlayBackgroundMusic(Constants.kInsectSounds); 
+				GameSounds.SharedGameSounds.PlayBackgroundMusic(Constants.K_InsectSounds); 
 			}
 
             if (GameData.SharedData.FirstRunEver && openWithMenuInsteadOfGame)
@@ -1377,7 +1377,7 @@ namespace AngryNinjas
 				while(someNum <= dotTotalOnOddNumberedTurn ) 
 				{
 					
-					RemoveChildByTag(Constants.tagForWhiteDotsOddNumberedTurn + someNum, false);
+					RemoveChildByTag(Constants.TagForWhiteDotsOddNumberedTurn + someNum, false);
 					someNum ++;
 					
 					
@@ -1392,7 +1392,7 @@ namespace AngryNinjas
 				
 				while(someNum <= dotTotalOnEvenNumberedTurn ) {
 					
-					RemoveChildByTag(Constants.tagForWhiteDotsEvenNumberedTurn + someNum, false);
+					RemoveChildByTag(Constants.TagForWhiteDotsEvenNumberedTurn + someNum, false);
 					someNum ++;
 					
 					
@@ -1413,7 +1413,7 @@ namespace AngryNinjas
 			
 			while(someNum <= dotTotalOnOddNumberedTurn ) {
 				
-				RemoveChildByTag(Constants.tagForWhiteDotsOddNumberedTurn + someNum, false);
+				RemoveChildByTag(Constants.TagForWhiteDotsOddNumberedTurn + someNum, false);
 				someNum ++;
 				
 			}
@@ -1423,7 +1423,7 @@ namespace AngryNinjas
 			
 			while(someNum <= dotTotalOnEvenNumberedTurn ) {
 				
-				RemoveChildByTag(Constants.tagForWhiteDotsEvenNumberedTurn + someNum, false);
+				RemoveChildByTag(Constants.TagForWhiteDotsEvenNumberedTurn + someNum, false);
 				someNum ++; 
 				
 			}
@@ -1444,12 +1444,12 @@ namespace AngryNinjas
 				
 				if (throwCount % 2 != 0){  //odd number..
 					
-					AddChild(whiteDot, Constants.depthWhiteDots, Constants.tagForWhiteDotsOddNumberedTurn + dotCount);
+					AddChild(whiteDot, Constants.DepthWhiteDots, Constants.TagForWhiteDotsOddNumberedTurn + dotCount);
 					dotTotalOnOddNumberedTurn = dotCount;
 					
 				} else {
 					
-					AddChild(whiteDot, Constants.depthWhiteDots, Constants.tagForWhiteDotsEvenNumberedTurn + dotCount);
+					AddChild(whiteDot, Constants.DepthWhiteDots, Constants.TagForWhiteDotsEvenNumberedTurn + dotCount);
 					dotTotalOnEvenNumberedTurn = dotCount;
 				}
 				
@@ -1693,7 +1693,7 @@ namespace AngryNinjas
 		void showSimpleVisualFX(CCPoint positionToShowScore, int theSimpleScoreVisualFX)
 		{
 			
-			if ( theSimpleScoreVisualFX == Constants.breakEffectSmokePuffs ) {
+			if ( theSimpleScoreVisualFX == Constants.BreakEffectSmokePuffs ) {
 				
 				GameSounds.SharedGameSounds.PlayBreakSound();
 				
@@ -1708,9 +1708,9 @@ namespace AngryNinjas
 				                                               false,
 				                                               false,
 				                                               false);
-				AddChild(smokeFX, Constants.depthVisualFx);
+				AddChild(smokeFX, Constants.DepthVisualFx);
 				
-			} else if ( theSimpleScoreVisualFX == Constants.breakEffectExplosion ) {
+			} else if ( theSimpleScoreVisualFX == Constants.BreakEffectExplosion ) {
 				
 				GameSounds.SharedGameSounds.PlayBreakSound();
 				
@@ -1725,7 +1725,7 @@ namespace AngryNinjas
 				                                               false,
 				                                               false,
 				                                               false);
-				AddChild(smokeFX, Constants.depthVisualFx);
+				AddChild(smokeFX, Constants.DepthVisualFx);
 				
 			}    
 			
@@ -1790,7 +1790,7 @@ namespace AngryNinjas
 			}
 			
 			
-			AddChild(scoreLabel, Constants.depthPointScore);
+			AddChild(scoreLabel, Constants.DepthPointScore);
 			scoreLabel.Position = positionToShowScore;
 			
 			
@@ -1826,7 +1826,7 @@ namespace AngryNinjas
 		{
 
 			CCLabelTTF scoreLabel = new CCLabelTTF(string.Format("{0}", pointValue), "MarkerFelt", 22);
-			AddChild(scoreLabel, Constants.depthPointScore);
+			AddChild(scoreLabel, Constants.DepthPointScore);
 			scoreLabel.Color = new CCColor3B(255,255,255);
 			scoreLabel.Position = positionToShowScore;
 			
@@ -1986,7 +1986,7 @@ namespace AngryNinjas
 		{
 			
 			CCLabelTTF boardMessage = new CCLabelTTF(theMessage, "MarkerFelt", 22);
-			AddChild(boardMessage, Constants.depthPointScore);
+			AddChild(boardMessage, Constants.DepthPointScore);
 			boardMessage.Color = new CCColor3B(255,255,255);
 			boardMessage.PositionX = screenWidth /2;
 			boardMessage.PositionY = screenHeight * .7f;
