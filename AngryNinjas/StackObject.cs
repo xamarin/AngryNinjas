@@ -25,7 +25,7 @@ namespace AngryNinjas
 		public bool IsCanDamageEnemy { get; set; }
 		public bool IsStatic { get; set; }  //will always be static
 		float theDensity;
-		int shapeCreationMethod;
+		CreationMethod shapeCreationMethod;
 		
 		int angle;
 		
@@ -43,7 +43,7 @@ namespace AngryNinjas
 		                    bool hasAnimatedBreakFrames,
 		                    bool damagesEnemy,
 		                    float density,
-		                    int createHow,
+		                    CreationMethod createHow,
 		                    int angleChange,
 		                    bool makeImmovable,
 		                    int points,
@@ -72,7 +72,7 @@ namespace AngryNinjas
 		                   bool hasAnimatedBreakFrames,
 		                   bool damagesEnemy,
 		                   float density,
-		                   int createHow,
+		                   CreationMethod createHow,
 		                   int angleChange,
 		                   bool makeImmovable,
 		                   int points,
@@ -115,7 +115,7 @@ namespace AngryNinjas
 			var shape = new b2PolygonShape();
 			var shapeCircle = new b2CircleShape();
 			
-			if (shapeCreationMethod == Constants.UseDiameterOfImageForCircle) {
+			if (shapeCreationMethod == CreationMethod.DiameterOfImageForCircle) {
 				
 				var tempSprite = new CCSprite(spriteImageName);
 				var radiusInMeters = (tempSprite.ContentSize.Width / Constants.PTM_RATIO) * 0.5f;
@@ -125,7 +125,7 @@ namespace AngryNinjas
 			}
 			
 			
-			else if ( shapeCreationMethod == Constants.UseShapeOfSourceImage) {
+			else if ( shapeCreationMethod == CreationMethod.ShapeOfSourceImage) {
 				
 				var tempSprite = new CCSprite(spriteImageName);
 				
@@ -139,7 +139,7 @@ namespace AngryNinjas
 				shape.Set(vertices, num);
 			}
 			
-			else if ( shapeCreationMethod == Constants.UseTriangle) {
+			else if ( shapeCreationMethod == CreationMethod.Triangle) {
 				var tempSprite = new CCSprite(spriteImageName);
 				
 				var num = 3;
@@ -152,7 +152,7 @@ namespace AngryNinjas
 				shape.Set(vertices, num);
 			}
 			
-			else if ( shapeCreationMethod == Constants.UseTriangleRightAngle) {
+			else if ( shapeCreationMethod == CreationMethod.TriangleRightAngle) {
 				var tempSprite = new CCSprite(spriteImageName);
 				
 				var num = 3;
@@ -165,7 +165,7 @@ namespace AngryNinjas
 				shape.Set(vertices, num);
 			}
 			
-			else if ( shapeCreationMethod == Constants.UseTrapezoid) {
+			else if ( shapeCreationMethod == CreationMethod.Trapezoid) {
 				var tempSprite = new CCSprite(spriteImageName);
 				
 				var num = 4;
@@ -180,7 +180,7 @@ namespace AngryNinjas
 			}
 			
 			
-			else if ( shapeCreationMethod == Constants.UseHexagon) {
+			else if ( shapeCreationMethod == CreationMethod.Hexagon) {
 				
 				var tempSprite = new CCSprite(spriteImageName);
 				
@@ -197,7 +197,7 @@ namespace AngryNinjas
 				shape.Set(vertices, num);
 			}
 			
-			else if ( shapeCreationMethod == Constants.UsePentagon) {
+			else if ( shapeCreationMethod == CreationMethod.Pentagon) {
 				
 				var tempSprite = new CCSprite(spriteImageName);
 				
@@ -214,7 +214,7 @@ namespace AngryNinjas
 				shape.Set(vertices, num);
 			}
 			
-			else if ( shapeCreationMethod == Constants.UseOctagon) {
+			else if ( shapeCreationMethod == CreationMethod.Octagon) {
 				
 				var tempSprite = new CCSprite(spriteImageName);
 				
@@ -232,7 +232,7 @@ namespace AngryNinjas
 				
 				shape.Set(vertices, num);
 			}
-			else if ( shapeCreationMethod == Constants.UseParallelogram) {
+			else if ( shapeCreationMethod == CreationMethod.Parallelogram) {
 				
 				var tempSprite = new CCSprite(spriteImageName);
 				
@@ -247,7 +247,7 @@ namespace AngryNinjas
 				shape.Set(vertices, num);
 			}
 			
-			else if ( shapeCreationMethod == Constants.CustomCoordinates1) {  //use your own custom coordinates from a program like Vertex Helper Pro
+			else if ( shapeCreationMethod == CreationMethod.CustomCoordinates1) {  //use your own custom coordinates from a program like Vertex Helper Pro
 				
 				var num = 4;
 				b2Vec2[] vertices = {
@@ -265,7 +265,7 @@ namespace AngryNinjas
 			// Define the dynamic body fixture.
 			var fixtureDef = b2FixtureDef.Create();
 			
-			if ( shapeCreationMethod == Constants.UseDiameterOfImageForCircle) {
+			if ( shapeCreationMethod == CreationMethod.DiameterOfImageForCircle) {
 				
 				fixtureDef.shape = shapeCircle;	
 				
