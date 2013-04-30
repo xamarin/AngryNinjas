@@ -33,12 +33,10 @@ namespace AngryNinjas
 		public const int TagForWhiteDotsEvenNumberedTurn = 1000;
 		public const int TagForWhiteDotsOddNumberedTurn = 2000;
 
-		//remember when defining custom coordinates, the vec points much be defined in counter clockwise order, 8 points at most, and make a convex shape (i.e. every point must be able to touch every other point)
-		
-		
-		public const int BreakEffectNone = 0;
-		public const int BreakEffectSmokePuffs = 1;
-		public const int BreakEffectExplosion = 2;
+
+//		public const int BreakEffectNone = 0;
+//		public const int BreakEffectSmokePuffs = 1;
+//		public const int BreakEffectExplosion = 2;
 
 		
 		//sounds
@@ -71,7 +69,16 @@ namespace AngryNinjas
 		CustomCoordinates1 = 101,  //use your own custom coordinates from a program like Vertex Helper Pro 
 		CustomCoordinates2 = 102, //use your own custom coordinates from a program like Vertex Helper Pro
 		CustomCoordinates3 = 103 //use your own custom coordinates from a program like Vertex Helper Pro
+
+		//remember when defining custom coordinates, the vec points much be defined in counter clockwise order, 8 points at most, and make a convex shape (i.e. every point must be able to touch every other point)
+
 	}
 
+	public enum BreakEffect
+	{
+		None = 0,
+		SmokePuffs = 1,
+		Explosion = 2
+	}
 }
 

@@ -1690,10 +1690,10 @@ namespace AngryNinjas
 
 		#region SIMPLE BREAK FX
 		
-		void showSimpleVisualFX(CCPoint positionToShowScore, int theSimpleScoreVisualFX)
+		void showSimpleVisualFX(CCPoint positionToShowScore, BreakEffect theSimpleScoreVisualFX)
 		{
 			
-			if ( theSimpleScoreVisualFX == Constants.BreakEffectSmokePuffs ) {
+			if ( theSimpleScoreVisualFX == BreakEffect.SmokePuffs ) {
 				
 				GameSounds.SharedGameSounds.PlayBreakSound();
 				
@@ -1710,7 +1710,7 @@ namespace AngryNinjas
 				                                               false);
 				AddChild(smokeFX, Constants.DepthVisualFx);
 				
-			} else if ( theSimpleScoreVisualFX == Constants.BreakEffectExplosion ) {
+			} else if ( theSimpleScoreVisualFX == BreakEffect.Explosion ) {
 				
 				GameSounds.SharedGameSounds.PlayBreakSound();
 				
@@ -1732,7 +1732,7 @@ namespace AngryNinjas
 		}
 		
 
-		public void showPoints(int pointValue, CCPoint positionToShowScore, int theSimpleScoreVisualFX)
+		public void ShowPoints(int pointValue, CCPoint positionToShowScore, BreakEffect theSimpleScoreVisualFX)
 		{
 			
 			pointTotalThisRound = pointTotalThisRound + pointValue;

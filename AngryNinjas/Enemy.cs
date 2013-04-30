@@ -35,7 +35,7 @@ namespace AngryNinjas
 		bool differentSpritesForDamage; //whether or not you've included different images for damage progression (recommended)
 		
 		public int PointValue { get; set; }
-		public int SimpleScoreVisualFX { get; set; }  //defined in constants, which visual effect occurs when the enemy breaks
+		public BreakEffect SimpleScoreVisualFX { get; set; }  //defined in constants, which visual effect occurs when the enemy breaks
 		
 		int currentFrame;
 		int framesToAnimateOnBreak; //if 0 won't show any break frames
@@ -55,7 +55,7 @@ namespace AngryNinjas
 		              float density,
 		              CreationMethod createHow,
 		              int points,
-		              int simpleScoreVisualFXType )
+		              BreakEffect simpleScoreVisualFXType )
 		{
 			InitWithWorld( world,
 			               location,
@@ -84,7 +84,7 @@ namespace AngryNinjas
 		                    float density,
 		                    CreationMethod createHow,
 		                    int points,
-		                    int simpleScoreVisualFXType )
+		                    BreakEffect simpleScoreVisualFXType )
 		{
 			this.theWorld = world;
 			this.initialLocation = location;

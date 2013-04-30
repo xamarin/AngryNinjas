@@ -33,7 +33,7 @@ namespace AngryNinjas
 		int framesToAnimate;
 		
 		public int  PointValue { get; set; }
-		public int  SimpleScoreVisualFX { get; set; } //defined in Constants.cs
+		public BreakEffect  SimpleScoreVisualFX { get; set; } //defined in Constants.cs
 
 		public StackObject (b2World world, 
 		                    CCPoint location,
@@ -47,7 +47,7 @@ namespace AngryNinjas
 		                    int angleChange,
 		                    bool makeImmovable,
 		                    int points,
-		                    int simpleScoreVisualFXType)
+		                    BreakEffect simpleScoreVisualFXType)
 		{
 			InitWithWorld(world, 
 			              location, 
@@ -76,7 +76,7 @@ namespace AngryNinjas
 		                   int angleChange,
 		                   bool makeImmovable,
 		                   int points,
-		                   int simpleScoreVisualFXType)
+		                   BreakEffect simpleScoreVisualFXType)
 		{
 			this.theWorld = world;
 			this.initialLocation = location;
