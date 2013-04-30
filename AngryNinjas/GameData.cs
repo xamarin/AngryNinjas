@@ -145,22 +145,12 @@ namespace AngryNinjas
 			}
 		}
 
-		public bool FirstRunEver 
+		public bool FirstRunEver
 		{
-			get 
-			{	
-				return firstRunEver;
-			}
+			get { return firstRunEver; }
+			set { firstRunEver = value; }
 		}
 
-		public void SetFirstRunEverToNo ()
-		{
-			
-			firstRunEver = false;
-		}
-		
-		
-		
 		public int Level 
 		{
 			
@@ -180,10 +170,10 @@ namespace AngryNinjas
 				defaults.SetIntegerForKey("levelsCompletedAllTime", levelsCompleted);
 				defaults.Flush();
 
-				CCLog.Log(@"level {0} completed", levelsCompleted);
+				CCLog.Log(@"Level {0} completed", levelsCompleted);
 			} else {
 				
-				CCLog.Log(@"that level was completed before");
+				CCLog.Log(@"That level was completed before");
 				
 			}
 			
@@ -394,7 +384,7 @@ namespace AngryNinjas
 		public bool CanYouGoToTheFirstLevelOfThisSection(int theSection)
 		{
 			
-			int thePreviousSection = theSection - 1;
+			var thePreviousSection = theSection - 1;
 			
 			if (levelsCompleted >= ( thePreviousSection * eachLevelSectionIsHowManyLevels) ) {
 				
@@ -412,7 +402,7 @@ namespace AngryNinjas
 		public void ChangeLevelToFirstInThisSection(int theSection) 
 		{
 			
-			int thePreviousSection = theSection - 1;
+			var thePreviousSection = theSection - 1;
 			
 			level = ( thePreviousSection * eachLevelSectionIsHowManyLevels) + 1;
 			CCLog.Log("Level now equals {0}, which is the first level in Section: {1}", level, theSection);
@@ -456,94 +446,60 @@ namespace AngryNinjas
 
 		#region sounds
 		
-		public void TurnSoundFXOn()
+		public bool AreSoundFXMuted
 		{
 			
-			
-			soundFXMuted = false;
-			defaults.SetBoolForKey("soundFXMutedKey", soundFXMuted );
-			defaults.Flush();
-
-			
-			
-			
-		}
-		public void TurnSoundFXOff()
-		{
-			
-			soundFXMuted = true;
-			defaults.SetBoolForKey("soundFXMutedKey", soundFXMuted );
-			defaults.Flush();
-
-			
-		}
-		public bool AreSoundFXMuted {
 			get {
 				return soundFXMuted;
 			}
+
+			set 
+			{
+				soundFXMuted = value;
+				defaults.SetBoolForKey("soundFXMutedKey", soundFXMuted );
+				defaults.Flush();
+			}
+
 		}
 
 		#endregion
 
 		/////////////////////////
 		
-		public void TurnVoiceFXOn() {
-			
-			
-			voiceFXMuted = false;
-			defaults.SetBoolForKey("voiceFXMutedKey",voiceFXMuted );
-			defaults.Flush();
-
-			
-			
-			
-		}
-		public void TurnVoiceFXOff() {
-			
-			voiceFXMuted = true;
-			defaults.SetBoolForKey("voiceFXMutedKey",voiceFXMuted );
-			defaults.Flush();
-
-			
-		}
-		
 		public bool AreVoiceFXMuted 
 		{
+
 			get {	
 				return voiceFXMuted;
 			}
+
+			set 
+			{
+				voiceFXMuted = false;
+				defaults.SetBoolForKey("voiceFXMutedKey",voiceFXMuted );
+				defaults.Flush();
+			}
+			
+			
+			
 		}
-		
+
 		/////////////////////////
 		
-		public void TurnAmbientFXOn()
+		public bool AreAmbientFXMuted
 		{
-			
-			
-			ambientFXMuted = false;
-			defaults.SetBoolForKey("ambientFXMutedKey",ambientFXMuted );
-			defaults.Flush();
 
-
-			
-		}
-		public void TurnAmbientFXOff ()
-		{
-			
-			ambientFXMuted = true;
-			defaults.SetBoolForKey("ambientFXMutedKey",ambientFXMuted );
-			defaults.Flush();
-
-			
-		}
-		
-		public bool AreAmbientFXMuted 
-		{
 			get {	
 				return ambientFXMuted;
 			}
+
+			set 
+			{
+				ambientFXMuted = false;
+				defaults.SetBoolForKey("ambientFXMutedKey",ambientFXMuted );
+				defaults.Flush();
+			}
 		}
-		
 
 		#endregion
 	}

@@ -520,7 +520,7 @@ namespace AngryNinjas
 		void TurnVoiceFXOn(object sender)
 		{
 			
-			GameData.SharedData.TurnVoiceFXOn();
+			GameData.SharedData.AreVoiceFXMuted = true;
 			
 			GameSounds.SharedGameSounds.EnableVoiceFX();
 			CreateVoiceFXMenu = true;
@@ -530,7 +530,7 @@ namespace AngryNinjas
 		void TurnVoiceFXOff(object sender)
 		{
 			
-			GameData.SharedData.TurnVoiceFXOff();
+			GameData.SharedData.AreVoiceFXMuted = false;
 			
 			GameSounds.SharedGameSounds.DisableVoiceFX();
 			CreateVoiceFXMenu = false;
@@ -569,7 +569,7 @@ namespace AngryNinjas
 		void TurnSoundFXOn(object sender)
 		{
 			
-			GameData.SharedData.TurnSoundFXOn();
+			GameData.SharedData.AreSoundFXMuted = true;
 
 			GameSounds.SharedGameSounds.EnableSoundFX();
 			CreateSoundFXMenu = true;
@@ -579,7 +579,7 @@ namespace AngryNinjas
 		void TurnSoundFXOff (object sender)
 		{
 			
-			GameData.SharedData.TurnSoundFXOff();
+			GameData.SharedData.AreSoundFXMuted = false;
 
 			GameSounds.SharedGameSounds.DisableSoundFX();
 			CreateSoundFXMenu = false;
@@ -618,7 +618,7 @@ namespace AngryNinjas
 
 		void TurnAmbientFXOn (object sender) {
 			
-			GameData.SharedData.TurnAmbientFXOn();
+			GameData.SharedData.AreAmbientFXMuted = true;
 			
 			GameSounds.SharedGameSounds.RestartBackgroundMusic();
 			CreateAmbientFXMenu = true;
@@ -627,7 +627,7 @@ namespace AngryNinjas
 		}
 		void TurnAmbientFXOff (object sender) {
 			
-			GameData.SharedData.TurnAmbientFXOff();
+			GameData.SharedData.AreAmbientFXMuted = false;
 			
 			GameSounds.SharedGameSounds.StopBackgroundMusic();
 			CreateAmbientFXMenu = false;

@@ -565,7 +565,7 @@ namespace AngryNinjas
             {
                 CCLog.Log("First run ever");
                 Schedule(ShowMenuFromSelector, 2f);
-                GameData.SharedData.SetFirstRunEverToNo();
+                GameData.SharedData.FirstRunEver = false;
             }
 
             // Always do this last.
