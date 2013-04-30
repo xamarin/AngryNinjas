@@ -79,35 +79,18 @@ namespace AngryNinjas
             return (sndfile);
         }
 
-		public void DisableSoundFX ()
+		public bool AreSoundFXMuted
 		{
-			
-			soundFXTurnedOff = true;
-			
+			get { return soundFXTurnedOff; }
+			set { soundFXTurnedOff = value; }
 		}
-		public void EnableSoundFX ()
+
+		public bool AreVoiceFXMuted
 		{
-			
-			soundFXTurnedOff = false;
+			get { return voiceFXTurnedOff; }
+			set { voiceFXTurnedOff = value; }
 		}
-		
-		public void DisableVoiceFX ()
-		{
-			
-			voiceFXTurnedOff = true;
-			
-		}
-		public void EnableVoiceFX ()
-		{
-			
-			voiceFXTurnedOff = false;
-			
-		}
-		
-		
-		
-		
-		
+
 		public void PlaySoundFX(string fileToPlay)
 		{
 			

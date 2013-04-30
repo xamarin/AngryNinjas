@@ -522,7 +522,7 @@ namespace AngryNinjas
 			
 			GameData.SharedData.AreVoiceFXMuted = true;
 			
-			GameSounds.SharedGameSounds.EnableVoiceFX();
+			GameSounds.SharedGameSounds.AreVoiceFXMuted = true;
 			CreateVoiceFXMenu = true;
 			
 			
@@ -530,9 +530,9 @@ namespace AngryNinjas
 		void TurnVoiceFXOff(object sender)
 		{
 			
-			GameData.SharedData.AreVoiceFXMuted = false;
+			GameData.SharedData.AreVoiceFXMuted = true;
 			
-			GameSounds.SharedGameSounds.DisableVoiceFX();
+			GameSounds.SharedGameSounds.AreVoiceFXMuted = true;
 			CreateVoiceFXMenu = false;
 		}
 
@@ -571,7 +571,7 @@ namespace AngryNinjas
 			
 			GameData.SharedData.AreSoundFXMuted = true;
 
-			GameSounds.SharedGameSounds.EnableSoundFX();
+			GameSounds.SharedGameSounds.AreSoundFXMuted = false;
 			CreateSoundFXMenu = true;
 			
 			
@@ -579,9 +579,9 @@ namespace AngryNinjas
 		void TurnSoundFXOff (object sender)
 		{
 			
-			GameData.SharedData.AreSoundFXMuted = false;
+			GameData.SharedData.AreSoundFXMuted = true;
 
-			GameSounds.SharedGameSounds.DisableSoundFX();
+			GameSounds.SharedGameSounds.AreSoundFXMuted = true;
 			CreateSoundFXMenu = false;
 		}
 
