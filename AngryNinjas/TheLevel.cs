@@ -2087,7 +2087,7 @@ namespace AngryNinjas
 			CleanupTheLevel();
 
 			// Too select a random transition comment the two lines below and uncomment the section below.
-			var transition = Transition2();
+			var transition = Transition2;
 			CCDirector.SharedDirector.ReplaceScene(transition);
 
 			  
@@ -2098,57 +2098,52 @@ namespace AngryNinjas
 //
 //		    switch (diceRoll) {
 //		        case 0:
-//					transition = Transition0();
+//					transition = Transition0;
 //		            break;
 //		        case 1:
-//					transition = Transition1();
+//					transition = Transition1;
 //		            break;
 //		        case 2:
-//					transition = Transition2();
+//					transition = Transition2;
 //		            break;
 //		        case 3:
-//					transition = Transition3();
+//					transition = Transition3;
 //		            break;
 //		        case 4:
-//					transition = Transition4();
+//					transition = Transition4;
 //		            break;
 //		            
 //		        default:
-//					transition = Transition0();
+//					transition = Transition0;
 //		            break;
 //		    }
 //     
 //			CCDirector.SharedDirector.ReplaceScene(transition);
 		}
 
-		CCTransitionScene Transition0()
+		CCTransitionScene Transition0
 		{
-			var transition = new CCTransitionFadeDown(1, TheLevel.Scene);
-			return transition;
+			get { return new CCTransitionFadeDown(1, TheLevel.Scene); }
 		}
 
-		CCTransitionScene Transition1() 
+		CCTransitionScene Transition1
 		{
-			var transition = new CCTransitionFlipX(1, TheLevel.Scene, tOrientation.kOrientationRightOver);
-			return transition;
+			get { return new CCTransitionFlipX(1, TheLevel.Scene, tOrientation.kOrientationRightOver); }
 		}
 
-		CCTransitionScene Transition2() 
+		CCTransitionScene Transition2 
 		{
-			var  transition = new CCTransitionFade (1 , TheLevel.Scene);
-			return transition;
+			get	{ return new CCTransitionFade (1 , TheLevel.Scene); }
 		}
 
-		CCTransitionScene Transition3() 
+		CCTransitionScene Transition3 
 		{
-			var  transition = new CCTransitionFlipAngular (1 , TheLevel.Scene, tOrientation.kOrientationDownOver);
-			return transition;
+			get	{ return new CCTransitionFlipAngular (1 , TheLevel.Scene, tOrientation.kOrientationDownOver); }
 		}
 
-		CCTransitionScene Transition4() 
+		CCTransitionScene Transition4 
 		{
-			var  transition = new CCTransitionFadeTR (1 , TheLevel.Scene);
-			return transition;
+			get { return new CCTransitionFadeTR (1 , TheLevel.Scene); }
 		}
 
 		void CleanupTheLevel()
