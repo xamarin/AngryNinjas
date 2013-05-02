@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Framework.MacOS", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cocos2d.MacOS", "..\cocos2d-xna\cocos2d\cocos2d.MacOS.csproj", "{A83510D8-7AED-411E-9616-DCFEA180969E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "box2d.MacOS", "..\cocos2d-xna\box2d\box2d.MacOS.csproj", "{A83510D8-7AED-411E-9616-DCFEA180969E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "box2d.MacOS", "..\cocos2d-xna\box2d\box2d.MacOS.csproj", "{A84510D8-7AED-411E-9616-DCFEA180969E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,21 +28,21 @@ Global
 		{36C538E6-C32A-4A8D-A39C-566173D7118E}.Release|x86.ActiveCfg = Release|Any CPU
 		{36C538E6-C32A-4A8D-A39C-566173D7118E}.Release|x86.Build.0 = Release|Any CPU
 		{A83510D8-7AED-411E-9616-DCFEA180969E}.AppStore|x86.ActiveCfg = Release|Any CPU
-		{A83510D8-7AED-411E-9616-DCFEA180969E}.AppStore|x86.ActiveCfg = Release|Any CPU
-		{A83510D8-7AED-411E-9616-DCFEA180969E}.AppStore|x86.Build.0 = Release|Any CPU
 		{A83510D8-7AED-411E-9616-DCFEA180969E}.AppStore|x86.Build.0 = Release|Any CPU
 		{A83510D8-7AED-411E-9616-DCFEA180969E}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A83510D8-7AED-411E-9616-DCFEA180969E}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A83510D8-7AED-411E-9616-DCFEA180969E}.Debug|x86.Build.0 = Debug|Any CPU
 		{A83510D8-7AED-411E-9616-DCFEA180969E}.Debug|x86.Build.0 = Debug|Any CPU
 		{A83510D8-7AED-411E-9616-DCFEA180969E}.Distribution|Any CPU.ActiveCfg = Distribution|Any CPU
-		{A83510D8-7AED-411E-9616-DCFEA180969E}.Distribution|Any CPU.ActiveCfg = Distribution|Any CPU
-		{A83510D8-7AED-411E-9616-DCFEA180969E}.Distribution|Any CPU.Build.0 = Distribution|Any CPU
 		{A83510D8-7AED-411E-9616-DCFEA180969E}.Distribution|Any CPU.Build.0 = Distribution|Any CPU
 		{A83510D8-7AED-411E-9616-DCFEA180969E}.Release|x86.ActiveCfg = Release|Any CPU
-		{A83510D8-7AED-411E-9616-DCFEA180969E}.Release|x86.ActiveCfg = Release|Any CPU
 		{A83510D8-7AED-411E-9616-DCFEA180969E}.Release|x86.Build.0 = Release|Any CPU
-		{A83510D8-7AED-411E-9616-DCFEA180969E}.Release|x86.Build.0 = Release|Any CPU
+		{A84510D8-7AED-411E-9616-DCFEA180969E}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{A84510D8-7AED-411E-9616-DCFEA180969E}.AppStore|x86.Build.0 = Release|Any CPU
+		{A84510D8-7AED-411E-9616-DCFEA180969E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A84510D8-7AED-411E-9616-DCFEA180969E}.Debug|x86.Build.0 = Debug|Any CPU
+		{A84510D8-7AED-411E-9616-DCFEA180969E}.Distribution|Any CPU.ActiveCfg = Distribution|Any CPU
+		{A84510D8-7AED-411E-9616-DCFEA180969E}.Distribution|Any CPU.Build.0 = Distribution|Any CPU
+		{A84510D8-7AED-411E-9616-DCFEA180969E}.Release|x86.ActiveCfg = Release|Any CPU
+		{A84510D8-7AED-411E-9616-DCFEA180969E}.Release|x86.Build.0 = Release|Any CPU
 		{AE483C29-042E-4226-BA52-D247CE7676DA}.AppStore|x86.ActiveCfg = Release|Any CPU
 		{AE483C29-042E-4226-BA52-D247CE7676DA}.AppStore|x86.Build.0 = Release|Any CPU
 		{AE483C29-042E-4226-BA52-D247CE7676DA}.Debug|x86.ActiveCfg = Debug|Any CPU
