@@ -11,6 +11,7 @@
     <RootNamespace>AngryNinjas</RootNamespace>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
     <AssemblyName>AngryNinjas-C2D-XNAMac</AssemblyName>
+    <SuppressXamMacMigration>True</SuppressXamMacMigration>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>

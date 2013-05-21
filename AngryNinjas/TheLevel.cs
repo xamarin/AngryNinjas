@@ -743,7 +743,7 @@ namespace AngryNinjas
 			
 			//recommended for iPad only
 			
-			system = CCParticleSun.Create();
+			system = new CCParticleSun ();
 			// AddChild(system, Constants.depthParticles);
 			system.Scale = 3;
 			system.Position = new CCPoint(240, 400 );

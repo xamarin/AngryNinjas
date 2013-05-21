@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngryNinjas-C2D-XNAMac", "AngryNinjas\AngryNinjas-C2D-XNAMac.csproj", "{AF1F2B39-3C06-467F-BCD8-579626640482}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngryNinjas-Mac", "AngryNinjas-Mac.csproj", "{AF1F2B39-3C06-467F-BCD8-579626640482}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lidgren.Network.MacOS", "..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.MacOS.csproj", "{AE483C29-042E-4226-BA52-D247CE7676DA}"
 EndProject
