@@ -9,7 +9,7 @@ for physics.
 Cocos2D-XNA is a pure C# port of Cocos2D built on top of the
 MonoGame/XNA engine.
 
-[[AngryNinjas.Mac.png]]
+![Mac Screenshot](https://raw.github.com/xamarin/AngryNinjas/master/AngryNinjas.Mac.png)
 
 
 Features
