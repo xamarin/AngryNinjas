@@ -8,7 +8,7 @@ using Box2D.Dynamics;
 using Box2D.Dynamics.Contacts;
 using Box2D.Dynamics.Joints;
 
-using cocos2d;
+using Cocos2D;
 
 namespace AngryNinjas
 {
@@ -2128,7 +2128,7 @@ namespace AngryNinjas
 
 		CCTransitionScene Transition1
 		{
-			get { return new CCTransitionFlipX(1, TheLevel.Scene, tOrientation.kOrientationRightOver); }
+			get { return new CCTransitionFlipX(1, TheLevel.Scene, CCTransitionOrientation.RightOver); }
 		}
 
 		CCTransitionScene Transition2 
@@ -2138,7 +2138,7 @@ namespace AngryNinjas
 
 		CCTransitionScene Transition3 
 		{
-			get	{ return new CCTransitionFlipAngular (1 , TheLevel.Scene, tOrientation.kOrientationDownOver); }
+			get	{ return new CCTransitionFlipAngular (1 , TheLevel.Scene, CCTransitionOrientation.DownOver); }
 		}
 
 		CCTransitionScene Transition4 

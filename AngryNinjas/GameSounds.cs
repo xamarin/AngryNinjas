@@ -1,6 +1,6 @@
 using System;
 
-using cocos2d;
+using Cocos2D;
 using CocosDenshion;
 
 namespace AngryNinjas
@@ -174,7 +174,7 @@ namespace AngryNinjas
 			if (!soundFXTurnedOff) {
 				
 				
-				int randomNum = cocos2d.Random.Next(0,4); //0 to 4
+				int randomNum = Cocos2D.Random.Next(0,4); //0 to 4
 				
 				
 				switch ( randomNum ){ 
@@ -210,7 +210,7 @@ namespace AngryNinjas
 			if (!soundFXTurnedOff) {
 				
 				
-				int randomNum = cocos2d.Random.Next(0,2); //0 to 2
+				int randomNum = Cocos2D.Random.Next(0,2); //0 to 2
 				
 				
 				switch ( randomNum ){ 
@@ -249,7 +249,7 @@ namespace AngryNinjas
 			if ( !voiceFXTurnedOff ) {
 				
 				
-				int randomNum = cocos2d.Random.Next(0,7); //0 to 7
+				int randomNum = Cocos2D.Random.Next(0,7); //0 to 7
 				
 				
 				switch ( randomNum ){ 

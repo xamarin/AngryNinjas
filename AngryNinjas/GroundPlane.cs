@@ -8,7 +8,7 @@ using Box2D.Dynamics;
 using Box2D.Dynamics.Contacts;
 using Box2D.Dynamics.Joints;
 
-using cocos2d;
+using Cocos2D;
 
 namespace AngryNinjas
 {

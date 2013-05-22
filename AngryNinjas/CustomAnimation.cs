@@ -8,7 +8,7 @@ using Box2D.Dynamics;
 using Box2D.Dynamics.Contacts;
 using Box2D.Dynamics.Joints;
 
-using cocos2d;
+using Cocos2D;
 
 namespace AngryNinjas
 {
@@ -116,7 +116,7 @@ namespace AngryNinjas
 					
 				} else if ( doesTheAnimationLoop && useRandomFrameToLoop ) {
 					
-					currentFrame = cocos2d.Random.Next() % framesToAnimate; // you'd get a range of 0 to whatever framesToAnimate is
+					currentFrame = Cocos2D.Random.Next() % framesToAnimate; // you'd get a range of 0 to whatever framesToAnimate is
 					
 				} else {
 					RemoveChild(someSprite, false);

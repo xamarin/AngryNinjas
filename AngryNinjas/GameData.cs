@@ -1,6 +1,6 @@
 using System;
 
-using cocos2d;
+using Cocos2D;
 
 // Video guide is at https://vimeo.com/cartoonsmart/angryninjasguide
 // HowToGuide part 1 Images and GameData Class 00:00:00
