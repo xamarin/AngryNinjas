@@ -15,7 +15,7 @@ namespace AngryNinjas
             graphics.PreferredBackBufferWidth = 1024;
             graphics.PreferredBackBufferHeight = 768;
 #endif
-            DrawManager.InitializeDisplay(game, 
+            CCDrawManager.InitializeDisplay(game, 
 			                              graphics, 
 			                              DisplayOrientation.LandscapeRight | DisplayOrientation.LandscapeLeft);
 			
@@ -57,10 +57,9 @@ namespace AngryNinjas
 
 
 #if WINDOWS || MACOS || MONOMAC || LINUX || OUYA || XBOX
-            DrawManager.SetDesignResolutionSize(1024, 768, ResolutionPolicy.ExactFit);
+            CCDrawManager.SetDesignResolutionSize(1024, 768, ResolutionPolicy.ExactFit);
 			#else
-			DrawManager.SetDesignResolutionSize(480, 320, ResolutionPolicy.ShowAll);
-			//DrawManager.SetDesignResolutionSize(2048, 1536, ResolutionPolicy.ShowAll);
+			CCDrawManager.SetDesignResolutionSize(480, 320, ResolutionPolicy.ShowAll);
 			#endif
 
 			// turn on display FPS
