@@ -89,7 +89,7 @@ namespace AngryNinjas
 			
 			sprite.Texture = new CCSprite(String.Format("{0}_standing.png", baseImageName)).Texture;
 
-			var blinkInterval = Cocos2D.Random.Next(3,8); // range 3 to 8
+			var blinkInterval = Cocos2D.CCRandom.Next(3,8); // range 3 to 8
 			
 			Schedule(Blink, blinkInterval);
 		}
@@ -178,7 +178,7 @@ namespace AngryNinjas
 
 			Unschedule(OpenEyes);
 			
-			int blinkInterval = Cocos2D.Random.Next(3,8);//   random.Next(3,8); // range 3 to 8
+			int blinkInterval = Cocos2D.CCRandom.Next(3,8);//   random.Next(3,8); // range 3 to 8
 			Schedule(Blink,blinkInterval);
 		}
 

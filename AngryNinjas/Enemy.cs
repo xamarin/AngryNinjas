@@ -316,7 +316,7 @@ namespace AngryNinjas
 			CreateBodyWithSpriteAndFixture(theWorld, bodyDef, fixtureDef, spriteImageName);
 			
 			
-			var blinkInterval = Cocos2D.Random.Next(3,8); // range 3 to 8
+			var blinkInterval = Cocos2D.CCRandom.Next(3,8); // range 3 to 8
 			
 			Schedule(Blink, blinkInterval); //comment this out if you never want to show the blink
 			
@@ -423,7 +423,7 @@ namespace AngryNinjas
 			
 			Unschedule(OpenEyes);
 			
-			var blinkInterval = Cocos2D.Random.Next(3,8);//   random.Next(3,8); // range 3 to 8
+			var blinkInterval = Cocos2D.CCRandom.Next(3,8);//   random.Next(3,8); // range 3 to 8
 			Schedule(Blink,blinkInterval);
 		}
 

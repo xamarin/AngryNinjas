@@ -116,7 +116,7 @@ namespace AngryNinjas
 					
 				} else if ( doesTheAnimationLoop && useRandomFrameToLoop ) {
 					
-					currentFrame = Cocos2D.Random.Next() % framesToAnimate; // you'd get a range of 0 to whatever framesToAnimate is
+					currentFrame = Cocos2D.CCRandom.Next() % framesToAnimate; // you'd get a range of 0 to whatever framesToAnimate is
 					
 				} else {
 					RemoveChild(someSprite, false);
