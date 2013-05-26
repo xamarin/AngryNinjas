@@ -475,7 +475,7 @@ namespace AngryNinjas
 
 			set 
 			{
-				voiceFXMuted = false;
+				voiceFXMuted = value;
 				defaults.SetBoolForKey("voiceFXMutedKey",voiceFXMuted );
 				defaults.Flush();
 			}
@@ -495,7 +495,7 @@ namespace AngryNinjas
 
 			set 
 			{
-				ambientFXMuted = false;
+				ambientFXMuted = value;
 				defaults.SetBoolForKey("ambientFXMutedKey",ambientFXMuted );
 				defaults.Flush();
 			}
