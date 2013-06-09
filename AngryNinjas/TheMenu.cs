@@ -479,7 +479,7 @@ namespace AngryNinjas
 		#endregion
 
 		#region  POP (remove) SCENE and continue playing current level
-		public override void TouchesBegan (System.Collections.Generic.List<CCTouch> touches, CCEvent event_)
+		public override void TouchesBegan (System.Collections.Generic.List<CCTouch> touches)
 		{
 			CCDirector.SharedDirector.PopScene();
 		}

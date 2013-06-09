@@ -49,7 +49,7 @@ namespace AngryNinjas
 
 
 			// 2D projection
-			pDirector.Projection = ccDirectorProjection.kCCDirectorProjection2D;
+			pDirector.Projection = CCDirectorProjection.Projection2D;
 
 			// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
 			//if( ! [director_ enableRetinaDisplay:YES] )
@@ -57,7 +57,7 @@ namespace AngryNinjas
 
 
 #if WINDOWS || MACOS || MONOMAC || LINUX || OUYA || XBOX
-            CCDrawManager.SetDesignResolutionSize(1024, 768, ResolutionPolicy.ExactFit);
+            CCDrawManager.SetDesignResolutionSize(1024, 768, CCResolutionPolicy.ExactFit);
 			#else
 			CCDrawManager.SetDesignResolutionSize(480, 320, ResolutionPolicy.ShowAll);
 			#endif
