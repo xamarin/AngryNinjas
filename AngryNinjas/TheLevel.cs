@@ -1005,7 +1005,7 @@ namespace AngryNinjas
 		}
 
 		#region TOUCHES BEGAN  / MOVED
-		public override void TouchesBegan (System.Collections.Generic.List<CCTouch> touches, CCEvent event_)
+		public override void TouchesBegan (System.Collections.Generic.List<CCTouch> touches)
 		{
 			//base.TouchesBegan (touches, event_);
 			foreach ( var touch in touches ) {
@@ -1146,7 +1146,7 @@ namespace AngryNinjas
             }
         }
 
-		public override void TouchesMoved (System.Collections.Generic.List<CCTouch> touches, CCEvent event_)
+		public override void TouchesMoved (System.Collections.Generic.List<CCTouch> touches)
 		{
 			//base.TouchesMoved (touches, event_);
 			if ( autoPanningInProgress ) {
@@ -1330,7 +1330,7 @@ namespace AngryNinjas
 
 		#region TOUCHES ENDED
 
-		public override void TouchesEnded (System.Collections.Generic.List<CCTouch> touches, CCEvent event_)
+		public override void TouchesEnded (System.Collections.Generic.List<CCTouch> touches)
 		{
 			//base.TouchesEnded (touches, event_);
 			foreach ( var touch in touches ) {
