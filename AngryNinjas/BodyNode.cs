@@ -46,7 +46,7 @@ namespace AngryNinjas
 		public void FadeThenRemove(float delta)
 		{
 			
-			var seq = CCSequence.FromActions(
+			var seq = new CCSequence(
 			                   new CCFadeTo (1.0f,0),          
 			                   new CCCallFunc(RemoveSpriteAndBody));
 			sprite.RunAction(seq);

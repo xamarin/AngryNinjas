@@ -1798,7 +1798,7 @@ namespace AngryNinjas
 			
 			scoreLabel.RunAction(moveAction);
 			
-			CCSequence seq = CCSequence.FromActions(
+			CCSequence seq = new CCSequence(
 			                   new CCFadeTo(1.5f, 20),          
 			                   new CCCallFuncN(RemoveThisChild));
 			
@@ -1834,7 +1834,7 @@ namespace AngryNinjas
 			
 			scoreLabel.RunAction(moveAction);
 			
-			CCSequence seq = CCSequence.FromActions(
+			CCSequence seq = new CCSequence(
 				new CCFadeTo(1.5f, 20),          
 				new CCCallFuncN(RemoveThisLabel));
 			
@@ -1859,7 +1859,7 @@ namespace AngryNinjas
 		{
 			
 			var updateLabel = String.Format("{0}/{1} ", pointTotalThisRound, pointsToPassLevel);
-			currentScoreLabel.Label = updateLabel;
+			currentScoreLabel.Text = updateLabel;
 			
 		}
 		
@@ -1992,7 +1992,7 @@ namespace AngryNinjas
 			boardMessage.PositionY = screenHeight * .7f;
 			
 			
-			CCSequence seq = CCSequence.FromActions(
+			CCSequence seq = new CCSequence(
 			                   new CCScaleTo(2.0f, 2.0f),
 			                   new CCFadeTo(1.0f, 0),          
 			                   new CCCallFuncN(RemoveBoardMessage)  //NOTE: CCCallFuncN  works, CCCallFunc does not.
