@@ -130,7 +130,7 @@ namespace AngryNinjas
 			
 			
 			// Define the dynamic body.
-			var bodyDef = b2BodyDef.Create();
+			var bodyDef = new b2BodyDef();
 			bodyDef.type = b2BodyType.b2_dynamicBody; //or you could use b2_staticBody
 			
 			bodyDef.fixedRotation = isRotationFixed;
@@ -298,7 +298,7 @@ namespace AngryNinjas
 			}
 			
 			// Define the dynamic body fixture.
-			var fixtureDef = b2FixtureDef.Create();
+			var fixtureDef = new b2FixtureDef();
 			
 			if ( shapeCreationMethod == CreationMethod.DiameterOfImageForCircle) {
 				

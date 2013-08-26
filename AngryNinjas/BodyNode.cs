@@ -22,7 +22,7 @@ namespace AngryNinjas
 		public CCSprite Sprite { get { return sprite; } }
 
 		protected void CreateBodyWithSpriteAndFixture (b2World world, b2BodyDef bodyDef,
-		                                               b2FixtureDef? fixtureDef, string spriteName)
+		                                               b2FixtureDef fixtureDef, string spriteName)
 		{
 			// this is the meat of our class, it creates (OR recreates) the body in the world with the body definition, fixture definition and sprite name
 			
@@ -38,7 +38,7 @@ namespace AngryNinjas
 			if ( fixtureDef != null) 
 			{
 				
-				body.CreateFixture(fixtureDef.Value);
+				body.CreateFixture(fixtureDef);
 			}
 
 		}

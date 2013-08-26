@@ -412,7 +412,7 @@ namespace AngryNinjas
 			
 			
 			// Define the ground body.
-			b2BodyDef groundBodyDef = b2BodyDef.Create();  // Make sure we call 
+			var groundBodyDef = new b2BodyDef();  // Make sure we call 
 			groundBodyDef.position.Set(0, 0); // bottom-left corner
 			
 			// Call the body factory which allocates memory for the ground body

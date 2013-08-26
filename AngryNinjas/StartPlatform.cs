@@ -38,7 +38,7 @@ namespace AngryNinjas
 		void CreatePlatform() {
 			
 			// Define the dynamic body.
-			var bodyDef = b2BodyDef.Create();
+			var bodyDef = new b2BodyDef();
 			bodyDef.type = b2BodyType.b2_staticBody; //or you could use b2_staticBody
 			
 			bodyDef.position.Set(initialLocation.X/Constants.PTM_RATIO, initialLocation.Y/Constants.PTM_RATIO);
@@ -57,7 +57,7 @@ namespace AngryNinjas
 			
 			
 			// Define the dynamic body fixture.
-			var fixtureDef = b2FixtureDef.Create();
+			var fixtureDef = new b2FixtureDef();
 			fixtureDef.shape = shape;	
 			fixtureDef.density = 1.0f;
 			fixtureDef.friction = 0.3f;
