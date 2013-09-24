@@ -545,6 +545,7 @@
     <BundleResource Include="Content\fonts\MarkerFelt-16.xnb" />
     <BundleResource Include="Content\fonts\MarkerFelt-22.xnb" />
     <BundleResource Include="Content\fonts\MarkerFelt-18.xnb" />
+    <BundleResource Include="Content\stonePillar.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="Resources\iTunesArtwork" />

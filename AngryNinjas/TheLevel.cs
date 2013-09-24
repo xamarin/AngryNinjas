@@ -717,7 +717,7 @@ namespace AngryNinjas
 
 		void EnableDebugMode()
 		{
-			CCDraw debugDraw = new CCDraw(Constants.PTM_RATIO);
+			CCBox2dDraw debugDraw = new CCBox2dDraw("fonts/arial-12");
 			world.SetDebugDraw(debugDraw);
 			debugDraw.AppendFlags(b2DrawFlags.e_shapeBit);
 

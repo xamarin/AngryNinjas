@@ -344,7 +344,7 @@ namespace AngryNinjas
 
 		}
 
-		public override void PreSolve (b2Contact contact, ref b2Manifold oldManifold)
+		public override void PreSolve (b2Contact contact, b2Manifold oldManifold)
 		{
 			//throw new NotImplementedException ();
 		}
