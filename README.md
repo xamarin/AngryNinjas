@@ -39,6 +39,11 @@ so:
 	git clone git://github.com/mono/MonoGame.git 
 	git clone git://github.com/xamarin/AngryNinjas 
 
+The MonoGame [projects must be generated](https://github.com/mono/MonoGame#solutions--projects), which you can easily do by executing the following commands:
+
+	cd MonoGame
+	mono Protobuild.exe
+
 Then open the solution for the platform that you want to target.
 Currently there are solutions for: Android, MacOS X, Ouya, iOS,
 Windows, Windows Phone and XNA.
